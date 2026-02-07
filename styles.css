@@ -83,12 +83,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* 代码块 */
-div.sourceCode {
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
 /* Tex公式 */
 .math.display {
   background: rgba(90, 103, 216, 0.05) !important; 
