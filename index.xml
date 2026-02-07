@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Yijia&#39;s Physics Blog</title>
+<link>https://Yijia-phys.github.io/my-blog/</link>
+<atom:link href="https://Yijia-phys.github.io/my-blog/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Sat, 07 Feb 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Post With Code</title>
+  <dc:creator>Harlow Malloc</dc:creator>
+  <link>https://Yijia-phys.github.io/my-blog/posts/post-with-code/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is a post with executable code.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <category>code</category>
+  <category>analysis</category>
+  <guid>https://Yijia-phys.github.io/my-blog/posts/post-with-code/</guid>
+  <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://Yijia-phys.github.io/my-blog/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Welcome To My Blog</title>
+  <dc:creator>Tristan O&#39;Malley</dc:creator>
+  <link>https://Yijia-phys.github.io/my-blog/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is the first post in a Quarto blog. Welcome!</p>
+<p><img src="https://Yijia-phys.github.io/my-blog/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7B%5Cdot%7Bp%7D%7D%7D)=%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7Bp%7D%7D%0A"></p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://Yijia-phys.github.io/my-blog/posts/welcome/</guid>
+  <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
