@@ -1,15 +1,16 @@
 ---
-title: "my-blog"
-listing:
-  contents: posts
-  feed: true
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "Yijia Zhao"
+image: author.png
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/Yijia-phys
+    - icon: ai-orcid
+      text: Orcid
+      href: https://orcid.org/0009-0004-5515-2981
+
 ---
 
-
+A chinese high school student, passionate about physics and philosophy.
