@@ -18,6 +18,6 @@
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\nHere is the Euler-Lagrange’s equation\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{p}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{p}}\n\\]"
+    "text": "This is the first post in a Quarto blog. Welcome!\nHere is the Euler-Lagrange’s equation\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{p}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{p}}\n\\]\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{p}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{p}}"
   }
 ]

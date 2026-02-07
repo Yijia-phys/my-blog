@@ -12,3 +12,7 @@ Here is the **Euler-Lagrange's equation**
 $$
 \frac{\mathrm{d}}{\mathrm{d}t}(\frac{\partial{\mathcal{L}}}{\partial{\dot{p}}})=\frac{\partial{\mathcal{L}}}{\partial{p}}
 $$
+
+```
+\frac{\mathrm{d}}{\mathrm{d}t}(\frac{\partial{\mathcal{L}}}{\partial{\dot{p}}})=\frac{\partial{\mathcal{L}}}{\partial{p}}
+```

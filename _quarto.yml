@@ -12,5 +12,7 @@ format:
     theme:
       light: cosmo
     css: styles.css
+    code-copy: true
+    code-tools: true
     toc: true
     mathjax: true

@@ -21,4 +21,4 @@ Thumbs.db
 
 .env
 
-deploy.psl
+deploy.ps1
