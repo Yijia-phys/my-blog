@@ -10,7 +10,7 @@
 <atom:link href="https://Yijia-phys.github.io/my-blog/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sat, 07 Feb 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 06 Feb 2026 16:00:00 GMT</lastBuildDate>
 <item>
   <title>Welcome To My Blog</title>
   <dc:creator>Yijia Zhao</dc:creator>
@@ -30,7 +30,7 @@
  ]]></description>
   <category>news</category>
   <guid>https://Yijia-phys.github.io/my-blog/posts/welcome/</guid>
-  <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+  <pubDate>Fri, 06 Feb 2026 16:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
