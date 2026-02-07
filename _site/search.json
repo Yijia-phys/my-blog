@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\nHere is the Euler-Lagrange’s equation\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{p}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{p}}\n\\]"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Yijia Zhao",
-    "section": "",
-    "text": "A chinese high school student, passionate about physics and philosophy."
+    "text": "Welcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\nYijia Zhao\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -28,10 +14,10 @@
     "text": "A chinese high school student, passionate about physics and philosophy."
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Posts",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "Welcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\nYijia Zhao\n\n\n\n\n\nNo matching items"
+    "text": "This is the first post in a Quarto blog. Welcome!\nHere is the Euler-Lagrange’s equation\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{p}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{p}}\n\\]"
   }
 ]

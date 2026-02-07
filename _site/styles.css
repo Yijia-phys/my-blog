@@ -1,51 +1,19 @@
-/* 强制修改导航栏背景色 */
+/* 导航栏背景色 */
 .navbar {
-  background-color: #5a67d8 !important; /* 换成你喜欢的紫色或蓝色 */
+  background-color: #5a67d8 !important;
 }
 
-/* 强制修改导航栏里的文字颜色 */
+/* 导航栏文字 */
 .navbar-title, 
 .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.9) !important; /* 白色文字 */
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* 鼠标悬停时的文字颜色 */
+/* 导航栏特效 */
 .navbar-nav .nav-link:hover {
-  color: #ffd700 !important; /* 悬停变金色 */
+  color: #ffd700 !important;
 }
 
-/* 1. 深度定位：强制修改所有导航栏工具图标的颜色 */
-.navbar .quarto-navigation-tool, 
-.navbar .quarto-search-toggle,
-.navbar .quarto-color-scheme-toggle {
-  color: white !important;
-}
-
-/* 2. 针对内部的 SVG 图标（这是最关键的） */
-.navbar .bi, 
-.navbar svg {
-  fill: white !important; /* 强制填充颜色为白色 */
-  color: white !important;
-}
-
-/* 3. 特别针对搜索框内的放大镜图标 */
-#quarto-search .bi-search,
-.quarto-search-toggle .bi-search {
-  fill: white !important;
-}
-
-/* 4. 如果点击搜索后弹出的关闭按钮也需要改色，可以加这一行 */
-.quarto-search-pwa-close {
-  color: white !important;
-}
-
-/* 1. 全局字体优化 - 让文字更有质感 */
-body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* 2. 导航栏微动效 - 鼠标指上去时链接会有个下划线划出的感觉 */
 .navbar-nav .nav-link {
   position: relative;
   transition: color 0.3s ease;
@@ -58,7 +26,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ffd700; /* 你的品牌色 */
+  background-color: #ffd700;
   transition: width 0.3s ease;
 }
 
@@ -66,7 +34,44 @@ body {
   width: 100%;
 }
 
-/* 3. 给首页的文章卡片加点阴影和圆角 (如果是 grid 模式) */
+.nav-link:hover {
+  opacity: 0.8;
+  transform: scale(1.05); 
+  transition: all 0.2s ease-in-out;
+}
+
+/* 导航栏工具图标颜色 */
+.navbar .quarto-navigation-tool, 
+.navbar .quarto-search-toggle,
+.navbar .quarto-color-scheme-toggle {
+  color: white !important;
+}
+
+/* SVG图标 */
+.navbar .bi, 
+.navbar svg {
+  fill: white !important;
+  color: white !important;
+}
+
+/* 搜索图标 */
+#quarto-search .bi-search,
+.quarto-search-toggle .bi-search {
+  fill: white !important;
+}
+
+/* 搜索框 */
+.quarto-search-pwa-close {
+  color: white !important;
+}
+
+/* 正文文字 */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 文章卡片 */
 .quarto-post .card {
   border: none !important;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
@@ -75,18 +80,30 @@ body {
 }
 
 .quarto-post .card:hover {
-  transform: translateY(-5px); /* 悬停时向上浮动 */
+  transform: translateY(-5px);
 }
 
-/* 4. 代码块圆角 */
+/* 代码块 */
 div.sourceCode {
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.1);
 }
 
-/* 导航链接的悬停动效 */
-.nav-link:hover {
-  opacity: 0.8;
-  transform: scale(1.05); /* 微微放大 */
-  transition: all 0.2s ease-in-out;
+/* Tex公式 */
+.math.display {
+  background: rgba(90, 103, 216, 0.05) !important; 
+  border-left: 4px solid #5a67d8 !important;     
+  padding: 1.5rem 1rem !important;                
+  margin: 1.5rem 0 !important;                    
+  border-radius: 4px;                             
+  
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.mjx-chtml.MJXc-display {
+  margin: 0 !important;
 }
