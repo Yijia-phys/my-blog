@@ -18,6 +18,6 @@
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\nHere is the Euler-Lagrange’s equation\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{p}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{p}}\n\\]\npre.sourceCode, .cell-output pre {\n  background: rgba(90, 103, 216, 0.05) !important;\n  border-left: 4px solid #5a67d8 !important;\n  padding: 1.5rem !important;\n  margin: 1.5rem 0 !important;\n  border-radius: 4px !important;\n  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !important;\n  font-size: 0.9em !important;\n  line-height: 1.5 !important;\n  overflow-x: auto !important;\n  white-space: pre !important;\n  box-sizing: border-box !important;\n  width: 100% !important;\n}\n\ncode:not(pre code) {\n  background: rgba(90, 103, 216, 0.1) !important;\n  padding: 0.2em 0.4em !important;\n  border-radius: 3px !important;\n  font-size: 0.9em !important;\n  border: 1px solid rgba(90, 103, 216, 0.2) !important;\n}"
+    "text": "This is the first post in a Quarto blog. Welcome!\nHere is the Euler-Lagrange’s equation\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{p}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{p}}\n\\]"
   }
 ]
