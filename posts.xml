@@ -12,7 +12,7 @@
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Sat, 07 Feb 2026 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Welcome To My Blog</title>
+  <title>Test post: Site design in progress</title>
   <dc:creator>Yijia Zhao</dc:creator>
   <link>https://Yijia-phys.github.io/my-blog/posts/welcome/</link>
   <description><![CDATA[ 
@@ -21,14 +21,60 @@
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p>Here is the <strong>Euler-Lagrange’s equation</strong></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7B%5Cdot%7Bp%7D%7D%7D)=%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7Bp%7D%7D%0A"></p>
+<p>Here is the <strong>Euler-Lagrange’s equation</strong>:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7B%5Cdot%7Bp_i%7D%7D%7D)=%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7Bp_i%7D%7D%0A"></p>
+<p>Where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BL%7D"> is the <strong>Lagrangian</strong>, defined as <img src="https://latex.codecogs.com/png.latex?T-V">.<br>
+In <strong>Mathematica</strong>, we can compute it directly by calling the <code>VariationalMethods</code> package:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode mathematica code-with-copy"><code class="sourceCode mathematica"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Needs</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"VariationalMethods`"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">L</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">T</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">V</span></span>
+<span id="cb1-3">EulerEquations<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">L</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>q1<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">t</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">],</span> q2<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">t</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]},</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">t</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span></code></pre></div></div>
 
 
 
  ]]></description>
-  <category>news</category>
+  <category>Misc</category>
   <guid>https://Yijia-phys.github.io/my-blog/posts/welcome/</guid>
   <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
 </item>
