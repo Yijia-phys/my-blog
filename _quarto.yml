@@ -1,5 +1,7 @@
 project:
   type: website
+  resources: 
+    - assets/
 
 website:
   title: "Yijia Zhao"
@@ -7,6 +9,10 @@ website:
     left:
       - href: posts.qmd
         text: Posts
+    right:
+      - icon: info-circle
+        href: credits.qmd
+        aria-label: "Credits"
 format:
   html:
     theme:

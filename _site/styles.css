@@ -1,4 +1,4 @@
-/* 导航栏 */
+/* Hide */
 .navbar {
   background-color: #5a67d8;
 }
@@ -30,7 +30,7 @@
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* 导航栏特效 */
+/* Hide_Effect */
 .navbar-nav .nav-link:hover {
   color: #ffd700 !important;
 }
@@ -62,14 +62,13 @@
   transition: all 0.2s ease-in-out;
 }
 
-/* 导航栏工具图标颜色 */
+/* Hide_Icon */
 .navbar .quarto-navigation-tool, 
 .navbar .quarto-search-toggle,
 .navbar .quarto-color-scheme-toggle {
   color: white !important;
 }
 
-/* SVG图标 */
 .navbar .bi, 
 .navbar svg {
   fill: white !important;
@@ -98,7 +97,6 @@
 .quarto-color-scheme-toggle .bi::after {
   display: inline-block;
   font-family: 'bootstrap-icons' !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -121,13 +119,13 @@ body.quarto-dark .quarto-color-scheme-toggle .bi::after {
   text-shadow: 0 0 10px rgba(255, 202, 40, 0.5); 
 }
 
-/* 正文文字 */
+/* Body */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* 文章卡片 */
+/* Card */
 .quarto-post .card {
   border: none !important;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
@@ -139,7 +137,7 @@ body {
   transform: translateY(-5px);
 }
 
-/* Tex公式 */
+/* Tex */
 .math.display {
   background: rgba(90, 103, 216, 0.05) !important; 
   border-left: 4px solid #5a67d8 !important;     
@@ -158,7 +156,7 @@ body {
   margin: 0 !important;
 }
 
-/* 代码块样式 */
+/* Code_Block */
 pre.sourceCode, .cell-output pre {
   background: rgba(16, 185, 129, 0.05) !important;
   border-left: 4px solid #10b981 !important;
@@ -173,10 +171,9 @@ pre.sourceCode, .cell-output pre {
   white-space: pre !important;
   box-sizing: border-box !important;
   width: 100% !important;
-  position: relative; /* 为复制按钮定位 */
+  position: relative;
 }
 
-/* 代码块标题样式 */
 .code-with-title {
   margin-top: 1.5rem !important;
 }
@@ -197,7 +194,6 @@ pre.sourceCode, .cell-output pre {
   margin-top: 0 !important;
 }
 
-/* 代码复制按钮样式 - 重写这部分 */
 pre.sourceCode button.code-copy,
 .cell-output pre button.code-copy,
 div.sourceCode button.code-copy {
@@ -224,7 +220,6 @@ div.sourceCode button.code-copy:hover {
   opacity: 1 !important;
 }
 
-/* 深色模式下的代码复制按钮 */
 [data-theme="dark"] pre.sourceCode button.code-copy,
 [data-theme="dark"] .cell-output pre button.code-copy,
 [data-theme="dark"] div.sourceCode button.code-copy {
@@ -240,7 +235,6 @@ div.sourceCode button.code-copy:hover {
   border-color: #10b981 !important;
 }
 
-/* 响应式调整 */
 @media (max-width: 768px) {
   pre.sourceCode, .cell-output pre {
     padding: 1rem !important;
@@ -254,7 +248,7 @@ div.sourceCode button.code-copy:hover {
   }
 }
 
-/* 深色模式 */
+/* Dark_Mode */
 :root {
   --primary: #5a67d8;
   --secondary: #718096;
@@ -289,7 +283,6 @@ div.sourceCode button.code-copy:hover {
   --shadow: rgba(0, 0, 0, 0.3);
 }
 
-/* 应用到具体元素 */
 [data-theme="dark"] body {
   background-color: var(--background);
   color: var(--text);
@@ -310,7 +303,6 @@ div.sourceCode button.code-copy:hover {
   background-color: var(--background-tertiary);
 }
 
-/* 代码块 */
 [data-theme="dark"] pre,
 [data-theme="dark"] code {
   background-color: var(--code-bg);
@@ -318,7 +310,6 @@ div.sourceCode button.code-copy:hover {
   border-color: var(--border);
 }
 
-/* 表格 */
 [data-theme="dark"] table {
   background-color: var(--background-secondary);
   border-color: var(--border);
@@ -333,7 +324,6 @@ div.sourceCode button.code-copy:hover {
   background-color: var(--background-tertiary);
 }
 
-/* 主题过渡 */
 * {
   transition: background-color 0.3s ease,
               color 0.3s ease,
@@ -341,36 +331,6 @@ div.sourceCode button.code-copy:hover {
               box-shadow 0.3s ease;
 }
 
-/* 主题切换按钮样式 */
-.theme-toggle {
-  background: var(--background-secondary);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  width: 60px;
-  height: 30px;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.theme-toggle::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 24px;
-  height: 24px;
-  background: var(--text);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-[data-theme="dark"] .theme-toggle::before {
-  transform: translateX(30px);
-  background: #f6e05e;
-}
-
-/* 图片 */
 [data-theme="dark"] img {
   opacity: 0.9;
   filter: brightness(0.9) contrast(1.1);
@@ -380,7 +340,6 @@ div.sourceCode button.code-copy:hover {
   --text: #e2e8f0;
 }
 
-/* 阴影 */
 [data-theme="dark"] .card,
 [data-theme="dark"] .navbar {
   box-shadow: 0 4px 6px var(--shadow);

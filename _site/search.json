@@ -19,5 +19,40 @@
     "title": "Test post: Site design in progress",
     "section": "",
     "text": "Here is the Euler-Lagrange’s equation:\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{q_i}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{q_i}}\n\\]\nWhere \\(\\mathcal{L}\\) is the Lagrangian, defined as \\(T-V\\).\nIn Mathematica, we can compute it directly by calling the VariationalMethods package:\nNeeds[\"VariationalMethods`\"]\nL = T - V\nEulerEquations[L, {q1[t], q2[t]}, t]"
+  },
+  {
+    "objectID": "credits.html",
+    "href": "credits.html",
+    "title": "Credits",
+    "section": "",
+    "text": "To respect the work of creators and comply with licensing, all third-party images, icons, and code components used across this blog are listed below."
+  },
+  {
+    "objectID": "credits.html#视觉素材",
+    "href": "credits.html#视觉素材",
+    "title": "Credits",
+    "section": "视觉素材",
+    "text": "视觉素材\n\n\n\n资源预览\n描述与用途\n来源与作者\n许可协议\n\n\n\n\n\n默认封面图用于文章占位\n由 Gemini 生成 (Feynman Diagram)\nCC BY-NC 4.0\n\n\n\n个人头像用于侧边栏\n自拍 / 摄影师姓名\n版权所有\n\n\n\nPDF 图标用于讲义下载链接\nIcons8\nFree License"
+  },
+  {
+    "objectID": "credits.html#技术支持",
+    "href": "credits.html#技术支持",
+    "title": "Credits",
+    "section": "技术支持",
+    "text": "技术支持\n\n框架: Quarto\n图标库: Bootstrap Icons\n托管: GitHub Pages\n\n\n\n版权提示: 除非另有说明，本站发布的笔记和讲义内容均采用 CC BY-NC-SA 4.0 许可协议。"
+  },
+  {
+    "objectID": "credits.html#visual-assets",
+    "href": "credits.html#visual-assets",
+    "title": "Credits",
+    "section": "Visual Assets",
+    "text": "Visual Assets\n\n\n\nPreview\nDescription & Usage\nSource & Author\nLicense\n\n\n\n\n\nDefault ThumbnailPlaceholder for posts\nIllustration by:羽々斬/ Source: Pixiv\nAuthor’s Standard Terms (Attribution Required)\n\n\n\nProfile PictureUsed in sidebar\n[Your Name/Photographer]\nAll Rights Reserved"
+  },
+  {
+    "objectID": "credits.html#technical-stack",
+    "href": "credits.html#technical-stack",
+    "title": "Credits",
+    "section": "Technical Stack",
+    "text": "Technical Stack\n\n\nLicensing\nUnless otherwise noted, the original educational content (lecture notes and posts) on this site is licensed under CC BY-NC 4.0."
   }
 ]
