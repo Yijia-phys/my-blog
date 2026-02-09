@@ -21,8 +21,9 @@
 
 
 
+
 <p>Here is the <strong>Euler-Lagrange’s equation</strong>:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7B%5Cdot%7Bp_i%7D%7D%7D)=%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7Bp_i%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7B%5Cdot%7Bq_i%7D%7D%7D)=%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7Bq_i%7D%7D%0A"></p>
 <p>Where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BL%7D"> is the <strong>Lagrangian</strong>, defined as <img src="https://latex.codecogs.com/png.latex?T-V">.<br>
 In <strong>Mathematica</strong>, we can compute it directly by calling the <code>VariationalMethods</code> package:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode mathematica code-with-copy"><code class="sourceCode mathematica"><span id="cb1-1"><span class="fu" style="color: #4758AB;
