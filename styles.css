@@ -91,6 +91,36 @@
   color: white !important;
 }
 
+.quarto-color-scheme-toggle .bi::before {
+  display: none !important;
+}
+
+.quarto-color-scheme-toggle .bi::after {
+  display: inline-block;
+  font-family: 'bootstrap-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+body.quarto-light .quarto-color-scheme-toggle .bi::after {
+  content: "\F497" !important;
+  color: #ffffff !important;
+}
+
+body.quarto-dark .quarto-color-scheme-toggle .bi::after {
+  content: "\F5A2" !important; 
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 202, 40, 0.5); 
+}
+
 /* 正文文字 */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
