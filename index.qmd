@@ -1,6 +1,6 @@
 ---
 title: "Yijia Zhao"
-image: /assets/profile.png
+image: assets/profile.png
 about:
   template: jolla
   links:

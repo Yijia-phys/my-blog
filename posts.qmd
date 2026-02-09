@@ -8,7 +8,7 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
-  image-placeholder: /assets/placeholder.png
+  image-placeholder: assets/placeholder.png
 page-layout: full
 title-block-banner: true
 include-in-header:
