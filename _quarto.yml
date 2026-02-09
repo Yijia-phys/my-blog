@@ -11,7 +11,12 @@ format:
   html:
     theme:
       light: cosmo
+      dark: darkly
+    theme-toggle:
+      location: navbar
+      default-appearance: auto
     css: styles.css
     code-copy: true
     toc: true
+    toc-location: right
     mathjax: true

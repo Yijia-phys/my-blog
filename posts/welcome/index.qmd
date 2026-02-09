@@ -9,7 +9,7 @@ format: html
 Here is the **Euler-Lagrange's equation**:
 
 $$
-\frac{\mathrm{d}}{\mathrm{d}t}(\frac{\partial{\mathcal{L}}}{\partial{\dot{p_i}}})=\frac{\partial{\mathcal{L}}}{\partial{p_i}}
+\frac{\mathrm{d}}{\mathrm{d}t}(\frac{\partial{\mathcal{L}}}{\partial{\dot{q_i}}})=\frac{\partial{\mathcal{L}}}{\partial{q_i}}
 $$
 
 Where $\mathcal{L}$ is the **Lagrangian**, defined as $T-V$. \

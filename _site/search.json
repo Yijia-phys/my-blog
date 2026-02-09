@@ -18,6 +18,6 @@
     "href": "posts/welcome/index.html",
     "title": "Test post: Site design in progress",
     "section": "",
-    "text": "Here is the Euler-Lagrange’s equation:\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{p_i}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{p_i}}\n\\]\nWhere \\(\\mathcal{L}\\) is the Lagrangian, defined as \\(T-V\\).\nIn Mathematica, we can compute it directly by calling the VariationalMethods package:\nNeeds[\"VariationalMethods`\"]\nL = T - V\nEulerEquations[L, {q1[t], q2[t]}, t]"
+    "text": "Here is the Euler-Lagrange’s equation:\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{q_i}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{q_i}}\n\\]\nWhere \\(\\mathcal{L}\\) is the Lagrangian, defined as \\(T-V\\).\nIn Mathematica, we can compute it directly by calling the VariationalMethods package:\nNeeds[\"VariationalMethods`\"]\nL = T - V\nEulerEquations[L, {q1[t], q2[t]}, t]"
   }
 ]
