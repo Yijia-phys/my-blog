@@ -156,6 +156,13 @@ body {
   margin: 0 !important;
 }
 
+mjx-container[display="true"] {
+  width: 100% !important;
+  margin: 1em 0 !important;
+  text-align: center;
+}
+
+
 /* Code_Block */
 pre.sourceCode, .cell-output pre {
   background: rgba(16, 185, 129, 0.05) !important;
@@ -343,4 +350,9 @@ div.sourceCode button.code-copy:hover {
 [data-theme="dark"] .card,
 [data-theme="dark"] .navbar {
   box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* Svg */
+body.quarto-dark img[src$=".svg"] {
+  filter: invert(1) hue-rotate(180deg) brightness(1.5);
 }

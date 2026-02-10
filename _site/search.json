@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Yijia Zhao",
     "section": "",
-    "text": "A chinese high school student, passionate about physics and philosophy."
+    "text": "A Chinese high school student, passionate about physics and philosophy."
   },
   {
     "objectID": "credits.html",
@@ -39,6 +39,20 @@
     "href": "posts/welcome/index.html",
     "title": "Test post: Site design in progress",
     "section": "",
-    "text": "Here is the Euler-Lagrange’s equation:\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{q_i}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{q_i}}\n\\]\nWhere \\(\\mathcal{L}\\) is the Lagrangian, defined as \\(T-V\\).\nIn Mathematica, we can compute it directly by calling the VariationalMethods package:\nNeeds[\"VariationalMethods`\"]\nL = T - V\nEulerEquations[L, {q1[t], q2[t]}, t]"
+    "text": "Here is the Euler-Lagrange’s equation:\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{q_i}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{q_i}}\n\\tag{1}\\]\nWhere \\(\\mathcal{L}\\) is the Lagrangian, defined as \\(T-V\\).\nIn Mathematica, we can compute it directly by calling the VariationalMethods package:\nNeeds[\"VariationalMethods`\"]\nL = T - V\nEulerEquations[L, {q1[t], q2[t]}, t]"
+  },
+  {
+    "objectID": "posts/welcome/index.html#defination",
+    "href": "posts/welcome/index.html#defination",
+    "title": "Test post: Site design in progress",
+    "section": "",
+    "text": "Here is the Euler-Lagrange’s equation:\n\\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{q_i}}})=\\frac{\\partial{\\mathcal{L}}}{\\partial{q_i}}\n\\tag{1}\\]\nWhere \\(\\mathcal{L}\\) is the Lagrangian, defined as \\(T-V\\).\nIn Mathematica, we can compute it directly by calling the VariationalMethods package:\nNeeds[\"VariationalMethods`\"]\nL = T - V\nEulerEquations[L, {q1[t], q2[t]}, t]"
+  },
+  {
+    "objectID": "posts/welcome/index.html#example",
+    "href": "posts/welcome/index.html#example",
+    "title": "Test post: Site design in progress",
+    "section": "Example",
+    "text": "Example\n\n\n\nSimple pendulum\n\n\nChoose the angular displacement \\(\\theta\\) (the angle between the pendulum and the vertical) as the generalized coordinate.\n\\[\n\\mathcal{L} =\\frac{1}{2}ml^2 \\dot{\\theta}^2+mgl\\cos{\\theta}\n\\tag{2}\\]\nWhich set \\(V=0\\) at the pivot point. Use Euler-Lagrange equation, we have: \\[\nl\\ddot{\\theta}+g\\sin{\\theta}=0\n\\tag{3}\\]\n\nSolution\n\\[\n\\dot{\\theta}\\ddot{\\theta}+\\frac{g}{l}\\dot{\\theta}\\sin{\\theta}=0 \\\\\n\\tag{4}\\] \\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{1}{2}\\dot{\\theta}^2-\\frac{g}{l}\\cos{\\theta})=0\n\\tag{5}\\]\nLet \\(\\theta=\\theta_0\\) when \\(t=0\\) : \\[\n\\dot{\\theta}^2=\\frac{2g}{l}(\\cos{\\theta}-\\cos{\\theta_0})\n\\tag{6}\\] \\[\nt=\\sqrt{\\frac{l}{2g}} \\int_0^{\\theta} \\frac{1}{\\sqrt{\\cos{\\theta}-\\cos{\\theta_0}}}\\mathrm{d}\\theta\n\\tag{7}\\]\nUse double-angle formula \\(\\cos{2x}=1-2\\sin{x}^2\\) and let \\(\\sin{\\frac{\\theta}{2}}=k\\sin{\\phi}\\) : \\[\nt=\\sqrt{\\frac{l}{g}}\\int_0^{\\arcsin{\\frac{1}{k}\\sin{\\frac{\\theta}{2}}}}\\frac{1}{\\sqrt{1-k^2\\sin{\\phi}^2}} \\mathrm{d}\\phi\n\\tag{8}\\]\nWhere \\(k=\\sin{\\frac{\\theta_0}{2}}\\). For the period \\(T\\), the process is \\(\\theta_0 \\to 0 \\to -\\theta_0 \\to 0\\) , so: \\[\nT=4\\sqrt{\\frac{l}{g}}\\int_0^{\\pi/2}\\frac{1}{\\sqrt{1-k^2\\sin{\\phi}^2}} \\mathrm{d}\\phi\n\\tag{9}\\]\nThis is the Complete Elliptic Integral of the 1st Kind, which can be written as: \\[\nT=4\\sqrt{\\frac{l}{g}}K\\left(\\sin{\\left( \\frac{\\theta_0}{2} \\right)}\\right)\n\\tag{10}\\]\nUsing the power series expansion of \\(K(k)\\) , we obtain: \\[\nT=2\\pi\\sqrt{\\frac{l}{g}}\\sum_{n=0}^{\\infty}\\left( \\frac{(2n)!}{2^{2n}(n!)^2} \\right)\\sin^{2n}\\left( \\frac{\\theta_0}{2} \\right)\n\\tag{11}\\]"
   }
 ]
