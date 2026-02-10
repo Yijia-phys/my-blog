@@ -22,8 +22,10 @@
 
 
 
+<section id="defination" class="level2">
+<h2 class="anchored" data-anchor-id="defination">Defination</h2>
 <p>Here is the <strong>Euler-Lagrange’s equation</strong>:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7B%5Cdot%7Bq_i%7D%7D%7D)=%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7Bq_i%7D%7D%0A"></p>
+<p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7B%5Cdot%7Bq_i%7D%7D%7D)=%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7Bq_i%7D%7D%0A%5Ctag%7B1%7D"></span></p>
 <p>Where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BL%7D"> is the <strong>Lagrangian</strong>, defined as <img src="https://latex.codecogs.com/png.latex?T-V">.<br>
 In <strong>Mathematica</strong>, we can compute it directly by calling the <code>VariationalMethods</code> package:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode mathematica code-with-copy"><code class="sourceCode mathematica"><span id="cb1-1"><span class="fu" style="color: #4758AB;
@@ -71,8 +73,31 @@ background-color: null;
 font-style: inherit;">t</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">]</span></span></code></pre></div></div>
+<hr>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://Yijia-phys.github.io/my-blog/posts/welcome/simple_pendulum.svg" class="img-fluid figure-img" style="width:20.0%"></p>
+<figcaption>Simple pendulum</figcaption>
+</figure>
+</div>
+<p>Choose the angular displacement <img src="https://latex.codecogs.com/png.latex?%5Ctheta"> (the angle between the pendulum and the vertical) as the generalized coordinate.</p>
+<p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%7BL%7D%20=%5Cfrac%7B1%7D%7B2%7Dml%5E2%20%5Cdot%7B%5Ctheta%7D%5E2+mgl%5Ccos%7B%5Ctheta%7D%0A%5Ctag%7B2%7D"></span></p>
+<p>Which set <img src="https://latex.codecogs.com/png.latex?V=0"> at the pivot point. Use Euler-Lagrange equation, we have: <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0Al%5Cddot%7B%5Ctheta%7D+g%5Csin%7B%5Ctheta%7D=0%0A%5Ctag%7B3%7D"></span></p>
+<section id="solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution">Solution</h3>
+<p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cdot%7B%5Ctheta%7D%5Cddot%7B%5Ctheta%7D+%5Cfrac%7Bg%7D%7Bl%7D%5Cdot%7B%5Ctheta%7D%5Csin%7B%5Ctheta%7D=0%20%5C%5C%0A%5Ctag%7B4%7D"></span> <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B1%7D%7B2%7D%5Cdot%7B%5Ctheta%7D%5E2-%5Cfrac%7Bg%7D%7Bl%7D%5Ccos%7B%5Ctheta%7D)=0%0A%5Ctag%7B5%7D"></span></p>
+<p>Let <img src="https://latex.codecogs.com/png.latex?%5Ctheta=%5Ctheta_0"> when <img src="https://latex.codecogs.com/png.latex?t=0"> : <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cdot%7B%5Ctheta%7D%5E2=%5Cfrac%7B2g%7D%7Bl%7D(%5Ccos%7B%5Ctheta%7D-%5Ccos%7B%5Ctheta_0%7D)%0A%5Ctag%7B6%7D"></span> <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0At=%5Csqrt%7B%5Cfrac%7Bl%7D%7B2g%7D%7D%20%5Cint_0%5E%7B%5Ctheta%7D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B%5Ccos%7B%5Ctheta%7D-%5Ccos%7B%5Ctheta_0%7D%7D%7D%5Cmathrm%7Bd%7D%5Ctheta%0A%5Ctag%7B7%7D"></span></p>
+<p>Use double-angle formula <img src="https://latex.codecogs.com/png.latex?%5Ccos%7B2x%7D=1-2%5Csin%7Bx%7D%5E2"> and let <img src="https://latex.codecogs.com/png.latex?%5Csin%7B%5Cfrac%7B%5Ctheta%7D%7B2%7D%7D=k%5Csin%7B%5Cphi%7D"> : <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0At=%5Csqrt%7B%5Cfrac%7Bl%7D%7Bg%7D%7D%5Cint_0%5E%7B%5Carcsin%7B%5Cfrac%7B1%7D%7Bk%7D%5Csin%7B%5Cfrac%7B%5Ctheta%7D%7B2%7D%7D%7D%7D%5Cfrac%7B1%7D%7B%5Csqrt%7B1-k%5E2%5Csin%7B%5Cphi%7D%5E2%7D%7D%20%5Cmathrm%7Bd%7D%5Cphi%0A%5Ctag%7B8%7D"></span></p>
+<p>Where <img src="https://latex.codecogs.com/png.latex?k=%5Csin%7B%5Cfrac%7B%5Ctheta_0%7D%7B2%7D%7D">. For the period <img src="https://latex.codecogs.com/png.latex?T">, the process is <img src="https://latex.codecogs.com/png.latex?%5Ctheta_0%20%5Cto%200%20%5Cto%20-%5Ctheta_0%20%5Cto%200"> , so: <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0AT=4%5Csqrt%7B%5Cfrac%7Bl%7D%7Bg%7D%7D%5Cint_0%5E%7B%5Cpi/2%7D%5Cfrac%7B1%7D%7B%5Csqrt%7B1-k%5E2%5Csin%7B%5Cphi%7D%5E2%7D%7D%20%5Cmathrm%7Bd%7D%5Cphi%0A%5Ctag%7B9%7D"></span></p>
+<p>This is <a href="https://en.wikipedia.org/wiki/Elliptic_integral#Complete_elliptic_integral_of_the_first_kind">the Complete Elliptic Integral of the 1st Kind</a>, which can be written as: <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0AT=4%5Csqrt%7B%5Cfrac%7Bl%7D%7Bg%7D%7DK%5Cleft(%5Csin%7B%5Cleft(%20%5Cfrac%7B%5Ctheta_0%7D%7B2%7D%20%5Cright)%7D%5Cright)%0A%5Ctag%7B10%7D"></span></p>
+<p>Using the power series expansion of <img src="https://latex.codecogs.com/png.latex?K(k)"> , we obtain: <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0AT=2%5Cpi%5Csqrt%7B%5Cfrac%7Bl%7D%7Bg%7D%7D%5Csum_%7Bn=0%7D%5E%7B%5Cinfty%7D%5Cleft(%20%5Cfrac%7B(2n)!%7D%7B2%5E%7B2n%7D(n!)%5E2%7D%20%5Cright)%5Csin%5E%7B2n%7D%5Cleft(%20%5Cfrac%7B%5Ctheta_0%7D%7B2%7D%20%5Cright)%0A%5Ctag%7B11%7D"></span></p>
 
 
+</section>
+</section>
 
  ]]></description>
   <category>Misc</category>

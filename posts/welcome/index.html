@@ -376,8 +376,18 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#defination" id="toc-defination" class="nav-link active" data-scroll-target="#defination">Defination</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a>
+  <ul class="collapse">
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -387,17 +397,62 @@ window.Quarto = {
 
 
 
+<section id="defination" class="level2">
+<h2 class="anchored" data-anchor-id="defination">Defination</h2>
 <p>Here is the <strong>Euler-Lagrange’s equation</strong>:</p>
-<p><span class="math display">\[
+<p><span id="eq-label"><span class="math display">\[
 \frac{\mathrm{d}}{\mathrm{d}t}(\frac{\partial{\mathcal{L}}}{\partial{\dot{q_i}}})=\frac{\partial{\mathcal{L}}}{\partial{q_i}}
-\]</span></p>
+\tag{1}\]</span></span></p>
 <p>Where <span class="math inline">\(\mathcal{L}\)</span> is the <strong>Lagrangian</strong>, defined as <span class="math inline">\(T-V\)</span>.<br>
 In <strong>Mathematica</strong>, we can compute it directly by calling the <code>VariationalMethods</code> package:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode mathematica code-with-copy"><code class="sourceCode mathematica"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Needs</span><span class="op">[</span><span class="st">"VariationalMethods`"</span><span class="op">]</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">L</span> <span class="ex">=</span> <span class="fu">T</span> <span class="sc">-</span> <span class="fu">V</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>EulerEquations<span class="op">[</span><span class="fu">L</span><span class="op">,</span> <span class="op">{</span>q1<span class="op">[</span><span class="fu">t</span><span class="op">],</span> q2<span class="op">[</span><span class="fu">t</span><span class="op">]},</span> <span class="fu">t</span><span class="op">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="simple_pendulum.svg" class="img-fluid figure-img" style="width:20.0%"></p>
+<figcaption>Simple pendulum</figcaption>
+</figure>
+</div>
+<p>Choose the angular displacement <span class="math inline">\(\theta\)</span> (the angle between the pendulum and the vertical) as the generalized coordinate.</p>
+<p><span id="eq-label"><span class="math display">\[
+\mathcal{L} =\frac{1}{2}ml^2 \dot{\theta}^2+mgl\cos{\theta}
+\tag{2}\]</span></span></p>
+<p>Which set <span class="math inline">\(V=0\)</span> at the pivot point. Use Euler-Lagrange equation, we have: <span id="eq-label"><span class="math display">\[
+l\ddot{\theta}+g\sin{\theta}=0
+\tag{3}\]</span></span></p>
+<section id="solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution">Solution</h3>
+<p><span id="eq-label"><span class="math display">\[
+\dot{\theta}\ddot{\theta}+\frac{g}{l}\dot{\theta}\sin{\theta}=0 \\
+\tag{4}\]</span></span> <span id="eq-label"><span class="math display">\[
+\frac{\mathrm{d}}{\mathrm{d}t}(\frac{1}{2}\dot{\theta}^2-\frac{g}{l}\cos{\theta})=0
+\tag{5}\]</span></span></p>
+<p>Let <span class="math inline">\(\theta=\theta_0\)</span> when <span class="math inline">\(t=0\)</span> : <span id="eq-label"><span class="math display">\[
+\dot{\theta}^2=\frac{2g}{l}(\cos{\theta}-\cos{\theta_0})
+\tag{6}\]</span></span> <span id="eq-label"><span class="math display">\[
+t=\sqrt{\frac{l}{2g}} \int_0^{\theta} \frac{1}{\sqrt{\cos{\theta}-\cos{\theta_0}}}\mathrm{d}\theta
+\tag{7}\]</span></span></p>
+<p>Use double-angle formula <span class="math inline">\(\cos{2x}=1-2\sin{x}^2\)</span> and let <span class="math inline">\(\sin{\frac{\theta}{2}}=k\sin{\phi}\)</span> : <span id="eq-label"><span class="math display">\[
+t=\sqrt{\frac{l}{g}}\int_0^{\arcsin{\frac{1}{k}\sin{\frac{\theta}{2}}}}\frac{1}{\sqrt{1-k^2\sin{\phi}^2}} \mathrm{d}\phi
+\tag{8}\]</span></span></p>
+<p>Where <span class="math inline">\(k=\sin{\frac{\theta_0}{2}}\)</span>. For the period <span class="math inline">\(T\)</span>, the process is <span class="math inline">\(\theta_0 \to 0 \to -\theta_0 \to 0\)</span> , so: <span id="eq-label"><span class="math display">\[
+T=4\sqrt{\frac{l}{g}}\int_0^{\pi/2}\frac{1}{\sqrt{1-k^2\sin{\phi}^2}} \mathrm{d}\phi
+\tag{9}\]</span></span></p>
+<p>This is <a href="https://en.wikipedia.org/wiki/Elliptic_integral#Complete_elliptic_integral_of_the_first_kind">the Complete Elliptic Integral of the 1st Kind</a>, which can be written as: <span id="eq-label"><span class="math display">\[
+T=4\sqrt{\frac{l}{g}}K\left(\sin{\left( \frac{\theta_0}{2} \right)}\right)
+\tag{10}\]</span></span></p>
+<p>Using the power series expansion of <span class="math inline">\(K(k)\)</span> , we obtain: <span id="eq-label"><span class="math display">\[
+T=2\pi\sqrt{\frac{l}{g}}\sum_{n=0}^{\infty}\left( \frac{(2n)!}{2^{2n}(n!)^2} \right)\sin^{2n}\left( \frac{\theta_0}{2} \right)
+\tag{11}\]</span></span></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
