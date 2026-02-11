@@ -2,15 +2,15 @@
 title: "Credits"
 description: "Attribution for visual assets and resources used on this site."
 ---
-
+\
 To respect the work of creators and comply with licensing, all third-party images, icons, and code components used across this blog are listed below.
 
 ## Visual Assets
 
 | Preview | Description & Usage | Source & Author | License |
 |:---:|:---|:---|:---:|
-| ![](/assets/placeholder.png){width="100"} | **Default Thumbnail**<br>Placeholder for posts | Illustration by:[羽々斬](https://www.pixiv.net/users/2179695)/ Source: [Pixiv](https://www.pixiv.net/artworks/110011602#12)| Author's Standard Terms |
-| ![](/assets/profile.png){width="100"} | **Profile Picture**<br>Used in profile | Illustration by:[Daniil Komov](https://www.pexels.com/@dkomov/)/ Source: [Pexels](https://www.pexels.com/photo/close-up-shot-of-eurasian-blue-tit-on-tree-branch-10933924/)  | Pexels License |
+| ![](/assets/placeholder.png){width="100"} | **Default Thumbnail**<br>Placeholder for posts | Illustration by: [羽々斬](https://www.pixiv.net/users/2179695) / Source: [Pixiv](https://www.pixiv.net/artworks/110011602#12)| Author's Standard Terms |
+| ![](/assets/profile.png){width="100"} | **Profile Picture**<br>Used in profile | Illustration by: [Daniil Komov](https://www.pexels.com/@dkomov/) / Source: [Pexels](https://www.pexels.com/photo/close-up-shot-of-eurasian-blue-tit-on-tree-branch-10933924/)  | Pexels License |
 
 ## Technical Stack
 
