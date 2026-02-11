@@ -14,7 +14,7 @@
 <item>
   <title>Test post: Site design in progress</title>
   <dc:creator>Yijia Zhao</dc:creator>
-  <link>https://Yijia-phys.github.io/my-blog/posts/welcome/</link>
+  <link>https://Yijia-phys.github.io/my-blog/posts/1/</link>
   <description><![CDATA[ 
 
 
@@ -79,7 +79,7 @@ font-style: inherit;">]</span></span></code></pre></div></div>
 <h2 class="anchored" data-anchor-id="example">Example</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://Yijia-phys.github.io/my-blog/posts/welcome/simple_pendulum.svg" class="img-fluid figure-img" style="width:20.0%"></p>
+<p><img src="https://Yijia-phys.github.io/my-blog/posts/1/simple_pendulum.svg" class="img-fluid figure-img" style="width:20.0%"></p>
 <figcaption>Simple pendulum</figcaption>
 </figure>
 </div>
@@ -101,7 +101,7 @@ font-style: inherit;">]</span></span></code></pre></div></div>
 
  ]]></description>
   <category>Misc</category>
-  <guid>https://Yijia-phys.github.io/my-blog/posts/welcome/</guid>
+  <guid>https://Yijia-phys.github.io/my-blog/posts/1/</guid>
   <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
