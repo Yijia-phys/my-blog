@@ -16,5 +16,8 @@
   },
   "credits.qmd": {
     "credits.html": "b7b900d1"
+  },
+  "posts/1/index.qmd": {
+    "index.html": "7b07f3ea"
   }
 }

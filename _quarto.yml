@@ -7,12 +7,16 @@ website:
   title: "Yijia Zhao"
   navbar: 
     left:
-      - href: posts.qmd
+      - icon: file-post
+        href: posts.qmd
         text: Posts
-    right:
       - icon: info-circle
         href: credits.qmd
         aria-label: "Credits"
+  search:
+    location: navbar
+    type: overlay
+    copy-button: true
 format:
   html:
     theme:

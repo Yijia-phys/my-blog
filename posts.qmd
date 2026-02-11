@@ -22,6 +22,11 @@ include-in-header:
       object-fit: cover !important;
       width: 100% !important;
     }
+    .quarto-listing-container-default .listing-author, 
+    .quarto-listing-container-default .listing-date {
+      font-size: 0.9rem !important; 
+      line-height: 1.5 !important;
+    }
     </style>
 ---
 
