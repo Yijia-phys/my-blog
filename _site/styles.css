@@ -1,7 +1,5 @@
 
-/* ==========================
-   Variables & Theme (Light)
-   ========================== */
+/* Light Mode */
 :root {
   --primary: #5a67d8;
   --secondary: #718096;
@@ -11,9 +9,7 @@
   --border: #e2e8f0;
 }
 
-/* ==========================
-   Dark Theme Variables
-   ========================== */
+/* Dark Mode */
 body.quarto-dark {
   --primary: #667eea;
   --primary-dark: #5a67d8;
@@ -39,23 +35,20 @@ body.quarto-dark {
   --shadow: rgba(0, 0, 0, 0.3);
 }
 
-/* Smooth theme transition */
+/* Transition */
 body.quarto-dark {
   background-color: var(--background);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Smooth theme transition */
 [data-theme="dark"] body {
   background-color: var(--background);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ==========================
-   Base / Document
-   ========================== */
+/* Body */
 html {
   overflow-y: scroll;
 }
@@ -70,9 +63,7 @@ body.modal-open {
   padding-right: 0 !important;
 }
 
-/* ==========================
-   Navbar (grouped & consolidated)
-   ========================== */
+/* Navbar */
 .navbar {
   background-color: #5a67d8;
   min-height: 60px;
@@ -101,7 +92,6 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* nav link underline & hover effect */
 .navbar-nav .nav-link {
   position: relative;
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -130,40 +120,40 @@ body.modal-open {
   transition: all 0.2s ease-in-out;
 }
 
-/* toggles / icons in navbar */
+/* Icons */
 .navbar .quarto-navigation-tool,
 .navbar .quarto-search-toggle,
 .navbar .quarto-color-scheme-toggle {
-  color: white !important;
+  color: white;
 }
 .navbar .bi,
 .navbar svg {
-  fill: white !important;
-  color: white !important;
+  fill: white;
+  color: white;
 }
 
 #quarto-search .bi-search,
 .quarto-search-toggle .bi-search {
-  fill: white !important;
+  fill: white;
 }
 
 .quarto-search-pwa-close {
-  color: white !important;
+  color: white;
 }
 
 .navbar .quarto-color-scheme-toggle .bi,
 .navbar .quarto-color-scheme-toggle svg {
-  fill: white !important;
-  color: white !important;
+  fill: white;
+  color: white;
 }
 
 .quarto-color-scheme-toggle .bi::before {
-  display: none !important;
+  display: none;
 }
 
 .quarto-color-scheme-toggle .bi::after {
   display: inline-block;
-  font-family: 'bootstrap-icons' !important;
+  font-family: 'bootstrap-icons';
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -176,17 +166,16 @@ body.modal-open {
 }
 
 body.quarto-light .quarto-color-scheme-toggle .bi::after {
-  content: "\F497" !important;
-  color: #ffffff !important;
+  content: "\F497";
+  color: #ffffff;
 }
 
 body.quarto-dark .quarto-color-scheme-toggle .bi::after {
-  content: "\F5A2" !important;
-  color: #ffffff !important;
+  content: "\F5A2";
+  color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 202, 40, 0.5);
 }
 
-/* Dark-mode navbar shadow/border */
 [data-theme="dark"] .navbar {
   background-color: var(--background-secondary);
   border-bottom: 1px solid var(--border);
@@ -200,147 +189,137 @@ body.quarto-dark .quarto-color-scheme-toggle .bi::after {
   background-color: var(--background-tertiary);
 }
 
-/* navbar mobile adjustments are in responsive section */
-
-/* ==========================
-   Cards & Posts
-   ========================== */
-.quarto-post {
-  margin-bottom: 1em !important;
-  padding-top: 0 !important;
+/* Cards */
+.quarto-listing .quarto-post {
+  margin-bottom: 1em;
+  padding-top: 0;
 }
 
 .quarto-post .card {
-  border: none !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
-  transition: transform 0.3s ease !important;
-  border-radius: 12px !important;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease; 
+  border-radius: 12px;
 }
+
 .quarto-post .card:hover {
   transform: translateY(-5px);
 }
 
-.quarto-post .metadata {
-  width: 80px !important;
-  flex-basis: 80px !important;
+.quarto-listing-container-default .metadata {
+  width: 80px;
+  flex-basis: 80px;
 }
 
-.quarto-listing-container-default .listing-author,
-.quarto-listing-container-default .listing-date {
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  line-height: 1.2 !important;
-  font-family: sans-serif !important;
+.quarto-listing-container-default .quarto-post .listing-author,
+.quarto-listing-container-default .quarto-post .listing-date {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: sans-serif;
 }
 
 body.quarto-dark .quarto-listing-container-default .listing-author,
 body.quarto-dark .quarto-listing-container-default .listing-date {
-  -webkit-font-smoothing: auto !important;
-  -moz-osx-font-smoothing: auto !important;
-  color: #adb5bd !important;
+  color: #adb5bd;
 }
 
-/* ==========================
-   Math / KaTeX / MathJax
-   ========================== */
+/* Tex */
 .math.display {
-  background: rgba(90, 103, 216, 0.05) !important;
-  border-left: 4px solid #5a67d8 !important;
-  padding: 1rem 1rem !important;
-  margin: 1.2rem 0 !important;
+  background: rgba(90, 103, 216, 0.05);
+  border-left: 4px solid #5a67d8;
+  padding: 1rem 1rem;
+  margin: 1.2rem 0;
   border-radius: 4px;
 
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.mjx-chtml.MJXc-display { margin: 0 !important; }
+.mjx-chtml.MJXc-display { margin: 0; }
 
 mjx-container[display="true"] {
-  width: 100% !important;
-  margin: 1em 0 !important;
+  width: 100%;
+  margin: 1em 0;
   text-align: center;
 }
 
-/* ==========================
-   Code Blocks / Copy Button
-   ========================== */
+/* Code Blocks */
 pre.sourceCode, .cell-output pre {
-  background: rgba(16, 185, 129, 0.05) !important;
-  border-left: 4px solid #10b981 !important;
-  padding: 1.5rem !important;
-  margin: 0rem 0 !important;
-  border-radius: 4px !important;
+  background: rgba(16, 185, 129, 0.05);
+  border-left: 4px solid #10b981;
+  padding: 1.5rem;
+  margin: 0rem 0;
+  border-radius: 4px;
 
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !important;
-  font-size: 0.9em !important;
-  line-height: 1.5 !important;
-  overflow-x: auto !important;
-  white-space: pre !important;
-  box-sizing: border-box !important;
-  width: 100% !important;
+  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+  box-sizing: border-box;
+  width: 100%;
   position: relative;
 }
 
-.code-with-title { margin-top: 1.5rem !important; }
+.code-with-title { margin-top: 1.5rem; }
 .code-title {
-  background: #10b981 !important;
-  color: white !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 4px 4px 0 0 !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  font-size: 0.85em !important;
-  font-weight: 600 !important;
+  background: #10b981;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px 4px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.85em;
+  font-weight: 600;
 }
 .code-title + pre {
-  border-radius: 0 0 4px 4px !important;
-  border-top: none !important;
-  margin-top: 0 !important;
+  border-radius: 0 0 4px 4px;
+  border-top: none;
+  margin-top: 0;
 }
 
 pre.sourceCode button.code-copy,
 .cell-output pre button.code-copy,
 div.sourceCode button.code-copy {
-  position: absolute !important;
-  top: 0.5rem !important;
-  right: 0.5rem !important;
-  background: #f8f9fa !important;
-  color: #495057 !important;
-  border: 1px solid #dee2e6 !important;
-  border-radius: 3px !important;
-  padding: 0.25rem 0.5rem !important;
-  font-size: 0.75em !important;
-  cursor: pointer !important;
-  transition: all 0.2s ease !important;
-  z-index: 10 !important;
-  opacity: 0.8 !important;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  opacity: 0.8;
 }
 pre.sourceCode button.code-copy:hover,
 .cell-output pre button.code-copy:hover,
 div.sourceCode button.code-copy:hover {
-  background: #e9ecef !important;
-  border-color: #10b981 !important;
-  opacity: 1 !important;
+  background: #e9ecef;
+  border-color: #10b981;
+  opacity: 1;
 }
 
 [data-theme="dark"] pre.sourceCode button.code-copy,
 [data-theme="dark"] .cell-output pre button.code-copy,
 [data-theme="dark"] div.sourceCode button.code-copy {
-  background: #2d3748 !important;
-  color: #e2e8f0 !important;
-  border: 1px solid #4a5568 !important;
+  background: #2d3748;
+  color: #e2e8f0;
+  border: 1px solid #4a5568;
 }
 [data-theme="dark"] pre.sourceCode button.code-copy:hover,
 [data-theme="dark"] .cell-output pre button.code-copy:hover,
 [data-theme="dark"] div.sourceCode button.code-copy:hover {
-  background: #4a5568 !important;
-  border-color: #10b981 !important;
+  background: #4a5568;
+  border-color: #10b981;
 }
 
-/* Dark-mode code/table styling */
 [data-theme="dark"] pre,
 [data-theme="dark"] code {
   background-color: var(--code-bg);
@@ -361,73 +340,67 @@ div.sourceCode button.code-copy:hover {
 
 body.quarto-dark img[src$=".svg"] { filter: invert(1) hue-rotate(180deg) brightness(1.5); }
 
-/* ==========================
-   Images & Misc
-   ========================== */
+/* Image */
 [data-theme="dark"] img { opacity: 0.9; filter: brightness(0.9) contrast(1.1); }
 
-/* ==========================
-   Responsive / Mobile
-   ========================== */
+/* Mobile */
 @media (max-width: 768px) {
-  /* navbar spacing */
-  .navbar { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+  /* Navbar */
+  .navbar { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   }
 
   .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.3) !important;
-    background-color: #5a67d8 !important;
-    border-radius: 8px !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: #5a67d8;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     -webkit-tap-highlight-color: transparent;
   }
 
-  .navbar-toggler:focus { box-shadow: 0 0 0 0.25rem rgba(255,255,255,0.4) !important; outline: none !important; border-radius: 8px !important; }
-  .navbar-toggler:-moz-focusring { outline: none !important; }
+  .navbar-toggler:focus { box-shadow: 0 0 0 0.25rem rgba(255,255,255,0.4); outline: none; border-radius: 8px; }
+  .navbar-toggler:-moz-focusring { outline: none; }
 
   .navbar-collapse { background-color: #5a67d8; padding: 10px; border-radius: 8px; margin-top: 10px; max-width: 160px; margin-right: auto; }
 
-  .navbar-nav .nav-item { border-bottom: 1px solid rgba(255,255,255,0.3) !important; }
-  .navbar-nav .nav-item:last-child { border-bottom: none !important; }
+  .navbar-nav .nav-item { border-bottom: 1px solid rgba(255,255,255,0.3); }
+  .navbar-nav .nav-item:last-child { border-bottom: none; }
 
   /* responsive post thumbnails */
   .quarto-listing-cols > div .listing-item img,
   .quarto-post .thumbnail img,
   .listing-item .thumbnail img {
     aspect-ratio: 9 / 4 !important;
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    object-position: center !important;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
     border-radius: 8px;
     margin-bottom: 10px;
   }
 
-  /* math on mobile: allow horizontal scrolling */
+  /* Tex */
   .math.display,
   .katex-display,
   .mjx-container {
-    text-align: left !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
+    text-align: left;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding: 10px 0;
     display: block;
     width: 100%;
   }
   .math.display { padding-left: 10px !important; }
 
-  /* code blocks: force wrapping/scrolling */
-  pre.sourceCode, code.sourceCode { white-space: pre !important; overflow-x: auto !important; word-break: normal !important; display: block; width: 100%; }
+  /* Code Block */
+  pre.sourceCode, code.sourceCode { white-space: pre; overflow-x: auto; word-break: normal; display: block; width: 100%; }
 
   pre.sourceCode::-webkit-scrollbar { height: 4px; }
   pre.sourceCode::-webkit-scrollbar-thumb { background: rgba(90, 103, 216, 0.5); border-radius: 10px; }
 
-  /* tables: make scrollable on small screens */
-  .quarto-container table, .table { display: block !important; width: 100% !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; border-collapse: collapse; }
-  .quarto-container table th, .quarto-container table td { white-space: nowrap !important; padding: 8px 12px !important; font-size: 0.85rem; }
+  /* Table */
+  .quarto-container table, .table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-collapse: collapse; }
+  .quarto-container table th, .quarto-container table td { white-space: nowrap; padding: 8px 12px; font-size: 0.85rem; }
 }
-
-/* End of file */
