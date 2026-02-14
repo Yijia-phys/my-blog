@@ -2,9 +2,9 @@ project:
   type: website
   resources: 
     - assets/
-
 website:
   title: "Yijia Zhao"
+  site-url: "https://yijia-phys.github.io/my-blog"
   navbar: 
     left:
       - icon: file-post

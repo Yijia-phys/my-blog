@@ -368,7 +368,6 @@ body.quarto-dark img[src$=".svg"] { filter: invert(1) hue-rotate(180deg) brightn
   .navbar-nav .nav-item { border-bottom: 1px solid rgba(255,255,255,0.3); }
   .navbar-nav .nav-item:last-child { border-bottom: none; }
 
-  /* responsive post thumbnails */
   .quarto-listing-cols > div .listing-item img,
   .quarto-post .thumbnail img,
   .listing-item .thumbnail img {
