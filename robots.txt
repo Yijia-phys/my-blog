@@ -1,1 +1,1 @@
-Sitemap: https://Yijia-phys.github.io/my-blog/sitemap.xml
+Sitemap: https://yijia-phys.github.io/my-blog/sitemap.xml
