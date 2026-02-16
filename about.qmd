@@ -2,7 +2,7 @@
 title: "Yijia Zhao"
 image: assets/profile.png
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: github
       text: Github
@@ -12,7 +12,18 @@ about:
     - icon: envelope
       text: Mail
       href: mailto:y.zhao.phys@gmail.com
+format:
+  html:
+    toc: false
 
 ---
 
-A Chinese high school student, passionate about physics and philosophy.
+:::{#hero-heading}
+
+A high school student comes from Shenyang, China.
+
+## Education
+
+## Experience
+
+:::
