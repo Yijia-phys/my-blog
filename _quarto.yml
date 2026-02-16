@@ -10,9 +10,9 @@ website:
       - icon: file-post
         href: posts.qmd
         text: Posts
-      - icon: info-circle
-        href: credits.qmd
-        aria-label: "Credits"
+      - icon: file-person
+        href: about.qmd
+        text: About
   search:
     location: navbar
     type: overlay

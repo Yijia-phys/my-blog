@@ -1,18 +1,50 @@
 ---
-title: "Yijia Zhao"
-image: assets/profile.png
-about:
-  template: jolla
-  links:
-    - icon: github
-      text: Github
-      href: https://github.com/Yijia-phys
-    - text: "{{< fa brands orcid >}} ORCID"
-      href: https://orcid.org/0009-0004-5515-2981
-    - icon: envelope
-      text: Mail
-      href: mailto:y.zhao.phys@gmail.com
+title: "Yijia's Blog"
+subtitle: "The first principle is that you must not fool yourself and you are the person who is easiest to fool. — *Richard Feynman*"
+page-layout: full
+section-divs: false
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  grid-columns: 3
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  page-size: 6
+  fields: [image, date, title, description, reading-time]
+format:
+  html:
+    toc: false
+---
+
+::: {.column-page}
+
+## Welcome {.mt-4}
+
+Welcome to my blog, where I share my thoughts and insights on **physics**, **mathematics**, and **philosophy**. \
+You're welcome to subscribe to my posts via [RSS](https://yijia-liu.github.io/my-blog/_site/posts.xml), and feel free to reach out via [email](mailto:y.zhao.phys@gmail.com) to discuss ideas or share your feedback.\
+Detailed copyright information can be found in the [credits](credits.qmd) page.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### **Experience Sharing**
+Personal stories, reflections, and advice from my path through physics, math, and philosophy.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### **Personal Reflections**
+Open-ended explorations of questions that arise during my studies—sometimes with answers, sometimes without.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### **Projects & Resources**
+Code and project releases from my own work or collaborations.
+:::
 
 ---
 
-A Chinese high school student, passionate about physics and philosophy.
+## Recent Posts {.mt-5}
+
+:::

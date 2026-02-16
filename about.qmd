@@ -1,0 +1,18 @@
+---
+title: "Yijia Zhao"
+image: assets/profile.png
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/Yijia-phys
+    - text: "{{< fa brands orcid >}} ORCID"
+      href: https://orcid.org/0009-0004-5515-2981
+    - icon: envelope
+      text: Mail
+      href: mailto:y.zhao.phys@gmail.com
+
+---
+
+A Chinese high school student, passionate about physics and philosophy.

@@ -1,8 +1,6 @@
 ---
 title: "Credits"
-description: "Attribution for visual assets and resources used on this site."
 ---
-\
 To respect the work of creators and comply with licensing, all third-party images, icons, and code components used across this blog are listed below.
 
 ## Visual Assets
