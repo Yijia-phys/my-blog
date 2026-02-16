@@ -18,12 +18,43 @@ format:
     toc: false
 ---
 
+<style>
+.g-col-12, .g-col-md-4 {
+    border: 1px solid var(--quarto-border-color, rgba(0,0,0,0.1));
+    border-radius: 12px;
+    padding: 20px;
+
+    padding-top: 15px; 
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    background: var(--quarto-body-bg, white);
+    color: var(--quarto-body-color, inherit);
+}
+
+.g-col-12 h3, .g-col-md-4 h3,
+.g-col-12 .h3, .g-col-md-4 .h3 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.g-col-12:hover, .g-col-md-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+[data-quarto-color-scheme="dark"] .g-col-12,
+[data-quarto-color-scheme="dark"] .g-col-md-4 {
+    border-color: rgba(72, 187, 120, 0.2);
+}
+
+</style>
+
 ::: {.column-page}
 
 ## Welcome {.mt-4}
 
 Welcome to my blog, where I share my thoughts and insights on **physics**, **mathematics**, and **philosophy**. \
-You're welcome to subscribe to my posts via [RSS](_site/posts.xml), and feel free to reach out via [email](mailto:y.zhao.phys@gmail.com) to discuss ideas or share your feedback.\
+You're welcome to subscribe to my posts via [RSS](posts.xml), and feel free to reach out via [email](mailto:y.zhao.phys@gmail.com) to discuss ideas or share your feedback.\
 Detailed copyright information can be found in the [credits](credits.qmd) page.
 
 ::: {.grid}

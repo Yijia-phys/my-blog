@@ -362,10 +362,40 @@ window.Quarto = {
 </header>
 
 
+<style>
+.g-col-12, .g-col-md-4 {
+    border: 1px solid var(--quarto-border-color, rgba(0,0,0,0.1));
+    border-radius: 12px;
+    padding: 20px;
+
+    padding-top: 15px; 
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    background: var(--quarto-body-bg, white);
+    color: var(--quarto-body-color, inherit);
+}
+
+.g-col-12 h3, .g-col-md-4 h3,
+.g-col-12 .h3, .g-col-md-4 .h3 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.g-col-12:hover, .g-col-md-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+[data-quarto-color-scheme="dark"] .g-col-12,
+[data-quarto-color-scheme="dark"] .g-col-md-4 {
+    border-color: rgba(72, 187, 120, 0.2);
+}
+
+</style>
 <section id="welcome" class="mt-4 column-page">
 <h2 class="mt-4 anchored">Welcome</h2>
 <p>Welcome to my blog, where I share my thoughts and insights on <strong>physics</strong>, <strong>mathematics</strong>, and <strong>philosophy</strong>.<br>
-You’re welcome to subscribe to my posts via <a href="_site/posts.xml">RSS</a>, and feel free to reach out via <a href="mailto:y.zhao.phys@gmail.com">email</a> to discuss ideas or share your feedback.<br>
+You’re welcome to subscribe to my posts via <a href="posts.xml">RSS</a>, and feel free to reach out via <a href="mailto:y.zhao.phys@gmail.com">email</a> to discuss ideas or share your feedback.<br>
 Detailed copyright information can be found in the <a href="./credits.html">credits</a> page.</p>
 <div class="grid">
 <section id="experience-sharing" class="g-col-12 g-col-md-4">
@@ -390,7 +420,27 @@ Detailed copyright information can be found in the <a href="./credits.html">cred
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TWlzYw==" data-listing-date-sort="1770393600000" data-listing-file-modified-sort="1770838387691" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
+<div class="g-col-1" data-index="0" data-categories="TWlzYw==" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1771250380779" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="338">
+<a href="./posts/2/2.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Building process of this blog
+</h5>
+<div class="listing-reading-time card-text text-muted">2 min</div>
+<div class="card-text listing-description delink">
+This blog is built by Quarto, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode). &nbsp; I choose <strong>Quarto</strong> for its…<span class="math inline"></span><span class="math inline"></span><span class="math inline"></span><span class="math inline"></span><span class="math inline"></span><strong></strong><em></em><br><br><strong></strong><br><br><code></code><code></code><code></code>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 16, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="TWlzYw==" data-listing-date-sort="1770393600000" data-listing-file-modified-sort="1770838387691" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
 <a href="./posts/1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\1\simple_pendulum.svg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
