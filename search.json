@@ -4,7 +4,7 @@
     "href": "posts.html",
     "title": "Posts",
     "section": "",
-    "text": "Test post: Site design in progress\n\n\n\nMisc\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\nYijia Zhao\n\n\n\n\n\nNo matching items"
+    "text": "Building process of this blog\n\n\n\nMisc\n\n\n\n\n\n\n\n\n\nFeb 16, 2026\n\n\nYijia Zhao\n\n\n\n\n\n\n\n\n\n\n\n\nTest post: Site design in progress\n\n\n\nMisc\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\nYijia Zhao\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "credits.html",
@@ -28,13 +28,6 @@
     "text": "Technical Stack\n\n\nLicensing\nUnless otherwise noted, the original educational content (lecture notes and posts) on this site is licensed under CC BY-NC 4.0."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yijia’s Blog",
-    "section": "",
-    "text": "Welcome\nWelcome to my blog, where I share my thoughts and insights on physics, mathematics, and philosophy.\nYou’re welcome to subscribe to my posts via RSS, and feel free to reach out via email to discuss ideas or share your feedback.\nDetailed copyright information can be found in the credits page.\n\n\nExperience Sharing\nPersonal stories, reflections, and advice from my path through physics, math, and philosophy.\n\n\nPersonal Reflections\nOpen-ended explorations of questions that arise during my studies—sometimes with answers, sometimes without.\n\n\nProjects & Resources\nCode and project releases from my own work or collaborations.\n\n\nRecent Posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest post: Site design in progress\n\n1 min\n\n\n\n\n\nFeb 7, 2026\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/1/index.html",
     "href": "posts/1/index.html",
     "title": "Test post: Site design in progress",
@@ -54,6 +47,27 @@
     "title": "Test post: Site design in progress",
     "section": "Example",
     "text": "Example\n\n\n\nSimple pendulum\n\n\nChoose the angular displacement \\(\\theta\\) (the angle between the pendulum and the vertical) as the generalized coordinate.\n\\[\n\\mathcal{L} =\\frac{1}{2}ml^2 \\dot{\\theta}^2+mgl\\cos{\\theta}\n\\tag{2}\\]\nWhich set \\(V=0\\) at the pivot point. Use Euler-Lagrange equation, we have: \\[\nl\\ddot{\\theta}+g\\sin{\\theta}=0\n\\tag{3}\\]\n\nSolution\n\\[\n\\dot{\\theta}\\ddot{\\theta}+\\frac{g}{l}\\dot{\\theta}\\sin{\\theta}=0 \\\\\n\\tag{4}\\] \\[\n\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\frac{1}{2}\\dot{\\theta}^2-\\frac{g}{l}\\cos{\\theta})=0\n\\tag{5}\\]\nLet \\(\\theta=\\theta_0\\) when \\(t=0\\) : \\[\n\\dot{\\theta}^2=\\frac{2g}{l}(\\cos{\\theta}-\\cos{\\theta_0})\n\\tag{6}\\] \\[\nt=\\sqrt{\\frac{l}{2g}} \\int_0^{\\theta} \\frac{1}{\\sqrt{\\cos{\\theta}-\\cos{\\theta_0}}}\\mathrm{d}\\theta\n\\tag{7}\\]\nUse double-angle formula \\(\\cos{2x}=1-2\\sin{x}^2\\) and let \\(\\sin{\\frac{\\theta}{2}}=k\\sin{\\phi}\\) : \\[\nt=\\sqrt{\\frac{l}{g}}\\int_0^{\\arcsin{\\frac{1}{k}\\sin{\\frac{\\theta}{2}}}}\\frac{1}{\\sqrt{1-k^2\\sin{\\phi}^2}} \\mathrm{d}\\phi\n\\tag{8}\\]\nWhere \\(k=\\sin{\\frac{\\theta_0}{2}}\\). For the period \\(T\\), the process is \\(\\theta_0 \\to 0 \\to -\\theta_0 \\to 0\\) , so: \\[\nT=4\\sqrt{\\frac{l}{g}}\\int_0^{\\pi/2}\\frac{1}{\\sqrt{1-k^2\\sin{\\phi}^2}} \\mathrm{d}\\phi\n\\tag{9}\\]\nThis is the Complete Elliptic Integral of the first Kind, which can be written as: \\[\nT=4\\sqrt{\\frac{l}{g}}K\\left(\\sin{\\left( \\frac{\\theta_0}{2} \\right)}\\right)\n\\tag{10}\\]\nUsing the power series expansion of \\(K(k)\\) , we obtain: \\[\nT=2\\pi\\sqrt{\\frac{l}{g}}\\sum_{n=0}^{\\infty}\\left( \\frac{(2n)!}{2^{2n}(n!)} \\right)^2 \\sin^{2n}\\left( \\frac{\\theta_0}{2} \\right)\n\\tag{11}\\]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yijia’s Blog",
+    "section": "",
+    "text": "Welcome\nWelcome to my blog, where I share my thoughts and insights on physics, mathematics, and philosophy.\nYou’re welcome to subscribe to my posts via RSS, and feel free to reach out via email to discuss ideas or share your feedback.\nDetailed copyright information can be found in the credits page.\n\n\nExperience Sharing\nPersonal stories, reflections, and advice from my path through physics, math, and philosophy.\n\n\nPersonal Reflections\nOpen-ended explorations of questions that arise during my studies—sometimes with answers, sometimes without.\n\n\nProjects & Resources\nCode and project releases from my own work or collaborations.\n\n\nRecent Posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding process of this blog\n\n2 min\n\n\n\n\n\nFeb 16, 2026\n\n\n\n\n\n\n\n\n\n\n\nTest post: Site design in progress\n\n1 min\n\n\n\n\n\nFeb 7, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2/2.html",
+    "href": "posts/2/2.html",
+    "title": "Building process of this blog",
+    "section": "",
+    "text": "This blog is built by Quarto, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode).   I choose Quarto for its support for \\(Tex\\) formulas. My first choice was Hexo. However, after spending an entire afternoon trying to configure it to support \\(Tex\\) formulas–experimenting with renderers for \\(MathJax\\), which failed to render formulas entirely, and \\(KaTex\\), which produced ghosting arrtifacts and displayed raw \\(Tex\\) code on the page–I ultimately decided to switch to Quarto on 7th Feb, 2026.\n\nThe source code of this blog is available on GitHub. It was not my firstr time using git–I had previouly used it to upload my Obsidian vault to Github. But back then, I simply followed a tutorial posts machanically to set it up, and through an Obsidian plugin, I could have it automatically sync when closing Obsidian or after a certain time interval. I did not actually understand what those commands meant.\n\nDuring the process of building this blog, I began to truly understand the meaning of Git commands, such as git commit and git push. More interestingly, following some advice, I wrote a simple .ps1 script:\nquarto render\ngit add .\ngit commit -m \"Update blog: $(Get-Date -Format 'yyyy-MM-dd HH:mm')\"\ngit push origin main\nWhile I have observed that many seasoned GitHub users opt for brief descriptive commit messages rather than including dates, I do not yet find this practice necessary for my own workflow. Firstly, the volume of my contributions remains modest, allowing me to roughly recall the content of each commit. More fundamentally, I have yet to encounter a scenario that would require me to revert to a previous state.\n\nBefore building this website, I had almost no knowledge of CSS. My style.css file is probably full of messy, non-standard code. Since a large part of it was generated by AI, I don’t even have the ability to maintain it properly. Fortunately, at least for now, it seems to work just as I imagined. I hope to fill this knowledge gap in the days to come."
+  },
+  {
+    "objectID": "posts/2/2.html#technical-details",
+    "href": "posts/2/2.html#technical-details",
+    "title": "Building process of this blog",
+    "section": "",
+    "text": "This blog is built by Quarto, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode).   I choose Quarto for its support for \\(Tex\\) formulas. My first choice was Hexo. However, after spending an entire afternoon trying to configure it to support \\(Tex\\) formulas–experimenting with renderers for \\(MathJax\\), which failed to render formulas entirely, and \\(KaTex\\), which produced ghosting arrtifacts and displayed raw \\(Tex\\) code on the page–I ultimately decided to switch to Quarto on 7th Feb, 2026.\n\nThe source code of this blog is available on GitHub. It was not my firstr time using git–I had previouly used it to upload my Obsidian vault to Github. But back then, I simply followed a tutorial posts machanically to set it up, and through an Obsidian plugin, I could have it automatically sync when closing Obsidian or after a certain time interval. I did not actually understand what those commands meant.\n\nDuring the process of building this blog, I began to truly understand the meaning of Git commands, such as git commit and git push. More interestingly, following some advice, I wrote a simple .ps1 script:\nquarto render\ngit add .\ngit commit -m \"Update blog: $(Get-Date -Format 'yyyy-MM-dd HH:mm')\"\ngit push origin main\nWhile I have observed that many seasoned GitHub users opt for brief descriptive commit messages rather than including dates, I do not yet find this practice necessary for my own workflow. Firstly, the volume of my contributions remains modest, allowing me to roughly recall the content of each commit. More fundamentally, I have yet to encounter a scenario that would require me to revert to a previous state.\n\nBefore building this website, I had almost no knowledge of CSS. My style.css file is probably full of messy, non-standard code. Since a large part of it was generated by AI, I don’t even have the ability to maintain it properly. Fortunately, at least for now, it seems to work just as I imagined. I hope to fill this knowledge gap in the days to come."
   },
   {
     "objectID": "about.html",

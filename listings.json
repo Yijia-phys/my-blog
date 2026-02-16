@@ -2,12 +2,14 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/2/2.html",
       "/posts/1/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2/2.html",
       "/posts/1/index.html"
     ]
   }

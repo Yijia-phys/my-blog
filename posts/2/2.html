@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Yijia Zhao">
+<meta name="dcterms.date" content="2026-02-16">
 
-<title>Yijia’s Blog – Yijia Zhao</title>
+<title>Building process of this blog – Yijia Zhao</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,33 +22,66 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-30c9ffef5937f268bca92abf36cd19d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-776d4fc2eb00dd76daa9fce8b42b33ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-30c9ffef5937f268bca92abf36cd19d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-30c9ffef5937f268bca92abf36cd19d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-776d4fc2eb00dd76daa9fce8b42b33ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-30c9ffef5937f268bca92abf36cd19d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -73,35 +108,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -133,7 +139,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -301,11 +307,11 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Yijia Zhao</span>
     </a>
   </div>
@@ -316,12 +322,12 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> <i class="bi bi-file-post" role="img">
+    <a class="nav-link" href="../../posts.html"> <i class="bi bi-file-post" role="img">
 </i> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> <i class="bi bi-file-person" role="img">
+    <a class="nav-link" href="../../about.html"> <i class="bi bi-file-person" role="img">
 </i> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -334,135 +340,76 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Building process of this blog</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Misc</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Yijia Zhao </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 16, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#technical-details" id="toc-technical-details" class="nav-link active" data-scroll-target="#technical-details">Technical Details</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Yijia’s Blog</h1>
-<p class="subtitle lead">The first principle is that you must not fool yourself and you are the person who is easiest to fool. — <em>Richard Feynman</em></p>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta column-body">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
 
-
-<style>
-.g-col-12, .g-col-md-4 {
-    border: 1px solid var(--quarto-border-color, rgba(0,0,0,0.1));
-    border-radius: 12px;
-    padding: 20px;
-
-    padding-top: 15px; 
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-    background: var(--quarto-body-bg, white);
-    color: var(--quarto-body-color, inherit);
-}
-
-.g-col-12 h3, .g-col-md-4 h3,
-.g-col-12 .h3, .g-col-md-4 .h3 {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.g-col-12:hover, .g-col-md-4:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-[data-quarto-color-scheme="dark"] .g-col-12,
-[data-quarto-color-scheme="dark"] .g-col-md-4 {
-    border-color: rgba(72, 187, 120, 0.2);
-}
-
-</style>
-<section id="welcome" class="mt-4 column-page">
-<h2 class="mt-4 anchored">Welcome</h2>
-<p>Welcome to my blog, where I share my thoughts and insights on <strong>physics</strong>, <strong>mathematics</strong>, and <strong>philosophy</strong>.<br>
-You’re welcome to subscribe to my posts via <a href="posts.xml">RSS</a>, and feel free to reach out via <a href="mailto:y.zhao.phys@gmail.com">email</a> to discuss ideas or share your feedback.<br>
-Detailed copyright information can be found in the <a href="./credits.html">credits</a> page.</p>
-<div class="grid">
-<section id="experience-sharing" class="g-col-12 g-col-md-4">
-<h3 class="anchored"><strong>Experience Sharing</strong></h3>
-<p>Personal stories, reflections, and advice from my path through physics, math, and philosophy.</p>
-</section>
-<section id="personal-reflections" class="g-col-12 g-col-md-4">
-<h3 class="anchored"><strong>Personal Reflections</strong></h3>
-<p>Open-ended explorations of questions that arise during my studies—sometimes with answers, sometimes without.</p>
-</section>
-<section id="projects-resources" class="g-col-12 g-col-md-4">
-<h3 class="anchored"><strong>Projects &amp; Resources</strong></h3>
-<p>Code and project releases from my own work or collaborations.</p>
-</section>
-<hr>
-<h2 class="mt-5 anchored" id="recent-posts">Recent Posts</h2>
-</div>
-
+<section id="technical-details" class="level2">
+<h2 class="anchored" data-anchor-id="technical-details">Technical Details</h2>
+<p>This blog is built by <a href="https://quarto.org">Quarto</a>, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode). &nbsp; I choose <strong>Quarto</strong> for its support for <span class="math inline">\(Tex\)</span> formulas. My first choice was <a href="https://hexo.io">Hexo</a>. However, after spending an entire afternoon trying to configure it to support <span class="math inline">\(Tex\)</span> formulas–experimenting with renderers for <span class="math inline">\(MathJax\)</span>, which failed to render formulas entirely, and <span class="math inline">\(KaTex\)</span>, which produced ghosting arrtifacts and displayed raw <span class="math inline">\(Tex\)</span> code on the page–I ultimately decided to switch to <strong>Quarto</strong> on <em>7th Feb, 2026</em>.<br>
+<br>
+The source code of this blog is available on <a href="https://github.com/Yijia-phys/my-blog">GitHub</a>. It was not my firstr time using <strong>git</strong>–I had previouly used it to upload my Obsidian vault to Github. But back then, I simply followed a tutorial posts machanically to set it up, and through an Obsidian plugin, I could have it automatically sync when closing Obsidian or after a certain time interval. I did not actually understand what those commands meant.<br>
+<br>
+During the process of building this blog, I began to truly understand the meaning of Git commands, such as <code>git commit</code> and <code>git push</code>. More interestingly, following some advice, I wrote a simple <code>.ps1</code> script:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>quarto render</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">"Update blog: </span><span class="op">$(</span><span class="fu">Get-Date</span> <span class="op">-</span>Format <span class="st">'yyyy-MM-dd HH:mm'</span><span class="op">)</span><span class="st">"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>git push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>While I have observed that many seasoned GitHub users opt for brief descriptive commit messages rather than including dates, I do not yet find this practice necessary for my own workflow. Firstly, the volume of my contributions remains modest, allowing me to roughly recall the content of each commit. More fundamentally, I have yet to encounter a scenario that would require me to revert to a previous state.<br>
+<br>
+Before building this website, I had almost no knowledge of <code>CSS</code>. My <code>style.css</code> file is probably full of messy, non-standard code. Since a large part of it was generated by AI, I don’t even have the ability to maintain it properly. Fortunately, at least for now, it seems to work just as I imagined. I hope to fill this knowledge gap in the days to come.</p>
 
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TWlzYw==" data-listing-date-sort="1771200000000" data-listing-file-modified-sort="1771250406266" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="338">
-<a href="./posts/2/2.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Building process of this blog
-</h5>
-<div class="listing-reading-time card-text text-muted">2 min</div>
-<div class="card-text listing-description delink">
-This blog is built by Quarto, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode). &nbsp; I choose <strong>Quarto</strong> for its…<span class="math inline"></span><span class="math inline"></span><span class="math inline"></span><span class="math inline"></span><span class="math inline"></span><strong></strong><em></em><br><br><strong></strong><br><br><code></code><code></code><code></code>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Feb 16, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="TWlzYw==" data-listing-date-sort="1770422400000" data-listing-file-modified-sort="1771250406265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
-<a href="./posts/1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/1/simple_pendulum.svg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Test post: Site design in progress
-</h5>
-<div class="listing-reading-time card-text text-muted">1 min</div>
-<div class="card-text listing-description delink">
-Here is the <strong>Euler-Lagrange’s equation</strong>:
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Feb 7, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
