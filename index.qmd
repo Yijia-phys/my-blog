@@ -12,7 +12,7 @@ listing:
   sort-ui: false
   filter-ui: false
   page-size: 6
-  fields: [image, date, title, description, reading-time]
+  fields: [image, date, title, description, categories, author]
 format:
   html:
     toc: false
