@@ -11,7 +11,7 @@ about:
       href: https://orcid.org/0009-0004-5515-2981
     - icon: envelope
       text: Mail
-      href: mailto:y.zhao.phys@gmail.com
+      href: mailto:echo@yijialog.org
 format:
   html:
     toc: false
@@ -23,7 +23,7 @@ format:
 A high school student comes from Shenyang, China.
 
 ## Education
-
+(none)
 ## Experience
-
+(none)
 :::

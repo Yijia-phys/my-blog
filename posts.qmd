@@ -1,5 +1,6 @@
 ---
 title: "Posts"
+subtitle: '<i class="bi bi-rss-fill" style="color: #ee802f;"></i> [RSS](posts.xml)'
 listing:
   contents: posts
   feed: true
