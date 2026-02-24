@@ -17,6 +17,10 @@ website:
     location: navbar
     type: overlay
     copy-button: true
+  page-footer:
+    right:
+      - icon: c-circle
+        href: credits.qmd
 format:
   html:
     theme:
