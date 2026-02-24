@@ -120,6 +120,27 @@ body.modal-open {
   transition: all 0.2s ease-in-out;
 }
 
+/* Footer */
+.nav-footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 1.0rem 0;
+  border-top: none;
+}
+
+.nav-footer a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-footer i, 
+.nav-footer .bi {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 /* Icons */
 .navbar .quarto-navigation-tool,
 .navbar .quarto-search-toggle,
