@@ -4,7 +4,8 @@ project:
     - assets/
 website:
   title: "Yijia Zhao"
-  site-url: "https://yijia-phys.github.io/my-blog"
+  favicon: assets/favicon.svg
+  site-url: "https://blog.yijialog.org/"
   navbar: 
     left:
       - icon: file-post
@@ -18,9 +19,7 @@ website:
     type: overlay
     copy-button: true
   page-footer:
-    right:
-      - icon: c-circle
-        href: credits.qmd
+    center: "[Copyright](credits.qmd) © 2026 Yijia Zhao | Built with [Quarto](https://quarto.org/)"
 format:
   html:
     theme:

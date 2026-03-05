@@ -22,3 +22,5 @@ Thumbs.db
 .env
 
 deploy.ps1
+
+CNAME

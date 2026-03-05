@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -363,39 +364,55 @@ window.Quarto = {
 
 
 <style>
-.g-col-12, .g-col-md-4 {
-    border: 1px solid var(--quarto-border-color, rgba(0,0,0,0.1));
-    border-radius: 12px;
-    padding: 20px;
 
-    padding-top: 15px; 
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-    background: var(--quarto-body-bg, white);
-    color: var(--quarto-body-color, inherit);
+.column-page,
+#listing-listing,
+.quarto-listing {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.column-page hr {
+  margin-left: calc(-1.5rem);
+  margin-right: calc(-1.5rem);
+  border: none;
+  border-top: 1px solid var(--quarto-border-color, rgba(0,0,0,0.12));
+}
+
+#recent-posts {
+  white-space: nowrap;
+}
+
+.g-col-12, .g-col-md-4 {
+  border: 1px solid var(--quarto-border-color, rgba(0,0,0,0.1));
+  border-radius: 12px;
+  padding: 20px;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  background: var(--quarto-body-bg, white);
+  color: var(--quarto-body-color, inherit);
 }
 
 .g-col-12 h3, .g-col-md-4 h3,
 .g-col-12 .h3, .g-col-md-4 .h3 {
-    margin-top: 0;
-    padding-top: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .g-col-12:hover, .g-col-md-4:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 [data-quarto-color-scheme="dark"] .g-col-12,
 [data-quarto-color-scheme="dark"] .g-col-md-4 {
-    border-color: rgba(72, 187, 120, 0.2);
+  border-color: rgba(72, 187, 120, 0.2);
 }
-
 </style>
-<section id="welcome" class="mt-4 column-page">
-<h2 class="mt-4 anchored">Welcome</h2>
-<p>Welcome to my blog, where I share my thoughts and insights on <strong>physics</strong>, <strong>mathematics</strong>, and <strong>philosophy</strong>.<br>
-</p>
+<div class="column-page">
+<h2 class="mt-4 anchored" id="welcome">Welcome</h2>
+<p>Welcome to my blog, where I share my thoughts and insights on <strong>physics</strong>, <strong>mathematics</strong>, and <strong>philosophy</strong>.</p>
 <div class="grid">
 <section id="experience-sharing" class="g-col-12 g-col-md-4">
 <h3 class="anchored"><strong>Experience Sharing</strong></h3>
@@ -409,13 +426,13 @@ window.Quarto = {
 <h3 class="anchored"><strong>Projects &amp; Resources</strong></h3>
 <p>Code and project releases from my own work or collaborations.</p>
 </section>
+</div>
 <hr>
 <h2 class="mt-5 anchored" id="recent-posts">Recent Posts</h2>
 </div>
 
 
 
-</section>
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
@@ -562,7 +579,7 @@ Feb 7, 2026
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/yijia-phys\.github\.io\/my-blog");
+        var filterRegex = new RegExp("https:\/\/blog\.yijialog\.org\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -896,16 +913,10 @@ Feb 7, 2026
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+<p><a href="./credits.html">Copyright</a> © 2026 Yijia Zhao | Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
     <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="./credits.html">
-<p>Credits</p>
-</a>
-  </li>  
-</ul>
+      &nbsp;
     </div>
   </div>
 </footer>

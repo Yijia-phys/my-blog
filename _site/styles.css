@@ -124,17 +124,42 @@ body.modal-open {
 .nav-footer {
   background-color: var(--primary);
   color: white;
-  padding: 1.0rem 0;
+  padding: 0;
   border-top: none;
+  min-height: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-footer .nav-footer-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .nav-footer a {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+  padding-bottom: 1px;
 }
 
-.nav-footer i, 
+.nav-footer a:hover {
+  color: #ffd700;
+  border-bottom-color: #ffd700;
+}
+
+.nav-footer i,
 .nav-footer .bi {
   font-size: 1.2rem;
   vertical-align: middle;
