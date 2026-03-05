@@ -19,7 +19,7 @@ website:
     type: overlay
     copy-button: true
   page-footer:
-    center: "[Copyright](credits.qmd) © 2026 Yijia Zhao | Built with [Quarto](https://quarto.org/)"
+    center: "[Copyright](/credits.qmd) © 2026 Yijia Zhao | Built with [Quarto](https://quarto.org/)"
 format:
   html:
     theme:

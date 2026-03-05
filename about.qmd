@@ -15,17 +15,18 @@ about:
 format:
   html:
     toc: false
-
 ---
 
 :::{#hero-heading}
 
-A high school student comes from Shenyang, China.
+A high school student from Shenyang, China.
 
 ## Education
-(none)
 
+*(none yet)*
 
 ## Experience
-(none)
+
+*(none yet)*
+
 :::
