@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f5f6fa;
+    --accent: #5a67d8;
+    --accent-light: #ebedfa;
+    --ink: #2d2d3a;
+    --muted: #888;
+    --border: #e0e0ec;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 3rem 3.5rem 2.6rem;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 16px rgba(90,103,216,0.07);
+  }
+  .pendulum-wrap {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1.8rem;
+  }
+  .error-code {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 4.8rem;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.1em;
+  }
+  .title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+  .desc {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 0.4rem;
+  }
+  .eq {
+    display: inline-block;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--accent);
+    background: var(--accent-light);
+    border-radius: 4px;
+    padding: 0.25em 0.85em;
+    margin: 0.65rem 0 1.8rem;
+  }
+  .divider {
+    width: 28px; height: 1px;
+    background: var(--border);
+    margin: 0 auto 1.6rem;
+  }
+  .home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 0.6em 1.7em;
+    border-radius: 6px;
+    transition: background 0.15s, box-shadow 0.15s;
+  }
+  .home-btn:hover {
+    background: #4c56c0;
+    box-shadow: 0 4px 12px rgba(90,103,216,0.3);
+  }
+  .home-btn svg { width: 13px; height: 13px; fill: currentColor; }
+  .footnote {
+    font-size: 0.7rem;
+    color: #c0bdd8;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="pendulum-wrap">
+    <!--
+      Key fix: outer <g> translates the whole pendulum so the pivot sits at (50,12).
+      The inner #arm rotates around (0,0) — which is exactly the pivot point.
+      This guarantees the bob always swings from the correct fixed point.
+    -->
+    <svg width="100" height="140" viewBox="0 0 100 140">
+      <!-- dashed vertical guide, in world coords -->
+      <line x1="50" y1="12" x2="50" y2="138"
+            stroke="#e0e0ec" stroke-width="1" stroke-dasharray="4 3"/>
+
+      <!-- pivot dot (drawn on top, fixed) -->
+      <circle id="pivot-dot" cx="50" cy="12" r="4.5" fill="#5a67d8" style="transition:fill 1s ease;"/>
+
+      <!-- everything below pivots around (50,12) -->
+      <g transform="translate(50,12)">
+        <!-- arm rotates around (0,0) = the pivot -->
+        <g id="arm">
+          <line x1="0" y1="0" x2="0" y2="104"
+                stroke="#2d2d3a" stroke-width="2" stroke-linecap="round"/>
+          <circle id="bob" cx="0" cy="116" r="12" fill="#5a67d8" style="transition:fill 1s ease;"/>
+        </g>
+
+        <!-- angle arc & label (static, just decorative) -->
+        <path d="M0 30 A30 30 0 0 1 15.5 25.9"
+              fill="none" stroke="#c5c9f0" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="17" y="30" font-family="Georgia,serif" font-style="italic"
+              font-size="12" fill="#5a67d8">θ</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Easter egg: fades in when pendulum stops -->
+  <div id="egg" style="opacity:0; font-family:'Source Serif 4',Georgia,serif; font-style:italic; font-size:0.82rem; color:#f6ad55; margin-top:-0.8rem; margin-bottom:1.2rem; letter-spacing:0.01em;">
+    lim<sub style="font-size:0.65em">t → ∞</sub> θ(t) = 0 &nbsp;✓
+  </div>
+
+  <div class="error-code">404</div>
+  <h1 class="title">Page Not Found</h1>
+  <p class="desc">
+    Like a pendulum at unstable equilibrium —<br>
+    this page exists in theory, but not in practice.
+  </p>
+  <div class="eq">θ̈ + (g/ℓ) sin θ = 0</div>
+  <div class="divider"></div>
+  <a href="/" class="home-btn">
+    <svg viewBox="0 0 20 20"><path d="M10 2L2 9h2v9h5v-5h2v5h5V9h2L10 2z"/></svg>
+    Back to Home
+  </a>
+  <p class="footnote">The equation of motion is well-defined. The page, less so.</p>
+</div>
+
+<script>
+  // Drive pendulum with rAF — no SMIL quirks, works everywhere
+  var arm   = document.getElementById('arm');
+  var angle = -28;   // degrees, starts left
+  var vel   = 0;     // angular velocity
+  var last  = null;
+
+  function tick(ts) {
+    if (last !== null) {
+      var dt = Math.min(ts - last, 40) / 1000; // seconds, capped at 40ms
+      // Simple harmonic approximation: α = -(g/l)*θ  (small-angle, but feels right)
+      var acc = -0.4 * angle;
+      vel += acc * dt;
+      vel *= 0.9987;
+      angle += vel * dt * (180 / Math.PI) * 0.6;
+      // clamp so it never flips over the top
+      if (angle >  32) { angle =  32; vel = -Math.abs(vel); }
+      if (angle < -32) { angle = -32; vel =  Math.abs(vel); }
+    }
+    last = ts;
+    arm.setAttribute('transform', 'rotate(' + angle + ')');
+    if (!stopped && Math.abs(angle) < 0.4 && Math.abs(vel) < 0.05) {
+      stopped = true;
+      showEasterEgg();
+      return; // stop rAF
+    }
+    requestAnimationFrame(tick);
+  }
+  // Give it a small initial kick
+  vel = 0.13;
+  var stopped = false;
+
+  function showEasterEgg() {
+    // Bob turns gold
+    document.getElementById('bob').setAttribute('fill', '#f6ad55');
+    document.getElementById('pivot-dot').setAttribute('fill', '#f6ad55');
+    // Fade in the equation
+    var el = document.getElementById('egg');
+    el.style.transition = 'opacity 1.4s ease';
+    el.style.opacity = '1';
+  }
+  requestAnimationFrame(tick);
+</script>
+</body>
+</html>
