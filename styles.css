@@ -1,5 +1,6 @@
 /* ============================================================
-   styles.css 
+   styles.css — Yijia's Blog
+   Unified stylesheet: base + index + about + dark mode
    ============================================================ */
 
 /* ── Google Fonts ── */
@@ -198,7 +199,7 @@ body.quarto-dark .nav-link { color: rgba(255,255,255,0.85); }
   padding: 0;
   border-top: none;
   min-height: 60px;
-  height: 60px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,12 +209,15 @@ body.quarto-dark .nav-link { color: rgba(255,255,255,0.85); }
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.4rem;
+  padding: 0.9rem 1rem;
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.02em;
-  white-space: nowrap;
+  white-space: normal;
   text-align: center;
+  line-height: 1.6;
 }
 
 .nav-footer a {
@@ -255,7 +259,6 @@ body.quarto-dark .nav-link { color: rgba(255,255,255,0.85); }
   margin-bottom: 2rem;
 }
 
-/* Section headings (Welcome, Recent Posts, Education…) */
 h2 {
   font-size: 1.1rem;
   font-weight: 400;
@@ -629,6 +632,27 @@ body.quarto-dark .quarto-listing-container-default .listing-date {
    ============================================================ */
 
 @media (max-width: 768px) {
+  .nav-footer .nav-footer-left,
+  .nav-footer .nav-footer-right,
+  div.nav-footer-left,
+  div.nav-footer-right {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .nav-footer {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-footer .nav-footer-center {
+    width: 100%;
+    padding: 0.85rem 1rem;
+  }
+
   .navbar { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
   .navbar-toggler-icon {

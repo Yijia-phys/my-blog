@@ -16,6 +16,7 @@ listing:
 format:
   html:
     toc: false
+    anchor-sections: false
 ---
 
 ::: {.column-page}
