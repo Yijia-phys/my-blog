@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Posts – Yijia Zhao</title>
+<title>Downloads – Yijia Zhao</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,69 +72,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Yijia Zhao" href="posts.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -318,7 +258,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> <i class="bi bi-file-post" role="img">
+    <a class="nav-link" href="./posts.html"> <i class="bi bi-file-post" role="img">
 </i> 
 <span class="menu-text">Posts</span></a>
   </li>  
@@ -328,7 +268,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./downloads.html"> <i class="bi bi-download" role="img">
+    <a class="nav-link active" href="./downloads.html" aria-current="page"> <i class="bi bi-download" role="img">
 </i> 
 <span class="menu-text">Downloads</span></a>
   </li>  
@@ -343,14 +283,14 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Posts</h1>
-            <p class="subtitle lead"><i class="bi bi-rss-fill" style="color: #ee802f;"></i> <a href="posts.xml">RSS</a></p>
+    <div class="quarto-title column-page">
+      <h1 class="title">Downloads</h1>
+            <p class="subtitle lead">Source code, notes, and PDFs from my work</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -361,10 +301,9 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWlzYw==">Misc <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
@@ -372,222 +311,231 @@ window.Quarto = {
 
 
 <style>
-/* ── Horizontal listing cards ── */
-.quarto-listing-container-default .quarto-post {
+/* ── Section / folder ── */
+.dl-section { margin-bottom: 1rem; }
+
+details.dl-folder {
   background: var(--background-secondary, #fff);
   border: 1px solid var(--border, #e0e0ec);
   border-radius: 10px;
   box-shadow: 0 2px 16px var(--shadow, rgba(90,103,216,0.07));
-  padding: 1.1rem 1.2rem;
-  margin-bottom: 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+details.dl-folder[open] { box-shadow: 0 4px 24px rgba(90,103,216,0.11); }
+
+details.dl-folder > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.1rem;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  background: var(--accent-light, #ebedfa);
+  transition: background 0.15s;
+}
+details.dl-folder > summary::-webkit-details-marker { display: none; }
+details.dl-folder[open] > summary { border-bottom: 1px solid var(--border, #e0e0ec); }
+details.dl-folder > summary:hover { background: #dde1f7; }
+
+[data-quarto-color-scheme="dark"] details.dl-folder > summary:hover,
+body.quarto-dark details.dl-folder > summary:hover {
+  background: rgba(102,126,234,0.18) !important;
 }
 
-.quarto-listing-container-default .quarto-post:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(90,103,216,0.13);
+.dl-chevron {
+  display: inline-block; width: 1rem; height: 1rem; flex-shrink: 0;
+  color: var(--accent, #5a67d8); transition: transform 0.2s ease;
 }
+details.dl-folder[open] .dl-chevron { transform: rotate(90deg); }
 
-/* Remove default bottom border/divider Quarto adds */
-.quarto-listing-container-default .quarto-post + .quarto-post {
-  border-top: none;
-}
-.quarto-listing-container-default .list .quarto-post {
-  border-bottom: none !important;
-  padding-top: 1.1rem;
-  padding-bottom: 1.1rem;
-}
-
-/* Thumbnail */
-.quarto-listing-container-default .thumbnail img {
-  aspect-ratio: 4 / 3 !important;
-  object-fit: cover !important;
-  width: 100% !important;
-  border-radius: 6px;
-}
-
-/* Title */
-.quarto-listing-container-default .listing-title a {
+.dl-folder-icon { color: var(--accent, #5a67d8); font-size: 1rem; flex-shrink: 0; }
+.dl-folder-name {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400;
-  font-size: 1.05rem;
-  color: var(--ink, #2d2d3a);
-  text-decoration: none;
+  font-size: 0.95rem; font-weight: 400;
+  color: var(--accent, #5a67d8); flex: 1;
 }
-.quarto-listing-container-default .listing-title a:hover {
-  color: var(--accent, #5a67d8);
-}
+.dl-folder-count { font-size: 0.7rem; color: var(--muted, #888); font-family: 'DM Sans', sans-serif; }
 
-/* Description */
-.quarto-listing-container-default .listing-description {
-  font-size: 0.85rem;
-  color: var(--muted, #888);
-  line-height: 1.65;
-  margin-top: 0.3rem;
+/* ── Table ── */
+.dl-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.dl-table thead tr { background: transparent; }
+.dl-table thead th {
+  font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 0.7rem;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted, #888);
+  padding: 0.55rem 1.1rem; text-align: left; border-bottom: 1px solid var(--border, #e0e0ec);
 }
+.dl-table tbody tr { border-bottom: 1px solid var(--border, #e0e0ec); transition: background 0.12s; }
+.dl-table tbody tr:last-child { border-bottom: none; }
+.dl-table tbody tr:hover { background: var(--accent-light, #ebedfa); }
+[data-quarto-color-scheme="dark"] .dl-table tbody tr:hover,
+body.quarto-dark .dl-table tbody tr:hover { background: rgba(102,126,234,0.08) !important; }
+.dl-table td { padding: 0.7rem 1.1rem; vertical-align: middle; color: var(--ink, #2d2d3a); }
+.dl-table td.name { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.9rem; }
+.dl-table td.desc { color: var(--muted, #888); font-size: 0.82rem; }
+.dl-table td.date { color: var(--muted, #888); font-size: 0.78rem; white-space: nowrap; }
+.dl-table td.actions { white-space: nowrap; }
 
-/* Author & date — match the exact selector from styles.css so specificity is identical,
-   then repeat under every dark-mode selector so nothing can override it */
-.quarto-listing-container-default .listing-author,
-.quarto-listing-container-default .listing-date,
-.quarto-listing-container-default .quarto-post .listing-author,
-.quarto-listing-container-default .quarto-post .listing-date {
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  line-height: 1.5 !important;
-  font-family: sans-serif !important;
+/* ── Tags & Buttons ── */
+.dl-tag {
+  display: inline-block; font-size: 0.62rem; padding: 0.1em 0.5em;
+  border-radius: 3px; background: var(--accent-light, #ebedfa);
+  color: var(--accent, #5a67d8); margin-left: 0.35rem; vertical-align: middle;
 }
+.dl-btn {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  font-size: 0.72rem; font-family: 'DM Sans', sans-serif;
+  padding: 0.25em 0.7em; border-radius: 4px; text-decoration: none;
+  transition: background 0.15s, color 0.15s; margin-right: 0.3rem;
+}
+.dl-btn-pdf { background: var(--accent-light, #ebedfa); color: var(--accent, #5a67d8); border: 1px solid transparent; }
+.dl-btn-pdf:hover { background: var(--accent, #5a67d8); color: #fff; }
+.dl-btn-src { background: transparent; color: var(--muted, #888); border: 1px solid var(--border, #e0e0ec); }
+.dl-btn-src:hover { background: var(--accent, #5a67d8); color: #fff; border-color: var(--accent, #5a67d8); }
 
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-author,
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-date,
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .quarto-post .listing-author,
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .quarto-post .listing-date,
-body.quarto-dark .quarto-listing-container-default .listing-author,
-body.quarto-dark .quarto-listing-container-default .listing-date,
-body.quarto-dark .quarto-listing-container-default .quarto-post .listing-author,
-body.quarto-dark .quarto-listing-container-default .quarto-post .listing-date {
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  line-height: 1.5 !important;
-  font-family: sans-serif !important;
-}
+/* ── Dark mode ── */
+[data-quarto-color-scheme="dark"] details.dl-folder,
+body.quarto-dark details.dl-folder { background: var(--background-secondary, #161820) !important; }
+[data-quarto-color-scheme="dark"] details.dl-folder > summary,
+body.quarto-dark details.dl-folder > summary { background: rgba(102,126,234,0.12) !important; }
 
-/* Metadata column width */
-.quarto-listing-container-default .metadata {
-  width: 90px;
-  flex-basis: 90px;
-}
+@media (max-width: 600px) {
+  .dl-table thead { display: none; }
 
-/* Inline categories */
-.quarto-listing-container-default .listing-categories {
-  margin-top: 0.6rem !important;
-}
-.quarto-listing-container-default .listing-category {
-  background: var(--accent-light, #ebedfa) !important;
-  color: var(--accent, #5a67d8) !important;
-  border: none !important;
-  border-radius: 4px !important;
-  font-size: 0.7rem !important;
-  padding: 0.15em 0.6em !important;
-}
+  .dl-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    gap: 0.25rem;
+  }
 
-/* ── Categories sidebar box ── */
-#quarto-margin-sidebar {
-  padding-top: 0;
-}
+  .dl-table td {
+    display: block;
+    padding: 0;
+    border: none;
+  }
 
-#quarto-margin-sidebar .quarto-listing-category-title {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent, #5a67d8);
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border, #e0e0ec);
-}
+  .dl-table td.date,
+  .dl-table td.actions {
+    display: inline;
+  }
 
-#quarto-margin-sidebar .quarto-listing-category {
-  background: var(--background-secondary, #fff);
-  border: 1px solid var(--border, #e0e0ec);
-  border-radius: 10px;
-  box-shadow: 0 2px 16px var(--shadow, rgba(90,103,216,0.07));
-  padding: 1rem 1.1rem;
-}
+  .dl-table td.date::after { content: "　"; }
 
-[data-quarto-color-scheme="dark"] #quarto-margin-sidebar .quarto-listing-category,
-body.quarto-dark #quarto-margin-sidebar .quarto-listing-category {
-  background: var(--background-secondary, #161820) !important;
-}
+  .dl-table td.name  { font-size: 0.92rem; margin-bottom: 0.1rem; }
+  .dl-table td.desc  { font-size: 0.8rem; margin-bottom: 0.2rem; }
+  .dl-table td.date  { font-size: 0.75rem; color: var(--muted, #888); }
 
-#quarto-margin-sidebar .quarto-category {
-  border-radius: 4px;
-  font-size: 0.78rem;
-  margin-bottom: 0.15rem;
-}
-#quarto-margin-sidebar .quarto-category.active {
-  background-color: var(--accent, #5a67d8);
-  border-color: var(--accent, #5a67d8);
-  color: #fff;
-}
-
-/* Dark mode card background */
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .quarto-post,
-body.quarto-dark .quarto-listing-container-default .quarto-post {
-  background: var(--background-secondary, #161820) !important;
+  .dl-btn { font-size: 0.75rem; padding: 0.3em 0.8em; }
 }
 </style>
+<div id="dl-root"></div>
+
+<script>
+// ============================================================
+//  Edit here to customize sections, files, and links
+// ============================================================
+const SECTIONS = [
+  {
+    name: "Notes & Write-ups",
+    icon: "bi-folder2-open",
+    open: true,
+    files: [
+      {
+        title: "Note1",
+        tag:   "PDF",
+        desc:  "Description for Note1",
+        date:  "None yet",
+        links: [
+          { type: "pdf",    label: "PDF",    icon: "bi-file-earmark-pdf", href: "#" },
+          { type: "source", label: "Source", icon: "bi-code",             href: "#" },
+        ]
+      },
+      {
+        title: "Note2",
+        tag:   "PDF",
+        desc:  "Description for Note2",
+        date:  "None yet",
+        links: [
+          { type: "pdf", label: "PDF", icon: "bi-file-earmark-pdf", href: "#" },
+        ]
+      },
+    ]
+  },
+  {
+    name: "Code & Scripts",
+    icon: "bi-folder2",
+    open: false,
+    files: [
+      {
+        title: "Code1",
+        tag:   "Python",
+        desc:  "Description for Code1",
+        date:  "None yet",
+        links: [
+          { type: "source", label: "GitHub", icon: "bi-github",   href: "#" },
+          { type: "pdf",    label: ".py",    icon: "bi-download", href: "#" },
+        ]
+      },
+    ]
+  },
+];
+// ============================================================
+//  Don't edit below unless you know what you're doing! This part renders the sections and files based on the structure above.
+// ============================================================
+
+const CHEVRON_SVG = `<svg class="dl-chevron" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M7.293 4.293a1 1 0 011.414 0L14 9.586l-5.293
+  5.293a1 1 0 01-1.414-1.414L11.586 9.586 7.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+</svg>`;
+
+function renderBtn({ type, label, icon, href }) {
+  const cls = type === "pdf" ? "dl-btn-pdf" : "dl-btn-src";
+  return `<a class="dl-btn ${cls}" href="${href}"><i class="bi ${icon}"></i> ${label}</a>`;
+}
+
+function renderRow({ title, tag, desc, date, links }) {
+  return `<tr>
+    <td class="name">${title}<span class="dl-tag">${tag}</span></td>
+    <td class="desc">${desc}</td>
+    <td class="date" data-label="Date">${date}</td>
+    <td class="actions" data-label="Download">${links.map(renderBtn).join("")}</td>
+  </tr>`;
+}
+
+function renderSection({ name, icon, open, files }) {
+  const rows   = files.map(renderRow).join("");
+  const count  = files.length;
+  const openAttr = open ? " open" : "";
+  return `<div class="dl-section">
+  <details class="dl-folder"${openAttr}>
+    <summary>
+      ${CHEVRON_SVG}
+      <i class="bi ${icon} dl-folder-icon"></i>
+      <span class="dl-folder-name">${name}</span>
+      <span class="dl-folder-count">${count} file${count !== 1 ? "s" : ""}</span>
+    </summary>
+    <table class="dl-table">
+      <thead><tr>
+        <th style="width:30%">Title</th>
+        <th>Description</th>
+        <th style="width:9%">Date</th>
+        <th style="width:16%">Download</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </details>
+</div>`;
+}
+
+document.getElementById("dl-root").innerHTML =
+  SECTIONS.map(renderSection).join("\n");
+</script>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TWlzYw==" data-listing-date-sort="1771200000000" data-listing-file-modified-sort="1772999728222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="572">
-<div class="thumbnail"><a href="./posts/2/index.html" class="no-external">
-
-<p class="card-img-top"><img src="assets/placeholder.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2/index.html" class="no-external">Building process of this blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWlzYw=='); return false;">Misc</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2/index.html" class="no-external">
-This blog is built by Quarto, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode).
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2/index.html" class="no-external">
-<div class="listing-date">
-Feb 16, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TWlzYw==" data-listing-date-sort="1770422400000" data-listing-file-modified-sort="1772999728222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
-<div class="thumbnail"><a href="./posts/1/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/1/simple_pendulum.svg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/1/index.html" class="no-external">Test post: Site design in progress</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWlzYw=='); return false;">Misc</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/1/index.html" class="no-external">
-Here is the <strong>Euler-Lagrange’s equation</strong>:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/1/index.html" class="no-external">
-<div class="listing-date">
-Feb 7, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
