@@ -224,14 +224,17 @@ body.quarto-dark .nav-link { color: rgba(255,255,255,0.85); }
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   transition: color 0.2s ease;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
   padding-bottom: 1px;
 }
+
+.nav-footer a:not(:has(i, .bi)) {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+}
+
 .nav-footer a:hover {
   color: #ffd700;
   border-bottom-color: #ffd700;
 }
-
 .nav-footer i,
 .nav-footer .bi {
   font-size: 1.2rem;

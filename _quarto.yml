@@ -14,12 +14,18 @@ website:
       - icon: file-person
         href: about.qmd
         text: About
+      - icon: download
+        href: downloads.qmd
+        text: Downloads
   search:
     location: navbar
     type: overlay
     copy-button: true
   page-footer:
     center: "[Copyright](/credits.qmd) © 2026 Yijia Zhao | Built with [Quarto](https://quarto.org/)"
+    right: 
+      - icon: github
+        href: https://github.com/Yijia-phys/my-blog
 format:
   html:
     theme:
