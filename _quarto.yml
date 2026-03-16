@@ -12,12 +12,12 @@ website:
       - icon: file-post
         href: posts.qmd
         text: Posts
-      - icon: file-person
-        href: about.qmd
-        text: About
       - icon: download
         href: downloads.qmd
         text: Downloads
+      - icon: file-person
+        href: about.qmd
+        text: About
   search:
     location: navbar
     type: overlay
