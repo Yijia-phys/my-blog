@@ -92,6 +92,12 @@ h1, h2, h3, h4,
   line-height: 1.6;
 }
 
+strong { color: #4c5b9e; }
+em     { color: #8a6c9c;   }
+
+body.quarto-dark strong { color: #8f9ef0; }
+body.quarto-dark em     { color: #b79fd0; }
+
 /* ============================================================
    NAVBAR
    ============================================================ */
