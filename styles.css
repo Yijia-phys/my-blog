@@ -1,12 +1,11 @@
 /* ============================================================
-   styles.css — Yijia's Blog
    Unified stylesheet: base + index + about + dark mode
    ============================================================ */
 
-/* ── Google Fonts ── */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;1,400&family=DM+Sans:wght@300;400&display=swap');
 
-/* ── Design tokens (light) ── */
+/* Design tokens (light) */
 :root {
   --primary:       #5a67d8;
   --accent:        #5a67d8;
@@ -23,7 +22,7 @@
   --radius:        10px;
 }
 
-/* ── Design tokens (dark) ── */
+/* Design tokens (dark) */
 [data-quarto-color-scheme="dark"],
 body.quarto-dark {
   --primary:              #667eea;
@@ -63,7 +62,7 @@ body {
 
 body.modal-open {
   overflow: hidden;
-  padding-right: 0 !important;
+  padding-right: 0;
 }
 
 #quarto-content {
@@ -71,7 +70,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-/* ── Typography ── */
+/* Typography */
 h1, h2, h3, h4,
 .title, .subtitle {
   font-family: 'Source Serif 4', Georgia, serif;
@@ -103,7 +102,7 @@ body.quarto-dark em     { color: #b79fd0; }
    ============================================================ */
 
 .navbar {
-  background-color: #5a67d8 !important;
+  background-color: #5a67d8;
   min-height: 60px;
   height: 60px;
   border-bottom: 1px solid transparent;
@@ -331,33 +330,33 @@ h2 {
 .quarto-post .card,
 .quarto-listing-cols-3 .card,
 .quarto-grid-item {
-  background: var(--background-secondary) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius) !important;
-  box-shadow: 0 2px 16px var(--shadow) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  background: var(--background-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 16px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 
 .quarto-post .card:hover,
 .quarto-listing-cols-3 .card:hover,
 .quarto-grid-item:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 6px 24px rgba(90, 103, 216, 0.13) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(90, 103, 216, 0.13);
 }
 
 .quarto-grid-item .card-title,
 .listing-title {
-  font-family: 'Source Serif 4', Georgia, serif !important;
-  font-weight: 400 !important;
-  color: var(--ink) !important;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  color: var(--ink);
 }
 
 .listing-date,
 .listing-author,
 .card-text.listing-description {
   font-size: 0.8rem !important;
-  color: var(--muted) !important;
+  color: var(--muted);
 }
 
 .quarto-listing-container-default .metadata { width: 80px; flex-basis: 80px; }
@@ -370,12 +369,12 @@ h2 {
 }
 
 .listing-categories .listing-category {
-  background: var(--accent-light) !important;
-  color: var(--accent) !important;
-  border: none !important;
-  border-radius: 4px !important;
-  font-size: 0.7rem !important;
-  padding: 0.15em 0.6em !important;
+  background: var(--accent-light);
+  color: var(--accent);
+  border: none;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  padding: 0.15em 0.6em;
 }
 
 /* ============================================================
@@ -386,8 +385,8 @@ h2 {
 .about-image img,
 img.about-image {
   border-radius: var(--radius) !important;
-  border: 1px solid var(--border) !important;
-  box-shadow: 0 2px 16px var(--shadow) !important;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 16px var(--shadow);
 }
 
 /* Social link buttons — override Quarto trestles default */
@@ -398,27 +397,27 @@ img.about-image {
   margin-top: 1rem;
 }
 
-.about-link,
-.btn-outline-dark {
-  font-family: 'DM Sans', system-ui, sans-serif !important;
-  font-size: 0.8rem !important;
-  color: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
-  border-radius: 6px !important;
-  padding: 0.35em 0.9em !important;
-  background: transparent !important;
-  text-decoration: none !important;
-  transition: background 0.15s, color 0.15s, box-shadow 0.15s !important;
+div.quarto-about-trestles .about-entity .about-link,
+.quarto-about-trestles .btn-outline-dark {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.35em 0.9em;
+  background: transparent;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
 }
 
-.about-link:hover,
-.btn-outline-dark:hover {
-  background: var(--accent) !important;
-  color: #fff !important;
-  box-shadow: 0 4px 12px rgba(90, 103, 216, 0.25) !important;
+div.quarto-about-trestles .about-entity .about-link:hover,
+.quarto-about-trestles .btn-outline-dark:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(90, 103, 216, 0.25);
 }
 
 /* About body text */
@@ -566,8 +565,8 @@ body.quarto-dark .g-col-12,
 body.quarto-dark .g-col-md-4,
 body.quarto-dark .quarto-grid-item,
 body.quarto-dark .card {
-  background: var(--background-secondary) !important;
-  box-shadow: 0 4px 6px var(--shadow) !important;
+  background: var(--background-secondary);
+  box-shadow: 0 4px 6px var(--shadow);
 }
 
 /* Code */
@@ -582,7 +581,7 @@ body.quarto-dark pre {
 [data-quarto-color-scheme="dark"] .cell-output pre,
 body.quarto-dark pre.sourceCode,
 body.quarto-dark .cell-output pre {
-  border-left: 4px solid #10b981 !important;
+  border-left: 4px solid #10b981;
 }
 
 [data-quarto-color-scheme="dark"] :not(pre) > code,
@@ -645,11 +644,11 @@ body.quarto-dark .quarto-listing-container-default .listing-date {
   .nav-footer .nav-footer-right,
   div.nav-footer-left,
   div.nav-footer-right {
-    display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    min-height: 0 !important;
+    display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
   }
 
   .nav-footer {
