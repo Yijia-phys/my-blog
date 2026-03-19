@@ -1,7 +1,9 @@
-name: Deploy Blog
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: main
+
+name: Quarto Publish
 
 jobs:
   build-deploy:
@@ -15,9 +17,12 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Render
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Deploy to cf-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: cf-pages
+          publish_dir: _site
