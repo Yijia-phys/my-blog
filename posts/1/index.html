@@ -381,18 +381,8 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#defination" id="toc-defination" class="nav-link active" data-scroll-target="#defination">Defination</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a>
-  <ul class="collapse">
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -402,6 +392,7 @@ window.Quarto = {
 
 
 
+<div class="code-figure">
 <section id="defination" class="level2">
 <h2 class="anchored" data-anchor-id="defination">Defination</h2>
 <p>Here is the <strong>Euler-Lagrange’s equation</strong>:</p>
@@ -423,6 +414,34 @@ In <strong>Mathematica</strong>, we can compute it directly by calling the <code
 <figcaption>Simple pendulum</figcaption>
 </figure>
 </div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[tikz,border=5pt]{<span class="ex">standalone</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\usetikzlibrary</span>{patterns}</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}[&gt;=stealth, thick]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\def\angle</span>{30}</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\def\len</span>{3.5}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\fill</span> [pattern = north east lines] (-1,0) rectangle (1,0.2);</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> (-1,0) -- (1,0);</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[above] at (0,0.3) {<span class="ss">$V = 0$</span>};</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\fill</span> (0,0) circle (2pt);</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> [dashed, gray] (0,0) -- (0,-4);</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> (0,0) -- ({-90-<span class="fu">\angle</span>}:<span class="fu">\len</span>) </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        node[midway, left, xshift=-2pt, yshift=5pt] {<span class="ss">$l$</span>};</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[circle, fill=blue!50, draw, inner sep=2.5pt] (ball) at ({-90-<span class="fu">\angle</span>}:<span class="fu">\len</span>) {};</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span>[below right=2pt] at (ball) {<span class="ss">$m$</span>};</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\draw</span> (0,-1.2) arc (-90:{-90-<span class="fu">\angle</span>}:1.2);</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\node</span> at ({-90-<span class="fu">\angle</span>/2}:1.5) {<span class="ss">$</span><span class="sc">\theta</span><span class="ss">$</span>};</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Choose the angular displacement <span class="math inline">\(\theta\)</span> (the angle between the pendulum and the vertical) as the generalized coordinate.</p>
 <p><span id="eq-label"><span class="math display">\[
 \mathcal{L} =\frac{1}{2}ml^2 \dot{\theta}^2+mgl\cos{\theta}
@@ -454,12 +473,47 @@ T=4\sqrt{\frac{l}{g}}K\left(\sin{\left( \frac{\theta_0}{2} \right)}\right)
 <p>Using the power series expansion of <span class="math inline">\(K(k)\)</span> , we obtain: <span id="eq-label"><span class="math display">\[
 T=2\pi\sqrt{\frac{l}{g}}\sum_{n=0}^{\infty}\left( \frac{(2n)!}{2^{2n}(n!)} \right)^2 \sin^{2n}\left( \frac{\theta_0}{2} \right)
 \tag{11}\]</span></span></p>
-
-
 </section>
 </section>
+</div>
+
+
 
 </main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".code-figure").forEach(function (container) {
+    const figureDiv = container.querySelector(".quarto-figure");
+    if (!figureDiv) return;
+
+    let sibling = figureDiv.nextElementSibling;
+    while (sibling) {
+      if (sibling.classList.contains("code-copy-outer-scaffold")) break;
+      sibling = sibling.nextElementSibling;
+    }
+    if (!sibling) return;
+
+    sibling.style.display = "none";
+    sibling.dataset.toggled = "false";
+
+    figureDiv.style.position = "relative";
+
+    const btn = document.createElement("button");
+    btn.textContent = "</>";
+    btn.className = "toggle-code-btn";
+    btn.title = "Display / Hide";
+
+    btn.addEventListener("click", function () {
+      const hidden = sibling.dataset.toggled === "false";
+      sibling.style.display = hidden ? "" : "none";
+      sibling.dataset.toggled = hidden ? "true" : "false";
+      btn.classList.toggle("active", hidden);
+    });
+
+    figureDiv.appendChild(btn);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

@@ -536,6 +536,40 @@ document.getElementById("dl-root").innerHTML =
 
 
 </main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".code-figure").forEach(function (container) {
+    const figureDiv = container.querySelector(".quarto-figure");
+    if (!figureDiv) return;
+
+    let sibling = figureDiv.nextElementSibling;
+    while (sibling) {
+      if (sibling.classList.contains("code-copy-outer-scaffold")) break;
+      sibling = sibling.nextElementSibling;
+    }
+    if (!sibling) return;
+
+    sibling.style.display = "none";
+    sibling.dataset.toggled = "false";
+
+    figureDiv.style.position = "relative";
+
+    const btn = document.createElement("button");
+    btn.textContent = "</>";
+    btn.className = "toggle-code-btn";
+    btn.title = "Display / Hide";
+
+    btn.addEventListener("click", function () {
+      const hidden = sibling.dataset.toggled === "false";
+      sibling.style.display = hidden ? "" : "none";
+      sibling.dataset.toggled = hidden ? "true" : "false";
+      btn.classList.toggle("active", hidden);
+    });
+
+    figureDiv.appendChild(btn);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
