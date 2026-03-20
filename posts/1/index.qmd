@@ -6,6 +6,8 @@ categories: [Misc]
 format: html
 ---
 
+:::{.code-figure}
+
 ## Defination
 Here is the **Euler-Lagrange's equation**:
 
@@ -27,6 +29,36 @@ EulerEquations[L, {q1[t], q2[t]}, t]
 ## Example
 
 ![Simple pendulum](simple_pendulum.svg){width=20%}
+```tex
+\documentclass[tikz,border=5pt]{standalone}
+\usetikzlibrary{patterns}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{tikzpicture}[>=stealth, thick]
+    \def\angle{30}
+    \def\len{3.5}
+
+    \fill [pattern = north east lines] (-1,0) rectangle (1,0.2);
+    \draw (-1,0) -- (1,0);
+    
+    \node[above] at (0,0.3) {$V = 0$};
+    \fill (0,0) circle (2pt);
+
+    \draw [dashed, gray] (0,0) -- (0,-4);
+    
+    \draw (0,0) -- ({-90-\angle}:\len) 
+        node[midway, left, xshift=-2pt, yshift=5pt] {$l$};
+    
+    \node[circle, fill=blue!50, draw, inner sep=2.5pt] (ball) at ({-90-\angle}:\len) {};
+    \node[below right=2pt] at (ball) {$m$};
+    
+    \draw (0,-1.2) arc (-90:{-90-\angle}:1.2);
+    \node at ({-90-\angle/2}:1.5) {$\theta$};
+
+\end{tikzpicture}
+\end{document}
+```
 
 Choose the angular displacement $\theta$ (the angle between the pendulum and the vertical) as the generalized coordinate.
 
@@ -76,3 +108,5 @@ Using the power series expansion of $K(k)$ , we obtain:
 $$
 T=2\pi\sqrt{\frac{l}{g}}\sum_{n=0}^{\infty}\left( \frac{(2n)!}{2^{2n}(n!)} \right)^2 \sin^{2n}\left( \frac{\theta_0}{2} \right)
 $$ {#eq-label}
+
+:::

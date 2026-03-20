@@ -555,7 +555,7 @@ Yijia Zhao
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TWlzYw==" data-listing-date-sort="1770393600000" data-listing-file-modified-sort="1773650858450" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="139">
+<div class="quarto-post image-right" data-index="1" data-categories="TWlzYw==" data-listing-date-sort="1770393600000" data-listing-file-modified-sort="1774004036217" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
 <div class="thumbnail"><a href="./posts/1/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts\1\simple_pendulum.svg"  class="thumbnail-image card-img"/></p>
@@ -588,6 +588,73 @@ Yijia Zhao
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".code-figure").forEach(function (container) {
+
+    const figureDiv = container.querySelector(".quarto-figure");
+
+    if (!figureDiv) return;
+
+
+
+    let sibling = figureDiv.nextElementSibling;
+
+    while (sibling) {
+
+      if (sibling.classList.contains("code-copy-outer-scaffold")) break;
+
+      sibling = sibling.nextElementSibling;
+
+    }
+
+    if (!sibling) return;
+
+
+
+    sibling.style.display = "none";
+
+    sibling.dataset.toggled = "false";
+
+
+
+    figureDiv.style.position = "relative";
+
+
+
+    const btn = document.createElement("button");
+
+    btn.textContent = "</>";
+
+    btn.className = "toggle-code-btn";
+
+    btn.title = "Display / Hide";
+
+
+
+    btn.addEventListener("click", function () {
+
+      const hidden = sibling.dataset.toggled === "false";
+
+      sibling.style.display = hidden ? "" : "none";
+
+      sibling.dataset.toggled = hidden ? "true" : "false";
+
+      btn.classList.toggle("active", hidden);
+
+    });
+
+
+
+    figureDiv.appendChild(btn);
+
+  });
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

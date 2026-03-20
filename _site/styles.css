@@ -627,12 +627,33 @@ body.quarto-dark img { opacity: 0.9; filter: brightness(0.9) contrast(1.1); }
 
 body.quarto-dark img[src$=".svg"] { filter: invert(1) hue-rotate(180deg) brightness(1.5); }
 
-/* Listing text */
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-author,
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-date,
-body.quarto-dark .quarto-listing-container-default .listing-author,
-body.quarto-dark .quarto-listing-container-default .listing-date {
-  color: var(--muted);
+.code-figure .quarto-figure {
+  position: relative;
+}
+
+.toggle-code-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-family: monospace;
+  background: rgba(240, 240, 240, 0.85);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.toggle-code-btn:hover {
+  background: rgba(210, 210, 240, 0.95);
+}
+
+.toggle-code-btn.active {
+  background: rgba(200, 200, 235, 0.95);
+  border-color: #99a;
 }
 
 /* ============================================================

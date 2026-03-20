@@ -36,6 +36,7 @@ format:
       location: navbar
       default-appearance: auto
     css: styles.css
+    include-after-body: styles.html
     code-copy: true
     toc: true
     toc-location: right
