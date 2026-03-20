@@ -194,6 +194,10 @@ body.quarto-dark .quarto-color-scheme-toggle .bi::after {
 [data-quarto-color-scheme="dark"] .nav-link,
 body.quarto-dark .nav-link { color: rgba(255,255,255,0.85); }
 
+/* Banner */
+[data-quarto-color-scheme="dark"] .quarto-title-banner,
+body.quarto-dark .quarto-title-banner { background-color: #111827; }
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -627,6 +631,7 @@ body.quarto-dark img { opacity: 0.9; filter: brightness(0.9) contrast(1.1); }
 
 body.quarto-dark img[src$=".svg"] { filter: invert(1) hue-rotate(180deg) brightness(1.5); }
 
+/* Code figure toggle */
 .code-figure .quarto-figure {
   position: relative;
 }
@@ -654,6 +659,33 @@ body.quarto-dark img[src$=".svg"] { filter: invert(1) hue-rotate(180deg) brightn
 .toggle-code-btn.active {
   background: rgba(200, 200, 235, 0.95);
   border-color: #99a;
+}
+
+html[data-bs-theme="dark"] .toggle-code-btn,
+body.quarto-dark .toggle-code-btn {
+  background: rgba(40, 44, 52, 0.85);
+  border-color: #555;
+  color: #e0e0e0;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+html[data-bs-theme="dark"] .toggle-code-btn:hover,
+body.quarto-dark .toggle-code-btn:hover {
+  color: #e68a00;
+  background: rgba(60, 65, 75, 0.95);
+  border-color: #777;
+}
+
+html[data-bs-theme="dark"] .toggle-code-btn.active,
+body.quarto-dark .toggle-code-btn.active {
+  background: rgba(70, 80, 100, 0.95);
+  border-color: #e68a00;
+  color: #ffffff;
+}
+
+html[data-bs-theme="dark"] .toggle-code-btn.active:hover,
+body.quarto-dark .toggle-code-btn.active:hover {
+  color: #e68a00;
 }
 
 /* ============================================================
