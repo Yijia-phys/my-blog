@@ -1,8 +1,8 @@
 ---
-title: "Test post: Site design in progress"
+title: "Test post: Euler-Lagrange's equation in simple pendulum"
 author: "Yijia Zhao"
 date: "2026-02-07"
-categories: [Misc]
+categories: [Classic Mechanics]
 format: html
 ---
 

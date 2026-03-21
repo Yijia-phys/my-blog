@@ -281,7 +281,8 @@ window.Quarto = {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -294,6 +295,14 @@ window.Quarto = {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -362,7 +371,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWlzYw==">Misc <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q2FzdWFs">Casual <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2xhc3NpYyUyME1lY2hhbmljcw==">Classic Mechanics <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -525,10 +534,10 @@ body.quarto-dark .quarto-listing-container-default .quarto-post {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TWlzYw==" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1771578171482" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="572">
+<div class="quarto-post image-right" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1774093939378" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1354">
 <div class="thumbnail"><a href="./posts/2/index.html" class="no-external">
 
-<p class="card-img-top"><img src="assets/placeholder.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts\2\Cos_and_Cosh.svg"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -537,7 +546,7 @@ body.quarto-dark .quarto-listing-container-default .quarto-post {
 </h3>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('TWlzYw=='); return false;">Misc</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Q2FzdWFs'); return false;">Casual</div>
 
 </div>
 <div class="delink listing-description"><a href="./posts/2/index.html" class="no-external">
@@ -555,7 +564,7 @@ Yijia Zhao
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TWlzYw==" data-listing-date-sort="1770393600000" data-listing-file-modified-sort="1774004036217" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
+<div class="quarto-post image-right" data-index="1" data-categories="Q2xhc3NpYyUyME1lY2hhbmljcw==" data-listing-date-sort="1770393600000" data-listing-file-modified-sort="1774047934067" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
 <div class="thumbnail"><a href="./posts/1/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts\1\simple_pendulum.svg"  class="thumbnail-image card-img"/></p>
@@ -563,11 +572,11 @@ Yijia Zhao
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/1/index.html" class="no-external">Test post: Site design in progress</a>
+<a href="./posts/1/index.html" class="no-external">Test post: Euler-Lagrange’s equation in simple pendulum</a>
 </h3>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('TWlzYw=='); return false;">Misc</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Q2xhc3NpYyUyME1lY2hhbmljcw=='); return false;">Classic Mechanics</div>
 
 </div>
 <div class="delink listing-description"><a href="./posts/1/index.html" class="no-external">
@@ -655,6 +664,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
+
+
+
+<noscript>
+
+  <div style="text-align: center; padding: 12px; background: #faf7ed; color: #5e5b52; border-radius: 8px; margin: 8px; font-size: 0.95em;">
+
+    This site works best with JavaScript enabled &gt;_&lt;
+  </div>
+
+</noscript>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
