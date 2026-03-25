@@ -392,8 +392,25 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#initial-building" id="toc-initial-building" class="nav-link active" data-scroll-target="#initial-building">2026-02-16: Initial Building</a>
+  <ul class="collapse">
+  <li><a href="#technical-details" id="toc-technical-details" class="nav-link" data-scroll-target="#technical-details">Technical Details</a></li>
+  <li><a href="#design-philosophy" id="toc-design-philosophy" class="nav-link" data-scroll-target="#design-philosophy">Design Philosophy</a></li>
+  </ul></li>
+  <li><a href="#refactoring-new-features" id="toc-refactoring-new-features" class="nav-link" data-scroll-target="#refactoring-new-features">2026-03-21: Refactoring &amp; New Features</a>
+  <ul class="collapse">
+  <li><a href="#new-pages" id="toc-new-pages" class="nav-link" data-scroll-target="#new-pages">New Pages</a></li>
+  <li><a href="#visual-overhaul" id="toc-visual-overhaul" class="nav-link" data-scroll-target="#visual-overhaul">Visual Overhaul</a></li>
+  <li><a href="#features-and-workflow" id="toc-features-and-workflow" class="nav-link" data-scroll-target="#features-and-workflow">Features and Workflow</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next?</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -403,7 +420,6 @@ window.Quarto = {
 
 
 
-<div class="code-figure">
 <section id="initial-building" class="level2">
 <h2 class="anchored" data-anchor-id="initial-building">2026-02-16: Initial Building</h2>
 <section id="technical-details" class="level3">
@@ -448,12 +464,8 @@ window.Quarto = {
 <section id="features-and-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="features-and-workflow">Features and Workflow</h3>
 <p>What’s most exciting is that I added a small <code>JavaScript</code> snippet to enable a “view code” feature for images (though in principle, it’s simply toggling a collapsed code block). Click the <code>&lt;/&gt;</code> icon in the top‑right corner of an image to expand the corresponding <code>Mathematica</code> or <code>TikZ</code> code—like this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Cos_and_Cosh.svg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Cos and Cosh functions in complex plane</figcaption>
-</figure>
-</div>
+<div class="code-figure">
+<p><img src="Cos_and_Cosh_light.svg" class="lightmode img-fluid" style="width:80.0%" alt="Cos and Cosh functions in complex plane"> <img src="Cos_and_Cosh_dark.svg" class="darkmode img-fluid" style="width:80.0%" alt="Cos and Cosh functions in complex plane"></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode mathematica code-with-copy"><code class="sourceCode mathematica"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>region <span class="ex">=</span> <span class="op">{</span><span class="fu">z</span><span class="op">,</span> <span class="sc">-</span><span class="dv">4</span> <span class="sc">-</span> <span class="dv">4</span>  <span class="fu">I</span><span class="op">,</span> <span class="dv">4</span> <span class="sc">+</span> <span class="dv">4</span>  <span class="fu">I</span><span class="op">}</span>;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plotCos <span class="ex">=</span> </span>
@@ -465,6 +477,7 @@ window.Quarto = {
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>   <span class="fu">AxesLabel</span> <span class="ot">-&gt;</span> <span class="op">{</span><span class="st">"Re"</span><span class="op">,</span> <span class="st">"Im"</span><span class="op">,</span> <span class="st">"|f|"</span><span class="op">},</span> PlotLegends <span class="ot">-&gt;</span> <span class="cn">Automatic</span><span class="op">]</span>;</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">GraphicsRow</span><span class="op">[{</span>plotCos<span class="op">,</span> plotCosh<span class="op">},</span> <span class="fu">ImageSize</span> <span class="ot">-&gt;</span> <span class="fu">Large</span><span class="op">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>One more thing: the display of <code>SVG</code> images in dark mode still needs some tweaking. If you view them in dark mode, they might look a bit off (though not incorrect).</p>
 <p>Also, I’ve made some small improvements to my workflow. I’ve come to realize the importance of naming conventions for <code>git commit</code>, but things are still pretty messy at the moment.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>quarto render</span>
@@ -485,11 +498,10 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="whats-next">What’s Next?</h3>
 <p>I’m trying to stop “tinkering” with the site as much. To be honest, I used to dislike constantly updating software or systems, but now that I’m a developer, I often get the urge to add something new. Once I fix the issues I mentioned and tidy up the code structure a bit, <strong>I’ll shift my focus back to writing blog content.</strong></p>
 <p>As for content, I’ve been studying <em>complex analysis</em> and <code>Mathematica</code> recently, and I’d like to combine the two to create some visualizations. However, I have other exam preparations at the moment, so that post will probably have to wait a while.</p>
-</section>
-</section>
-</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script>

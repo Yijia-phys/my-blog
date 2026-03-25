@@ -61,13 +61,13 @@ body {
 }
 
 body.modal-open {
-  overflow: hidden;
+  overflow: visible;
   padding-right: 0;
 }
 
 #quarto-content {
   flex: 1 0 auto;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Typography */
@@ -280,191 +280,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-#recent-posts { white-space: nowrap; }
-
-/* ============================================================
-   FEATURE CARDS  (index.qmd welcome grid)
-   ============================================================ */
-
-.g-col-12,
-.g-col-md-4 {
-  background: var(--background-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.4rem 1.5rem;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 2px 16px var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  color: var(--ink);
-}
-
-.g-col-12:hover,
-.g-col-md-4:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(90, 103, 216, 0.13);
-}
-
-.g-col-12 h3,
-.g-col-md-4 h3 {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.g-col-12 p,
-.g-col-md-4 p {
-  font-size: 0.875rem;
-  color: var(--muted);
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* ============================================================
-   LISTING CARDS  (Quarto-generated post grid)
-   ============================================================ */
-
-.quarto-listing .quarto-post {
-  margin-bottom: 1em;
-  padding-top: 0;
-}
-
-.quarto-post .card,
-.quarto-listing-cols-3 .card,
-.quarto-grid-item {
-  background: var(--background-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 16px var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
-}
-
-.quarto-post .card:hover,
-.quarto-listing-cols-3 .card:hover,
-.quarto-grid-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(90, 103, 216, 0.13);
-}
-
-.quarto-grid-item .card-title,
-.listing-title {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400;
-  color: var(--ink);
-}
-
-.listing-date,
-.listing-author,
-.card-text.listing-description {
-  font-size: 0.8rem !important;
-  color: var(--muted);
-}
-
-.quarto-listing-container-default .metadata { width: 80px; flex-basis: 80px; }
-
-.quarto-listing-container-default .quarto-post .listing-author,
-.quarto-listing-container-default .quarto-post .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-.listing-categories .listing-category {
-  background: var(--accent-light);
-  color: var(--accent);
-  border: none;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  padding: 0.15em 0.6em;
-}
-
-/* ============================================================
-   ABOUT PAGE
-   ============================================================ */
-
-/* Profile image */
-.about-image img,
-img.about-image {
-  border-radius: var(--radius) !important;
-  border: 1px solid var(--border);
-  box-shadow: 0 2px 16px var(--shadow);
-}
-
-/* Social link buttons — override Quarto trestles default */
-.about-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 1rem;
-}
-
-div.quarto-about-trestles .about-entity .about-link,
-.quarto-about-trestles .btn-outline-dark {
-  font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: 0.8rem;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  padding: 0.35em 0.9em;
-  background: transparent;
-  text-decoration: none;
-  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-div.quarto-about-trestles .about-entity .about-link:hover,
-.quarto-about-trestles .btn-outline-dark:hover {
-  background: var(--accent);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(90, 103, 216, 0.25);
-}
-
-/* About body text */
-#hero-heading p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.8;
-  margin-bottom: 1.6rem;
-}
-
-/* About section headings */
-#hero-heading h2 {
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-top: 1.8rem;
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border);
-}
-
-#hero-heading ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0.5rem;
-}
-
-#hero-heading li {
-  font-size: 0.9rem;
-  color: var(--ink);
-  line-height: 1.7;
-  padding: 0.15rem 0;
-}
-
-#hero-heading li em,
-#hero-heading p em {
-  color: var(--muted);
-  font-style: italic;
-  font-size: 0.85rem;
-}
-
 /* ============================================================
    MATH / LaTeX
    ============================================================ */
@@ -591,9 +406,8 @@ body.quarto-dark .cell-output pre {
 [data-quarto-color-scheme="dark"] :not(pre) > code,
 body.quarto-dark :not(pre) > code {
   background-color: var(--background-tertiary);
-  color: #a3bffa;
+  color: var(--primary-light);
   border-radius: 3px;
-  padding: 0.1em 0.35em;
 }
 
 [data-quarto-color-scheme="dark"] pre.sourceCode button.code-copy,
@@ -627,9 +441,20 @@ body.quarto-dark thead { background-color: var(--background-tertiary); }
 
 /* Images */
 [data-quarto-color-scheme="dark"] img,
-body.quarto-dark img { opacity: 0.9; filter: brightness(0.9) contrast(1.1); }
+body.quarto-dark img:not([src$=".svg"]) { 
+  filter: brightness(0.9) contrast(1.1); 
+}
 
-body.quarto-dark img[src$=".svg"] { filter: invert(1) hue-rotate(180deg) brightness(1.5); }
+body.quarto-dark img[src$=".svg"]:not(.darkmode):not(.no-invert) { 
+  filter: invert(1) hue-rotate(180deg) brightness(1.5); 
+}
+
+body.quarto-dark img[src$=".svg"].no-invert { 
+  filter: brightness(0.85); 
+}
+
+body.quarto-dark .lightmode { display: none; }
+body:not(.quarto-dark) .darkmode { display: none; }
 
 /* Code figure toggle */
 .code-figure .quarto-figure {

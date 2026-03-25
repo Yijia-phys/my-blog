@@ -325,6 +325,79 @@ ul.task-list li input[type="checkbox"] {
   </div>
   <div class="about-contents"><main class="content" id="quarto-document-content">
 
+<style>
+/* Profile image */
+.about-image img,
+img.about-image {
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 16px var(--shadow);
+}
+/* Social link buttons — override Quarto trestles default */
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+div.quarto-about-trestles .about-entity .about-link,
+.quarto-about-trestles .btn-outline-dark {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.35em 0.9em;
+  background: transparent;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+div.quarto-about-trestles .about-entity .about-link:hover,
+.quarto-about-trestles .btn-outline-dark:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(90, 103, 216, 0.25);
+}
+/* About body text */
+#hero-heading p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+/* About section headings */
+#hero-heading h2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+#hero-heading ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
+#hero-heading li {
+  font-size: 0.9rem;
+  color: var(--ink);
+  line-height: 1.7;
+  padding: 0.15rem 0;
+}
+#hero-heading li em,
+#hero-heading p em {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+</style>
 <div id="hero-heading">
 <p>A high school student from Shenyang, China.</p>
 <section id="education" class="level2">

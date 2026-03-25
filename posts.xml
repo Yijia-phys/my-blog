@@ -22,7 +22,6 @@
 
 
 
-<div class="code-figure">
 <section id="initial-building" class="level2">
 <h2 class="anchored" data-anchor-id="initial-building">2026-02-16: Initial Building</h2>
 <section id="technical-details" class="level3">
@@ -85,12 +84,8 @@ font-style: inherit;">"</span></span>
 <section id="features-and-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="features-and-workflow">Features and Workflow</h3>
 <p>What’s most exciting is that I added a small <code>JavaScript</code> snippet to enable a “view code” feature for images (though in principle, it’s simply toggling a collapsed code block). Click the <code>&lt;/&gt;</code> icon in the top‑right corner of an image to expand the corresponding <code>Mathematica</code> or <code>TikZ</code> code—like this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.yijialog.org/posts/2/Cos_and_Cosh.svg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Cos and Cosh functions in complex plane</figcaption>
-</figure>
-</div>
+<div class="code-figure">
+<p><img src="https://blog.yijialog.org/posts/2/Cos_and_Cosh_light.svg" class="lightmode img-fluid" style="width:80.0%" alt="Cos and Cosh functions in complex plane"> <img src="https://blog.yijialog.org/posts/2/Cos_and_Cosh_dark.svg" class="darkmode img-fluid" style="width:80.0%" alt="Cos and Cosh functions in complex plane"></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode mathematica code-with-copy"><code class="sourceCode mathematica"><span id="cb2-1">region <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
@@ -240,6 +235,7 @@ background-color: null;
 font-style: inherit;">Large</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">]</span></span></code></pre></div></div>
+</div>
 <p>One more thing: the display of <code>SVG</code> images in dark mode still needs some tweaking. If you view them in dark mode, they might look a bit off (though not incorrect).</p>
 <p>Also, I’ve made some small improvements to my workflow. I’ve come to realize the importance of naming conventions for <code>git commit</code>, but things are still pretty messy at the moment.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1">quarto render</span>
@@ -321,11 +317,10 @@ font-style: inherit;">-</span>ForegroundColor Green</span></code></pre></div></d
 <h3 class="anchored" data-anchor-id="whats-next">What’s Next?</h3>
 <p>I’m trying to stop “tinkering” with the site as much. To be honest, I used to dislike constantly updating software or systems, but now that I’m a developer, I often get the urge to add something new. Once I fix the issues I mentioned and tidy up the code structure a bit, <strong>I’ll shift my focus back to writing blog content.</strong></p>
 <p>As for content, I’ve been studying <em>complex analysis</em> and <code>Mathematica</code> recently, and I’d like to combine the two to create some visualizations. However, I have other exam preparations at the moment, so that post will probably have to wait a while.</p>
-</section>
-</section>
-</div>
 
 
+</section>
+</section>
 
  ]]></description>
   <category>Casual</category>
@@ -343,62 +338,20 @@ font-style: inherit;">-</span>ForegroundColor Green</span></code></pre></div></d
 
 
 
-<div class="code-figure">
 <section id="defination" class="level2">
 <h2 class="anchored" data-anchor-id="defination">Defination</h2>
 <p>Here is the <strong>Euler-Lagrange’s equation</strong>:</p>
 <p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7B%5Cdot%7Bq_i%7D%7D%7D)=%5Cfrac%7B%5Cpartial%7B%5Cmathcal%7BL%7D%7D%7D%7B%5Cpartial%7Bq_i%7D%7D%0A%5Ctag%7B1%7D"></span></p>
 <p>Where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BL%7D"> is the <strong>Lagrangian</strong>, defined as <img src="https://latex.codecogs.com/png.latex?T-V">.<br>
 In <strong>Mathematica</strong>, we can compute it directly by calling the <code>VariationalMethods</code> package:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode mathematica code-with-copy"><code class="sourceCode mathematica"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">Needs</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">[</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"VariationalMethods`"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">]</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">L</span> <span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">T</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">V</span></span>
-<span id="cb1-3">EulerEquations<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">[</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">L</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>q1<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">[</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">t</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">],</span> q2<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">[</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">t</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">]},</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">t</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">]</span></span></code></pre></div></div>
+<pre><code>Needs["VariationalMethods`"]
+L = T - V
+EulerEquations[L, {q1[t], q2[t]}, t]</code></pre>
 <hr>
 </section>
 <section id="example" class="level2">
 <h2 class="anchored" data-anchor-id="example">Example</h2>
+<div class="code-figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://blog.yijialog.org/posts/1/simple_pendulum.svg" class="img-fluid figure-img" style="width:20.0%"></p>
@@ -511,22 +464,24 @@ font-weight: bold;
 font-style: inherit;">\end</span>{<span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">document</span>}</span></code></pre></div></div>
+</div>
 <p>Choose the angular displacement <img src="https://latex.codecogs.com/png.latex?%5Ctheta"> (the angle between the pendulum and the vertical) as the generalized coordinate.</p>
 <p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%7BL%7D%20=%5Cfrac%7B1%7D%7B2%7Dml%5E2%20%5Cdot%7B%5Ctheta%7D%5E2+mgl%5Ccos%7B%5Ctheta%7D%0A%5Ctag%7B2%7D"></span></p>
 <p>Which set <img src="https://latex.codecogs.com/png.latex?V=0"> at the pivot point. Use Euler-Lagrange equation, we have: <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0Al%5Cddot%7B%5Ctheta%7D+g%5Csin%7B%5Ctheta%7D=0%0A%5Ctag%7B3%7D"></span></p>
 <section id="solution" class="level3">
 <h3 class="anchored" data-anchor-id="solution">Solution</h3>
-<p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cdot%7B%5Ctheta%7D%5Cddot%7B%5Ctheta%7D+%5Cfrac%7Bg%7D%7Bl%7D%5Cdot%7B%5Ctheta%7D%5Csin%7B%5Ctheta%7D=0%20%5C%5C%0A%5Ctag%7B4%7D"></span> <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B1%7D%7B2%7D%5Cdot%7B%5Ctheta%7D%5E2-%5Cfrac%7Bg%7D%7Bl%7D%5Ccos%7B%5Ctheta%7D)=0%0A%5Ctag%7B5%7D"></span></p>
-<p>Let <img src="https://latex.codecogs.com/png.latex?%5Ctheta=%5Ctheta_0"> when <img src="https://latex.codecogs.com/png.latex?t=0"> : <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cdot%7B%5Ctheta%7D%5E2=%5Cfrac%7B2g%7D%7Bl%7D(%5Ccos%7B%5Ctheta%7D-%5Ccos%7B%5Ctheta_0%7D)%0A%5Ctag%7B6%7D"></span> <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0At=%5Csqrt%7B%5Cfrac%7Bl%7D%7B2g%7D%7D%20%5Cint_0%5E%7B%5Ctheta%7D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B%5Ccos%7B%5Ctheta%7D-%5Ccos%7B%5Ctheta_0%7D%7D%7D%5Cmathrm%7Bd%7D%5Ctheta%0A%5Ctag%7B7%7D"></span></p>
+<p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cdot%7B%5Ctheta%7D%5Cddot%7B%5Ctheta%7D+%5Cfrac%7Bg%7D%7Bl%7D%5Cdot%7B%5Ctheta%7D%5Csin%7B%5Ctheta%7D=0%20%5C%5C%0A%5Ctag%7B4%7D"></span></p>
+<p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D(%5Cfrac%7B1%7D%7B2%7D%5Cdot%7B%5Ctheta%7D%5E2-%5Cfrac%7Bg%7D%7Bl%7D%5Ccos%7B%5Ctheta%7D)=0%0A%5Ctag%7B5%7D"></span></p>
+<p>Let <img src="https://latex.codecogs.com/png.latex?%5Ctheta=%5Ctheta_0"> when <img src="https://latex.codecogs.com/png.latex?t=0"> : <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0A%5Cdot%7B%5Ctheta%7D%5E2=%5Cfrac%7B2g%7D%7Bl%7D(%5Ccos%7B%5Ctheta%7D-%5Ccos%7B%5Ctheta_0%7D)%0A%5Ctag%7B6%7D"></span></p>
+<p><span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0At=%5Csqrt%7B%5Cfrac%7Bl%7D%7B2g%7D%7D%20%5Cint_0%5E%7B%5Ctheta%7D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B%5Ccos%7B%5Ctheta%7D-%5Ccos%7B%5Ctheta_0%7D%7D%7D%5Cmathrm%7Bd%7D%5Ctheta%0A%5Ctag%7B7%7D"></span></p>
 <p>Use double-angle formula <img src="https://latex.codecogs.com/png.latex?%5Ccos%7B2x%7D=1-2%5Csin%7Bx%7D%5E2"> and let <img src="https://latex.codecogs.com/png.latex?%5Csin%7B%5Cfrac%7B%5Ctheta%7D%7B2%7D%7D=k%5Csin%7B%5Cphi%7D"> : <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0At=%5Csqrt%7B%5Cfrac%7Bl%7D%7Bg%7D%7D%5Cint_0%5E%7B%5Carcsin%7B%5Cfrac%7B1%7D%7Bk%7D%5Csin%7B%5Cfrac%7B%5Ctheta%7D%7B2%7D%7D%7D%7D%5Cfrac%7B1%7D%7B%5Csqrt%7B1-k%5E2%5Csin%7B%5Cphi%7D%5E2%7D%7D%20%5Cmathrm%7Bd%7D%5Cphi%0A%5Ctag%7B8%7D"></span></p>
 <p>Where <img src="https://latex.codecogs.com/png.latex?k=%5Csin%7B%5Cfrac%7B%5Ctheta_0%7D%7B2%7D%7D">. For the period <img src="https://latex.codecogs.com/png.latex?T">, the process is <img src="https://latex.codecogs.com/png.latex?%5Ctheta_0%20%5Cto%200%20%5Cto%20-%5Ctheta_0%20%5Cto%200"> , so: <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0AT=4%5Csqrt%7B%5Cfrac%7Bl%7D%7Bg%7D%7D%5Cint_0%5E%7B%5Cpi/2%7D%5Cfrac%7B1%7D%7B%5Csqrt%7B1-k%5E2%5Csin%7B%5Cphi%7D%5E2%7D%7D%20%5Cmathrm%7Bd%7D%5Cphi%0A%5Ctag%7B9%7D"></span></p>
 <p>This is <a href="https://en.wikipedia.org/wiki/Elliptic_integral#Complete_elliptic_integral_of_the_first_kind">the Complete Elliptic Integral of the first Kind</a>, which can be written as: <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0AT=4%5Csqrt%7B%5Cfrac%7Bl%7D%7Bg%7D%7DK%5Cleft(%5Csin%7B%5Cleft(%20%5Cfrac%7B%5Ctheta_0%7D%7B2%7D%20%5Cright)%7D%5Cright)%0A%5Ctag%7B10%7D"></span></p>
 <p>Using the power series expansion of <img src="https://latex.codecogs.com/png.latex?K(k)"> , we obtain: <span id="eq-label"><img src="https://latex.codecogs.com/png.latex?%0AT=2%5Cpi%5Csqrt%7B%5Cfrac%7Bl%7D%7Bg%7D%7D%5Csum_%7Bn=0%7D%5E%7B%5Cinfty%7D%5Cleft(%20%5Cfrac%7B(2n)!%7D%7B2%5E%7B2n%7D(n!)%7D%20%5Cright)%5E2%20%5Csin%5E%7B2n%7D%5Cleft(%20%5Cfrac%7B%5Ctheta_0%7D%7B2%7D%20%5Cright)%0A%5Ctag%7B11%7D"></span></p>
-</section>
-</section>
-</div>
 
 
+</section>
+</section>
 
  ]]></description>
   <category>Classic Mechanics</category>
