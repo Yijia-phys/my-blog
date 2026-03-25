@@ -507,20 +507,16 @@ window.Quarto = {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".code-figure").forEach(function (container) {
-    const figureDiv = container.querySelector(".quarto-figure");
-    if (!figureDiv) return;
+    const codeBlock = container.querySelector(".code-copy-outer-scaffold");
+    if (!codeBlock) return;
 
-    let sibling = figureDiv.nextElementSibling;
-    while (sibling) {
-      if (sibling.classList.contains("code-copy-outer-scaffold")) break;
-      sibling = sibling.nextElementSibling;
-    }
-    if (!sibling) return;
+    const anchor = container.querySelector(".quarto-figure")
+                || container.querySelector("p:has(img)");
+    if (!anchor) return;
 
-    sibling.style.display = "none";
-    sibling.dataset.toggled = "false";
-
-    figureDiv.style.position = "relative";
+    codeBlock.style.display = "none";
+    codeBlock.dataset.toggled = "false";
+    anchor.style.position = "relative";
 
     const btn = document.createElement("button");
     btn.textContent = "</>";
@@ -528,13 +524,36 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.title = "Display / Hide";
 
     btn.addEventListener("click", function () {
-      const hidden = sibling.dataset.toggled === "false";
-      sibling.style.display = hidden ? "" : "none";
-      sibling.dataset.toggled = hidden ? "true" : "false";
+      const hidden = codeBlock.dataset.toggled === "false";
+      codeBlock.style.display = hidden ? "" : "none";
+      codeBlock.dataset.toggled = hidden ? "true" : "false";
       btn.classList.toggle("active", hidden);
     });
 
-    figureDiv.appendChild(btn);
+    anchor.appendChild(btn);
+  });
+
+  function syncThumbnails() {
+    const dark = document.body.classList.contains("quarto-dark");
+    document.querySelectorAll("img.thumbnail-image.card-img").forEach(function (img) {
+      const src = img.src;
+      if (!/_light\.|_dark\./.test(src)) return;
+
+      if (dark) {
+        img.src = src.replace(/_light\./, "_dark.");
+        img.classList.add("darkmode");
+      } else {
+        img.src = src.replace(/_dark\./, "_light.");
+        img.classList.remove("darkmode");
+      }
+    });
+  }
+
+  syncThumbnails();
+
+  new MutationObserver(syncThumbnails).observe(document.body, {
+    attributes: true,
+    attributeFilter: ["class"]
   });
 });
 </script>
