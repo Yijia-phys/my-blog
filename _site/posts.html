@@ -581,7 +581,7 @@ body.quarto-dark .quarto-listing-container-default .listing-date {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1774426072218" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
+<div class="quarto-post image-right" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1774436589247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
 <div class="thumbnail"><a href="./posts/2/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts\2\Cos_and_Cosh_light.svg" alt="Cos and Cosh functions in complex plane"  class="thumbnail-image card-img"/></p>
@@ -666,8 +666,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     codeBlock.style.display = "none";
 
-    codeBlock.dataset.toggled = "false";
-
     anchor.style.position = "relative";
 
 
@@ -684,13 +682,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btn.addEventListener("click", function () {
 
-      const hidden = codeBlock.dataset.toggled === "false";
+      const isHidden = codeBlock.style.display === "none"
 
-      codeBlock.style.display = hidden ? "" : "none";
+                    || getComputedStyle(codeBlock).display === "none";
 
-      codeBlock.dataset.toggled = hidden ? "true" : "false";
+      codeBlock.style.display = isHidden ? "" : "none";
 
-      btn.classList.toggle("active", hidden);
+      btn.classList.toggle("active", isHidden);
 
     });
 
