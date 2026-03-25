@@ -448,7 +448,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771200000000" data-listing-file-modified-sort="1774426173980" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
+<div class="g-col-1" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771200000000" data-listing-file-modified-sort="1774436670404" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
 <a href="./posts/2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img loading='lazy' src="posts/2/Cos_and_Cosh_light.svg" alt="Cos and Cosh functions in complex plane" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -475,7 +475,7 @@ Feb 16, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Q2xhc3NpYyUyME1lY2hhbmljcw==" data-listing-date-sort="1770422400000" data-listing-file-modified-sort="1774426173976" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
+<div class="g-col-1" data-index="1" data-categories="Q2xhc3NpYyUyME1lY2hhbmljcw==" data-listing-date-sort="1770422400000" data-listing-file-modified-sort="1774436670400" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
 <a href="./posts/1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img loading='lazy' src="posts/1/simple_pendulum.svg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -516,7 +516,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!anchor) return;
 
     codeBlock.style.display = "none";
-    codeBlock.dataset.toggled = "false";
     anchor.style.position = "relative";
 
     const btn = document.createElement("button");
@@ -525,10 +524,10 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.title = "Display / Hide";
 
     btn.addEventListener("click", function () {
-      const hidden = codeBlock.dataset.toggled === "false";
-      codeBlock.style.display = hidden ? "" : "none";
-      codeBlock.dataset.toggled = hidden ? "true" : "false";
-      btn.classList.toggle("active", hidden);
+      const isHidden = codeBlock.style.display === "none"
+                    || getComputedStyle(codeBlock).display === "none";
+      codeBlock.style.display = isHidden ? "" : "none";
+      btn.classList.toggle("active", isHidden);
     });
 
     anchor.appendChild(btn);

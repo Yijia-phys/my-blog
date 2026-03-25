@@ -425,7 +425,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!anchor) return;
 
     codeBlock.style.display = "none";
-    codeBlock.dataset.toggled = "false";
     anchor.style.position = "relative";
 
     const btn = document.createElement("button");
@@ -434,10 +433,10 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.title = "Display / Hide";
 
     btn.addEventListener("click", function () {
-      const hidden = codeBlock.dataset.toggled === "false";
-      codeBlock.style.display = hidden ? "" : "none";
-      codeBlock.dataset.toggled = hidden ? "true" : "false";
-      btn.classList.toggle("active", hidden);
+      const isHidden = codeBlock.style.display === "none"
+                    || getComputedStyle(codeBlock).display === "none";
+      codeBlock.style.display = isHidden ? "" : "none";
+      btn.classList.toggle("active", isHidden);
     });
 
     anchor.appendChild(btn);
