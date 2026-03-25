@@ -1,5 +1,6 @@
 ---
 title: "Credits"
+toc: false
 ---
 To respect the work of creators and comply with licensing, all third-party images, icons, and code components used across this blog are listed below.
 
@@ -12,7 +13,8 @@ To respect the work of creators and comply with licensing, all third-party image
 
 ## Technical Stack
 (none)
+
 ---
 
-### Licensing
-Unless otherwise noted, the original educational content (lecture notes and posts) on this site is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+## Licensing
+Unless otherwise noted, the original educational content (lecture notes and posts) on this site is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).

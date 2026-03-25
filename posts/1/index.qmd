@@ -6,8 +6,6 @@ categories: [Classic Mechanics]
 format: html
 ---
 
-:::{.code-figure}
-
 ## Defination
 Here is the **Euler-Lagrange's equation**:
 
@@ -18,7 +16,7 @@ $$ {#eq-label}
 Where $\mathcal{L}$ is the **Lagrangian**, defined as $T-V$. \
 In **Mathematica**, we can compute it directly by calling the `VariationalMethods` package:
 
-```mathematica
+```
 Needs["VariationalMethods`"]
 L = T - V
 EulerEquations[L, {q1[t], q2[t]}, t]
@@ -28,6 +26,7 @@ EulerEquations[L, {q1[t], q2[t]}, t]
 
 ## Example
 
+:::{.code-figure}
 ![Simple pendulum](simple_pendulum.svg){width=20%}
 ```tex
 \documentclass[tikz,border=5pt]{standalone}
@@ -59,6 +58,7 @@ EulerEquations[L, {q1[t], q2[t]}, t]
 \end{tikzpicture}
 \end{document}
 ```
+:::
 
 Choose the angular displacement $\theta$ (the angle between the pendulum and the vertical) as the generalized coordinate.
 
@@ -76,6 +76,7 @@ $$ {#eq-label}
 $$
 \dot{\theta}\ddot{\theta}+\frac{g}{l}\dot{\theta}\sin{\theta}=0 \\
 $$ {#eq-label}
+
 $$
 \frac{\mathrm{d}}{\mathrm{d}t}(\frac{1}{2}\dot{\theta}^2-\frac{g}{l}\cos{\theta})=0
 $$ {#eq-label}
@@ -84,6 +85,7 @@ Let $\theta=\theta_0$ when $t=0$ :
 $$
 \dot{\theta}^2=\frac{2g}{l}(\cos{\theta}-\cos{\theta_0})
 $$ {#eq-label}
+
 $$
 t=\sqrt{\frac{l}{2g}} \int_0^{\theta} \frac{1}{\sqrt{\cos{\theta}-\cos{\theta_0}}}\mathrm{d}\theta
 $$ {#eq-label}
@@ -108,5 +110,3 @@ Using the power series expansion of $K(k)$ , we obtain:
 $$
 T=2\pi\sqrt{\frac{l}{g}}\sum_{n=0}^{\infty}\left( \frac{(2n)!}{2^{2n}(n!)} \right)^2 \sin^{2n}\left( \frac{\theta_0}{2} \right)
 $$ {#eq-label}
-
-:::

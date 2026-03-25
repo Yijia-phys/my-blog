@@ -103,6 +103,29 @@
     margin-top: 2rem;
     font-style: italic;
   }
+  body.dark {
+    --bg: #1a1b2e;
+    --ink: #e8e8f0;
+    --muted: #9090a8;
+    --border: #2e2e45;
+    --accent-light: #1e2040;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  body.dark .card {
+    background: #21223a;
+    border-color: var(--border);
+    box-shadow: 0 2px 24px rgba(0,0,0,0.4);
+  }
+  body.dark .pendulum-wrap line {
+    stroke: #3a3a55;
+  }
+  body.dark #arm line {
+    stroke: #c0c0d8;
+  }
+  body.dark .footnote {
+    color: #4a4a68;
+  }
 </style>
 </head>
 <body>
@@ -197,6 +220,12 @@
     el.style.opacity = '1';
   }
   requestAnimationFrame(tick);
+
+  const scheme = localStorage.getItem('quarto-color-scheme');
+  if (scheme === 'alternate' || 
+    (!scheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.body.classList.add('dark');
+  }
 </script>
 </body>
 </html>

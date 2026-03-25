@@ -6,8 +6,6 @@ categories: [Casual]
 format: html
 ---
 
-:::{.code-figure}
-
 ## 2026-02-16: Initial Building
 
 ### Technical Details
@@ -62,7 +60,9 @@ Of course, I hope that most of my visitors will have `JavaScript` enabled becaus
 ### Features and Workflow
 What's most exciting is that I added a small `JavaScript` snippet to enable a "view code" feature for images (though in principle, it's simply toggling a collapsed code block). Click the `</>` icon in the top‑right corner of an image to expand the corresponding `Mathematica` or `TikZ` code—like this:
 
-![Cos and Cosh functions in complex plane](Cos_and_Cosh.svg){width="80%"}
+:::{.code-figure}
+![Cos and Cosh functions in complex plane](Cos_and_Cosh_light.svg){.lightmode width="80%"}
+![Cos and Cosh functions in complex plane](Cos_and_Cosh_dark.svg){.darkmode width="80%"}
 ```Mathematica
 region = {z, -4 - 4  I, 4 + 4  I};
 
@@ -76,6 +76,7 @@ plotCosh =
 
 GraphicsRow[{plotCos, plotCosh}, ImageSize -> Large]
 ```
+:::
 
 One more thing: the display of `SVG` images in dark mode still needs some tweaking. If you view them in dark mode, they might look a bit off (though not incorrect).
 
@@ -100,5 +101,3 @@ Write-Host "Yattaze" -ForegroundColor Green
 I'm trying to stop "tinkering" with the site as much. To be honest, I used to dislike constantly updating software or systems, but now that I'm a developer, I often get the urge to add something new. Once I fix the issues I mentioned and tidy up the code structure a bit, **I'll shift my focus back to writing blog content.**
 
 As for content, I've been studying *complex analysis* and `Mathematica` recently, and I'd like to combine the two to create some visualizations. However, I have other exam preparations at the moment, so that post will probably have to wait a while.
-
-:::

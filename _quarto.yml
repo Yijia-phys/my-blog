@@ -39,6 +39,7 @@ format:
     include-after-body: styles.html
     code-copy: true
     toc: true
+    toc-depth: 3
     toc-location: right
     include-in-header:
       - text: |

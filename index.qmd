@@ -18,6 +18,49 @@ format:
     toc: false
     anchor-sections: false
 ---
+<style>
+.g-col-12,
+.g-col-md-4 {
+  background: var(--background-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 16px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--ink);
+}
+
+.g-col-12:hover,
+.g-col-md-4:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(90, 103, 216, 0.13);
+}
+
+.g-col-12 h3,
+.g-col-md-4 h3 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.g-col-12 p,
+.g-col-md-4 p {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+#recent-posts {
+  white-space: nowrap;
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+</style>
 
 ::: {.column-page}
 
