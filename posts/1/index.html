@@ -421,9 +421,9 @@ window.Quarto = {
 \tag{1}\]</span></span></p>
 <p>Where <span class="math inline">\(\mathcal{L}\)</span> is the <strong>Lagrangian</strong>, defined as <span class="math inline">\(T-V\)</span>.<br>
 In <strong>Mathematica</strong>, we can compute it directly by calling the <code>VariationalMethods</code> package:</p>
-<pre><code>Needs["VariationalMethods`"]
-L = T - V
-EulerEquations[L, {q1[t], q2[t]}, t]</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode mathematica code-with-copy"><code class="sourceCode mathematica"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Needs</span><span class="op">[</span><span class="st">"VariationalMethods`"</span><span class="op">]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">L</span> <span class="ex">=</span> <span class="fu">T</span> <span class="sc">-</span> <span class="fu">V</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>EulerEquations<span class="op">[</span><span class="fu">L</span><span class="op">,</span> <span class="op">{</span>q1<span class="op">[</span><span class="fu">t</span><span class="op">],</span> q2<span class="op">[</span><span class="fu">t</span><span class="op">]},</span> <span class="fu">t</span><span class="op">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="example" class="level2">
