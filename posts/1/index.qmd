@@ -16,7 +16,7 @@ $$ {#eq-label}
 Where $\mathcal{L}$ is the **Lagrangian**, defined as $T-V$. \
 In **Mathematica**, we can compute it directly by calling the `VariationalMethods` package:
 
-```
+```Mathematica
 Needs["VariationalMethods`"]
 L = T - V
 EulerEquations[L, {q1[t], q2[t]}, t]

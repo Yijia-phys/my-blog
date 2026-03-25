@@ -9,7 +9,6 @@ format: html
 ## 2026-02-16: Initial Building
 
 ### Technical Details
-
 This blog is built by [Quarto](https://quarto.org), which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode). 
 
 I choose **Quarto** for its support for $Tex$ formulas. My first choice was [Hexo](https://hexo.io). However, after spending an entire afternoon trying to configure it to support $Tex$ formulas--experimenting with renderers for $MathJax$, which failed to render formulas entirely, and $KaTex$, which produced ghosting arrtifacts and displayed raw $Tex$ code on the page--I ultimately decided to switch to **Quarto** on *7th Feb, 2026*.
@@ -35,6 +34,7 @@ Also, the entire website is in English. My English isn't particularly strong—I
 Finally, a word on the purpose of this blog. I hope that one day it can find a place on my personal business card—something I can showcase when applying to schools or jobs in the future. That's why I don't plan to promote it widely or fill it with overly entertaining content. Of course, I know that those who become proficient do so through hands-on practice; to keep improving my blog, I need to let go of the "curse of perfectionism." I hope I can hold onto this mindset and continue refining this blog, step by step.
 
 ---
+
 ## 2026-03-21: Refactoring & New Features
 
 ### New Pages
@@ -101,3 +101,18 @@ Write-Host "Yattaze" -ForegroundColor Green
 I'm trying to stop "tinkering" with the site as much. To be honest, I used to dislike constantly updating software or systems, but now that I'm a developer, I often get the urge to add something new. Once I fix the issues I mentioned and tidy up the code structure a bit, **I'll shift my focus back to writing blog content.**
 
 As for content, I've been studying *complex analysis* and `Mathematica` recently, and I'd like to combine the two to create some visualizations. However, I have other exam preparations at the moment, so that post will probably have to wait a while.
+
+---
+
+## 2026-03-25: Final Touches
+
+### Dark Mode
+I added a dark mode version of the 404 page, and I also fixed the dark mode display of `SVG` images. Now, there are two versions of each `SVG` image, one for light mode and one for dark mode. Maybe in the future, I will use *PNG* or *WebP* images instead, which can be more quickly rendered.
+
+And I also added a dark mode support for thumbnails and the scrollbar. The scrollbar is now more visible in dark mode, and the thumbnails are now more consistent with the overall color scheme.
+
+### Code structure
+I separated some of the `CSS` code which is only used for one page into the front of the `qmd` file of that page respectively. This way, the `styles.css` file is now cleaner and more organized.
+
+### Conclusion
+I, Yijia Zhao, swear by the sky that this will be the last update for the appearance of the site. I will now focus on writing content and improving the quality of the posts.
