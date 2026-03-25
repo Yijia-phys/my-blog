@@ -574,9 +574,6 @@ body.quarto-dark .quarto-listing-container-default .listing-date {
   font-family: sans-serif;
 }
 
-/* Toggle elements for light/dark mode (unchanged) */
-body.quarto-dark .lightmode { display: none; }
-body:not(.quarto-dark) .darkmode { display: none; }
 </style>
 
 
@@ -584,7 +581,7 @@ body:not(.quarto-dark) .darkmode { display: none; }
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1774415157907" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1362">
+<div class="quarto-post image-right" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1774421318448" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1362">
 <div class="thumbnail"><a href="./posts/2/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts\2\Cos_and_Cosh_light.svg" alt="Cos and Cosh functions in complex plane"  class="thumbnail-image card-img"/></p>
@@ -614,7 +611,7 @@ Yijia Zhao
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Q2xhc3NpYyUyME1lY2hhbmljcw==" data-listing-date-sort="1770393600000" data-listing-file-modified-sort="1774415917681" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
+<div class="quarto-post image-right" data-index="1" data-categories="Q2xhc3NpYyUyME1lY2hhbmljcw==" data-listing-date-sort="1770393600000" data-listing-file-modified-sort="1774420862245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
 <div class="thumbnail"><a href="./posts/1/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts\1\simple_pendulum.svg"  class="thumbnail-image card-img"/></p>
@@ -653,33 +650,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".code-figure").forEach(function (container) {
 
-    const figureDiv = container.querySelector(".quarto-figure");
+    const codeBlock = container.querySelector(".code-copy-outer-scaffold");
 
-    if (!figureDiv) return;
-
-
-
-    let sibling = figureDiv.nextElementSibling;
-
-    while (sibling) {
-
-      if (sibling.classList.contains("code-copy-outer-scaffold")) break;
-
-      sibling = sibling.nextElementSibling;
-
-    }
-
-    if (!sibling) return;
+    if (!codeBlock) return;
 
 
 
-    sibling.style.display = "none";
+    const anchor = container.querySelector(".quarto-figure")
 
-    sibling.dataset.toggled = "false";
+                || container.querySelector("p:has(img)");
+
+    if (!anchor) return;
 
 
 
-    figureDiv.style.position = "relative";
+    codeBlock.style.display = "none";
+
+    codeBlock.dataset.toggled = "false";
+
+    anchor.style.position = "relative";
 
 
 
@@ -695,11 +684,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btn.addEventListener("click", function () {
 
-      const hidden = sibling.dataset.toggled === "false";
+      const hidden = codeBlock.dataset.toggled === "false";
 
-      sibling.style.display = hidden ? "" : "none";
+      codeBlock.style.display = hidden ? "" : "none";
 
-      sibling.dataset.toggled = hidden ? "true" : "false";
+      codeBlock.dataset.toggled = hidden ? "true" : "false";
 
       btn.classList.toggle("active", hidden);
 
@@ -707,7 +696,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    figureDiv.appendChild(btn);
+    anchor.appendChild(btn);
+
+  });
+
+
+
+  function syncThumbnails() {
+
+    const dark = document.body.classList.contains("quarto-dark");
+
+    document.querySelectorAll("img.thumbnail-image.card-img").forEach(function (img) {
+
+      const src = img.src;
+
+      if (!/_light\.|_dark\./.test(src)) return;
+
+
+
+      if (dark) {
+
+        img.src = src.replace(/_light\./, "_dark.");
+
+        img.classList.add("darkmode");
+
+      } else {
+
+        img.src = src.replace(/_dark\./, "_light.");
+
+        img.classList.remove("darkmode");
+
+      }
+
+    });
+
+  }
+
+
+
+  syncThumbnails();
+
+
+
+  new MutationObserver(syncThumbnails).observe(document.body, {
+
+    attributes: true,
+
+    attributeFilter: ["class"]
 
   });
 

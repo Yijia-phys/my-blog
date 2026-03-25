@@ -211,7 +211,4 @@ body.quarto-dark .quarto-listing-container-default .listing-date {
   font-family: sans-serif;
 }
 
-/* Toggle elements for light/dark mode (unchanged) */
-body.quarto-dark .lightmode { display: none; }
-body:not(.quarto-dark) .darkmode { display: none; }
 </style>

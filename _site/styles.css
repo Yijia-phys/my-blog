@@ -190,6 +190,57 @@ body.quarto-dark .quarto-color-scheme-toggle .bi::after {
   text-shadow: 0 0 10px rgba(255, 202, 40, 0.5);
 }
 
+body.quarto-dark .aa-Autocomplete .aa-Form .aa-InputWrapper .aa-Input,
+body.quarto-dark .aa-DetachedFormContainer .aa-Form .aa-InputWrapper .aa-Input {
+  background: #3a3a3a;
+  color: #ffffff;
+  caret-color: #ffffff;
+}
+
+body.quarto-dark .aa-Autocomplete .aa-Form .aa-InputWrapperPrefix,
+body.quarto-dark .aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix {
+  background: #3a3a3a;
+}
+
+body.quarto-dark .aa-Autocomplete .aa-Form .aa-SubmitButton,
+body.quarto-dark .aa-DetachedFormContainer .aa-Form .aa-SubmitButton {
+  background: #3a3a3a;
+  color: #cccccc !important;
+  outline-color: #3a3a3a;
+}
+
+body.quarto-dark .aa-Autocomplete .aa-Form,
+body.quarto-dark .aa-DetachedFormContainer .aa-Form {
+  background: #3a3a3a;
+}
+
+body.quarto-dark .aa-Autocomplete .aa-Form .aa-SubmitIcon,
+body.quarto-dark .aa-DetachedFormContainer .aa-Form .aa-SubmitIcon {
+  color: #ffffff !important;
+}
+
+body.quarto-dark .aa-Autocomplete .aa-Form .aa-ClearIcon,
+body.quarto-dark .aa-DetachedFormContainer .aa-Form .aa-ClearIcon {
+  color: #ffffff !important;
+}
+
+body.quarto-dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.quarto-dark ::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+body.quarto-dark ::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 4px;
+}
+
+body.quarto-dark ::-webkit-scrollbar-thumb:hover {
+  background: #777777;
+}
+
 /* nav-link color in dark mode */
 [data-quarto-color-scheme="dark"] .nav-link,
 body.quarto-dark .nav-link { color: rgba(255,255,255,0.85); }
