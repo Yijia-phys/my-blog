@@ -446,7 +446,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1774436589247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
+<div class="g-col-1" data-index="0" data-categories="Q2FzdWFs" data-listing-date-sort="1771171200000" data-listing-file-modified-sort="1774503955918" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
 <a href="./posts/2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\2\Cos_and_Cosh_light.svg" alt="Cos and Cosh functions in complex plane" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -507,25 +507,37 @@ Feb 7, 2026
 
 document.addEventListener("DOMContentLoaded", function () {
 
+
+
   document.querySelectorAll(".code-figure").forEach(function (container) {
 
-    const codeBlock = container.querySelector(".code-copy-outer-scaffold");
+    const codeBlock = container.querySelector(".code-copy-outer-scaffold > div.sourceCode");
 
-    if (!codeBlock) return;
+    const scaffold  = container.querySelector(".code-copy-outer-scaffold");
 
-
-
-    const anchor = container.querySelector(".quarto-figure")
-
-                || container.querySelector("p:has(img)");
-
-    if (!anchor) return;
+    if (!codeBlock || !scaffold) return;
 
 
 
-    codeBlock.style.display = "none";
+    const imgParas = container.querySelectorAll(".quarto-figure, p:has(img)");
 
-    anchor.style.position = "relative";
+    if (!imgParas.length) return;
+
+    const lastImg = imgParas[imgParas.length - 1];
+
+
+
+    codeBlock.style.maxHeight  = "0";
+
+    codeBlock.style.overflow   = "hidden";
+
+    codeBlock.style.transition = "max-height 0.25s ease";
+
+    scaffold.style.display     = "none";
+
+
+
+    let expandedHeight = null;
 
 
 
@@ -533,27 +545,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btn.textContent = "</>";
 
-    btn.className = "toggle-code-btn";
+    btn.className   = "toggle-code-btn";
 
-    btn.title = "Display / Hide";
+    btn.title       = "Display / Hide";
 
 
 
     btn.addEventListener("click", function () {
 
-      const isHidden = codeBlock.style.display === "none"
+      const isCollapsed = scaffold.style.display === "none";
 
-                    || getComputedStyle(codeBlock).display === "none";
+      if (isCollapsed) {
 
-      codeBlock.style.display = isHidden ? "" : "none";
+        scaffold.style.display = "";
 
-      btn.classList.toggle("active", isHidden);
+        if (!expandedHeight) {
+
+          codeBlock.style.maxHeight = "none";
+
+          expandedHeight = codeBlock.scrollHeight + "px";
+
+        }
+
+        codeBlock.style.maxHeight = expandedHeight;
+
+        btn.classList.add("active");
+
+      } else {
+
+        codeBlock.style.maxHeight = "0";
+
+        setTimeout(() => { scaffold.style.display = "none"; }, 250);
+
+        btn.classList.remove("active");
+
+      }
 
     });
 
 
 
-    anchor.appendChild(btn);
+    container.appendChild(btn);
 
   });
 
@@ -568,8 +600,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const src = img.src;
 
       if (!/_light\.|_dark\./.test(src)) return;
-
-
 
       if (dark) {
 
@@ -592,8 +622,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   syncThumbnails();
-
-
 
   new MutationObserver(syncThumbnails).observe(document.body, {
 
