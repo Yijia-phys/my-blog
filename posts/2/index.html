@@ -529,30 +529,46 @@ window.Quarto = {
 </main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+
   document.querySelectorAll(".code-figure").forEach(function (container) {
-    const codeBlock = container.querySelector(".code-copy-outer-scaffold");
-    if (!codeBlock) return;
+    const codeBlock = container.querySelector(".code-copy-outer-scaffold > div.sourceCode");
+    const scaffold  = container.querySelector(".code-copy-outer-scaffold");
+    if (!codeBlock || !scaffold) return;
 
-    const anchor = container.querySelector(".quarto-figure")
-                || container.querySelector("p:has(img)");
-    if (!anchor) return;
+    const imgParas = container.querySelectorAll(".quarto-figure, p:has(img)");
+    if (!imgParas.length) return;
+    const lastImg = imgParas[imgParas.length - 1];
 
-    codeBlock.style.display = "none";
-    anchor.style.position = "relative";
+    codeBlock.style.maxHeight  = "0";
+    codeBlock.style.overflow   = "hidden";
+    codeBlock.style.transition = "max-height 0.25s ease";
+    scaffold.style.display     = "none";
+
+    let expandedHeight = null;
 
     const btn = document.createElement("button");
     btn.textContent = "</>";
-    btn.className = "toggle-code-btn";
-    btn.title = "Display / Hide";
+    btn.className   = "toggle-code-btn";
+    btn.title       = "Display / Hide";
 
     btn.addEventListener("click", function () {
-      const isHidden = codeBlock.style.display === "none"
-                    || getComputedStyle(codeBlock).display === "none";
-      codeBlock.style.display = isHidden ? "" : "none";
-      btn.classList.toggle("active", isHidden);
+      const isCollapsed = scaffold.style.display === "none";
+      if (isCollapsed) {
+        scaffold.style.display = "";
+        if (!expandedHeight) {
+          codeBlock.style.maxHeight = "none";
+          expandedHeight = codeBlock.scrollHeight + "px";
+        }
+        codeBlock.style.maxHeight = expandedHeight;
+        btn.classList.add("active");
+      } else {
+        codeBlock.style.maxHeight = "0";
+        setTimeout(() => { scaffold.style.display = "none"; }, 250);
+        btn.classList.remove("active");
+      }
     });
 
-    anchor.appendChild(btn);
+    container.appendChild(btn);
   });
 
   function syncThumbnails() {
@@ -560,7 +576,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("img.thumbnail-image.card-img").forEach(function (img) {
       const src = img.src;
       if (!/_light\.|_dark\./.test(src)) return;
-
       if (dark) {
         img.src = src.replace(/_light\./, "_dark.");
         img.classList.add("darkmode");
@@ -572,7 +587,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   syncThumbnails();
-
   new MutationObserver(syncThumbnails).observe(document.body, {
     attributes: true,
     attributeFilter: ["class"]

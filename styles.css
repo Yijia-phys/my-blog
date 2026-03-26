@@ -409,6 +409,7 @@ div.sourceCode button.code-copy {
   z-index: 10;
   opacity: 0.8;
 }
+
 pre.sourceCode button.code-copy:hover,
 .cell-output pre button.code-copy:hover,
 div.sourceCode button.code-copy:hover {
@@ -508,7 +509,7 @@ body.quarto-dark .lightmode { display: none; }
 body:not(.quarto-dark) .darkmode { display: none; }
 
 /* Code figure toggle */
-.code-figure .quarto-figure {
+.code-figure {
   position: relative;
 }
 
@@ -535,6 +536,10 @@ body:not(.quarto-dark) .darkmode { display: none; }
 .toggle-code-btn.active {
   background: rgba(200, 200, 235, 0.95);
   border-color: #99a;
+}
+
+.code-copy-outer-scaffold {
+  position: relative;
 }
 
 html[data-bs-theme="dark"] .toggle-code-btn,
