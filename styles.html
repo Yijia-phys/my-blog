@@ -2,39 +2,40 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".code-figure").forEach(function (container) {
-    const codeBlock = container.querySelector(".code-copy-outer-scaffold > div.sourceCode");
     const scaffold  = container.querySelector(".code-copy-outer-scaffold");
-    if (!codeBlock || !scaffold) return;
+    if (!scaffold) return;
 
     const imgParas = container.querySelectorAll(".quarto-figure, p:has(img)");
     if (!imgParas.length) return;
     const lastImg = imgParas[imgParas.length - 1];
 
-    codeBlock.style.maxHeight  = "0";
-    codeBlock.style.overflow   = "hidden";
-    codeBlock.style.transition = "max-height 0.25s ease";
-    scaffold.style.display     = "none";
+    // Wrap scaffold so the whole block animates as one unit
+    const wrapper = document.createElement("div");
+    wrapper.className = "code-toggle-wrapper";
+    wrapper.style.overflow   = "hidden";
+    wrapper.style.maxHeight  = "0";
+    wrapper.style.transition = "max-height 0.35s ease";
+    scaffold.parentNode.insertBefore(wrapper, scaffold);
+    wrapper.appendChild(scaffold);
 
     let expandedHeight = null;
 
     const btn = document.createElement("button");
     btn.textContent = "</>";
     btn.className   = "toggle-code-btn";
-    btn.title       = "Display / Hide";
+    btn.title       = "Show / Hide code";
 
     btn.addEventListener("click", function () {
-      const isCollapsed = scaffold.style.display === "none";
-      if (isCollapsed) {
-        scaffold.style.display = "";
+      const collapsed = wrapper.style.maxHeight === "0px";
+      if (collapsed) {
         if (!expandedHeight) {
-          codeBlock.style.maxHeight = "none";
-          expandedHeight = codeBlock.scrollHeight + "px";
+          wrapper.style.maxHeight = "none";
+          expandedHeight = wrapper.scrollHeight + "px";
         }
-        codeBlock.style.maxHeight = expandedHeight;
+        wrapper.style.maxHeight = expandedHeight;
         btn.classList.add("active");
       } else {
-        codeBlock.style.maxHeight = "0";
-        setTimeout(() => { scaffold.style.display = "none"; }, 250);
+        wrapper.style.maxHeight = "0";
         btn.classList.remove("active");
       }
     });
