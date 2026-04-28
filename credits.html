@@ -425,6 +425,15 @@ document.addEventListener("DOMContentLoaded", function () {
     attributes: true,
     attributeFilter: ["class"]
   });
+
+  // After MathJax finishes, force flex layout recalculation
+  if (window.MathJax) {
+    MathJax.startup.promise.then(function () {
+      document.body.style.minHeight = (document.body.scrollHeight - 1) + "px";
+      document.body.offsetHeight; // force reflow
+      document.body.style.minHeight = "";
+    });
+  }
 });
 </script>
 
