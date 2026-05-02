@@ -1,0 +1,75 @@
+---
+title: "Tao's Analysis I, Chapter 2: Natural Numbers"
+author: "Yijia Zhao"
+date: "2026-05-02"
+categories: [Real Analysis, Mathematics, Reading Notes]
+format: html
+---
+
+I began with the Chinese version (my native language), but I wasted time because of a translation error in Chapter 2. I was afraid there would be more mistakes in the other chapters, so I switched to the original.
+
+I haven't written a reading note for Chapter 1, not only because I read the Chinese translation, but also because it didn't contain anything worth writing down. It reminded me of *Counterexamples in Real Analysis* — inspiring, but not really suited for taking notes.
+
+To begin with Section 2.1, I'd first like to state my basics. I only knew a little about the **Peano axioms** from some blogs and videos popularizing math. I had studied *Mathematical Analysis* in Chinese several years ago, but it began with **decimals** or **functions** instead.
+
+Also, I’ve seen in some articles that Tao’s notation, especially for the **increment operation**, differs from the mainstream notation. But since this is my first encounter with this material, I’m just using Tao’s notation directly.
+
+## Section 2.1 The Peano Axioms
+
+While Axioms 2.1–2.4 struck me as quite natural, my real confusion started with Axiom 2.5.
+
+> **Axiom 2.5 (Principle of mathematical induction).** Let $P(n)$ be any property pertaining to a natural number $n$. Suppose that $P(0)$ is true, and suppose that whenever $P(n)$ is true, $P(n++)$ is also true. Then $P(n)$ is true for every natural number $n$.
+
+Here were my questions:
+
+1. Why *Mathematical induction* ? 
+2. How to define $P(n)$ ?
+3. As it is an *axiom schema*, how many axioms do we need in total to determine $\mathbb{N}$ in total ?
+4. Does it really determine $\mathbb{N}$ ?
+
+As for the first question, I had never thought of *mathematical induction* as “obviously true,” and I couldn't accept it as an axiom or a basic rule. In other words: How was *mathematical induction* founded in **history**? Why did Peano choose it as an axiom? May I replace it with another axiom?
+
+What surprised and puzzled me is that, historically, the principle of mathematical induction seems to never have been “derived” from anything more fundamental. Peano probably just took this thing that everyone already accepted and made it an axiom. Also, while I did find some propositions that are equivalent to mathematical induction, they didn't quite reach the point of "deriving" mathematical induction in the way I had hoped. But some arguments about this issue (the *reality* of mathematical induction) did manage to convince me. That's too philosophical, so I won't expand on it in this post.
+
+As for the second question, the first thing that puzzled me was how to actually express such a $P(n)$. For instance, take the half-integer example Tao gives in the book, like ${0.5, 1.5,...}$. Am I supposed to write something like “$P(n)$ means $n$ is not a half-integer”? That hardly feels like mathematical language. Later I realized that this is actually because $0.5$ hasn't even been defined yet — so maybe I was overthinking it? Numbers like $\sqrt{2}$ or $1+2i$ would be ruled out in a similar way.
+
+But then I thought twice: if I define $b=a ++ , c= b++$, how can I be sure that these things are not in $\mathbb{N}$? Should I write "$P(n)$ means $n$ is not a letter of the alphabet"? Ugh, that seems unsatisfactory. At the moment, I'm not sure if this approach is correct. Maybe it's because what I defined wasn't really “mathematical” in the first place — hence the unsatisfying result.
+
+Given my thoughts on the second question, I intuitively felt that the answer to the third question would be "infinitely many," though I can't prove it. The same goes for the fourth question. My intuition tells me that if I could list infinitely many such “mathematical induction axioms,” I would thereby be able to determine $\mathbb{N}$ — but again, I can't prove it. Anyway, these reflections have strayed too far from *analysis* itself, so I've decided to set them aside for now.
+
+## Section 2.2 Addition
+
+By the way, I really like this style — “(why?)”, for example:
+
+> As a particular corollary of Lemma 2.2.2 and Lemma 2.2.3 we see that n++ = n + 1 (why?).
+
+> **Lemma 2.2.2.** For any natural number $n$, $n+0=n$.
+
+> **Lemma 2.2.3.** For any natural numbers $n$ and $m$, $n+(m++)=(n+m)++$
+
+It's really not that hard — you just need to apply **Lemma 2.2.2** in reverse to get $n++=(n+0)++$, and then use **Lemma 2.2.3** to prove $(n+0)++=n+(0++)=n+1$
+But this serves as a great reminder: when a step is skipped, I should actually stop and think it through, or even work out the derivation myself — not just accept the word "obviously" like in some physics books that use it to gloss over things that are anything but obvious.
+
+When doing the exercises, I noticed some problems too. The first few were fine, but at **Exercise 2.2.3** I ran into a few problems:
+
+> **Exercise 2.2.3.** Prove Proposition 2.2.12.
+
+> **Proposition 2.2.12 (Basic properties of order for natural numbers).** Let $a, b, c$ be natural numbers. Then: (e) $a < b$ if and only if $a++ \leq b$.
+
+At first, I didn't realize that this exercise required **Lemma 2.2.10**.
+
+> **Lemma 2.2.10.** Let a be a positive number. Then there exists exactly one natural number $b$ such that $b++=a$
+
+This made me go back and sort out the logical flow of the whole of **Section 2.2**. Tao's strong emphasis on rigor made me reluctant to use certain things that were probably fine — I just couldn't clearly tell what was strictly rigorous and what might lead to circular reasoning.
+
+Moreover, this also made me lean toward things I was already familiar with and could be certain were rigorous. For example, my original proof went like this:
+
+> $a < b$, by definition we get $b ≥ a$ and $b ≠ a$, $b=a+x$ which $x$ is a natural number. By **Lemma 2.2.10** we obtain there exists exactly one natural number $y$ such that $y++=x$. Then $b=a+(y++)$, by **Lemma 2.2.3** we obtain $b=(a+y)++$ ; using *commutativity* we get $b=(y+a)++$ ; then applying **Lemma 2.2.3** in reverse yields $b=y+(a++)$ ; and finally, by *commutativity* we obtain $b=(a++)+y$ . This is precisely the definition of $b≥a++$.
+
+Actually, if I'd just used the *definition of addition*, I wouldn't have needed *commutativity* at all... but I'm still more at ease using things I already know well.
+
+As for **Exercise 2.2.5**, maybe it was down to my English ability — halfway through the proof, I realized I hadn't even fully clarified what the problem was asking. That cost me some time. But with a similar kind of problem in **Exercise 2.2.6**, I first wrote out the logical structure of the statement. A bit clumsy, maybe, but it really helped me see the whole problem more clearly.
+
+## Section 2.3 Multiplication
+
+With the foundation laid in **Section 2.2**, **Section 2.3** was very straightforward — including all of the **Exercises 2.3.x** … I’m not sure if this was intentional on Tao’s part, but either way, this part went very smoothly.

@@ -2,7 +2,7 @@
 title: "Test post: Euler-Lagrange's equation in simple pendulum"
 author: "Yijia Zhao"
 date: "2026-02-07"
-categories: [Classic Mechanics]
+categories: [Classic Mechanics, Physics]
 format: html
 ---
 
