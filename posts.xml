@@ -10,7 +10,87 @@
 <atom:link href="https://blog.yijialog.org/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Mon, 16 Feb 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 02 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Tao’s Analysis I, Chapter 2: Natural Numbers</title>
+  <dc:creator>Yijia Zhao</dc:creator>
+  <link>https://blog.yijialog.org/posts/3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>I began with the Chinese version (my native language), but I wasted time because of a translation error in Chapter 2. I was afraid there would be more mistakes in the other chapters, so I switched to the original.</p>
+<p>I haven’t written a reading note for Chapter 1, not only because I read the Chinese translation, but also because it didn’t contain anything worth writing down. It reminded me of <em>Counterexamples in Real Analysis</em> — inspiring, but not really suited for taking notes.</p>
+<p>To begin with Section 2.1, I’d first like to state my basics. I only knew a little about the <strong>Peano axioms</strong> from some blogs and videos popularizing math. I had studied <em>Mathematical Analysis</em> in Chinese several years ago, but it began with <strong>decimals</strong> or <strong>functions</strong> instead.</p>
+<p>Also, I’ve seen in some articles that Tao’s notation, especially for the <strong>increment operation</strong>, differs from the mainstream notation. But since this is my first encounter with this material, I’m just using Tao’s notation directly.</p>
+<section id="section-2.1-the-peano-axioms" class="level2">
+<h2 class="anchored" data-anchor-id="section-2.1-the-peano-axioms">Section 2.1 The Peano Axioms</h2>
+<p>While Axioms 2.1–2.4 struck me as quite natural, my real confusion started with Axiom 2.5.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 2.5 (Principle of mathematical induction).</strong> Let <img src="https://latex.codecogs.com/png.latex?P(n)"> be any property pertaining to a natural number <img src="https://latex.codecogs.com/png.latex?n">. Suppose that <img src="https://latex.codecogs.com/png.latex?P(0)"> is true, and suppose that whenever <img src="https://latex.codecogs.com/png.latex?P(n)"> is true, <img src="https://latex.codecogs.com/png.latex?P(n++)"> is also true. Then <img src="https://latex.codecogs.com/png.latex?P(n)"> is true for every natural number <img src="https://latex.codecogs.com/png.latex?n">.</p>
+</blockquote>
+<p>Here were my questions:</p>
+<ol type="1">
+<li>Why <em>Mathematical induction</em> ?</li>
+<li>How to define <img src="https://latex.codecogs.com/png.latex?P(n)"> ?</li>
+<li>As it is an <em>axiom schema</em>, how many axioms do we need in total to determine <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> in total ?</li>
+<li>Does it really determine <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> ?</li>
+</ol>
+<p>As for the first question, I had never thought of <em>mathematical induction</em> as “obviously true,” and I couldn’t accept it as an axiom or a basic rule. In other words: How was <em>mathematical induction</em> founded in <strong>history</strong>? Why did Peano choose it as an axiom? May I replace it with another axiom?</p>
+<p>What surprised and puzzled me is that, historically, the principle of mathematical induction seems to never have been “derived” from anything more fundamental. Peano probably just took this thing that everyone already accepted and made it an axiom. Also, while I did find some propositions that are equivalent to mathematical induction, they didn’t quite reach the point of “deriving” mathematical induction in the way I had hoped. But some arguments about this issue (the <em>reality</em> of mathematical induction) did manage to convince me. That’s too philosophical, so I won’t expand on it in this post.</p>
+<p>As for the second question, the first thing that puzzled me was how to actually express such a <img src="https://latex.codecogs.com/png.latex?P(n)">. For instance, take the half-integer example Tao gives in the book, like <img src="https://latex.codecogs.com/png.latex?%7B0.5,%201.5,...%7D">. Am I supposed to write something like “<img src="https://latex.codecogs.com/png.latex?P(n)"> means <img src="https://latex.codecogs.com/png.latex?n"> is not a half-integer”? That hardly feels like mathematical language. Later I realized that this is actually because <img src="https://latex.codecogs.com/png.latex?0.5"> hasn’t even been defined yet — so maybe I was overthinking it? Numbers like <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> or <img src="https://latex.codecogs.com/png.latex?1+2i"> would be ruled out in a similar way.</p>
+<p>But then I thought twice: if I define <img src="https://latex.codecogs.com/png.latex?b=a%20++%20,%20c=%20b++">, how can I be sure that these things are not in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">? Should I write “<img src="https://latex.codecogs.com/png.latex?P(n)"> means <img src="https://latex.codecogs.com/png.latex?n"> is not a letter of the alphabet”? Ugh, that seems unsatisfactory. At the moment, I’m not sure if this approach is correct. Maybe it’s because what I defined wasn’t really “mathematical” in the first place — hence the unsatisfying result.</p>
+<p>Given my thoughts on the second question, I intuitively felt that the answer to the third question would be “infinitely many,” though I can’t prove it. The same goes for the fourth question. My intuition tells me that if I could list infinitely many such “mathematical induction axioms,” I would thereby be able to determine <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> — but again, I can’t prove it. Anyway, these reflections have strayed too far from <em>analysis</em> itself, so I’ve decided to set them aside for now.</p>
+</section>
+<section id="section-2.2-addition" class="level2">
+<h2 class="anchored" data-anchor-id="section-2.2-addition">Section 2.2 Addition</h2>
+<p>By the way, I really like this style — “(why?)”, for example:</p>
+<blockquote class="blockquote">
+<p>As a particular corollary of Lemma 2.2.2 and Lemma 2.2.3 we see that n++ = n + 1 (why?).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Lemma 2.2.2.</strong> For any natural number <img src="https://latex.codecogs.com/png.latex?n">, <img src="https://latex.codecogs.com/png.latex?n+0=n">.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Lemma 2.2.3.</strong> For any natural numbers <img src="https://latex.codecogs.com/png.latex?n"> and <img src="https://latex.codecogs.com/png.latex?m">, <img src="https://latex.codecogs.com/png.latex?n+(m++)=(n+m)++"></p>
+</blockquote>
+<p>It’s really not that hard — you just need to apply <strong>Lemma 2.2.2</strong> in reverse to get <img src="https://latex.codecogs.com/png.latex?n++=(n+0)++">, and then use <strong>Lemma 2.2.3</strong> to prove <img src="https://latex.codecogs.com/png.latex?(n+0)++=n+(0++)=n+1"> But this serves as a great reminder: when a step is skipped, I should actually stop and think it through, or even work out the derivation myself — not just accept the word “obviously” like in some physics books that use it to gloss over things that are anything but obvious.</p>
+<p>When doing the exercises, I noticed some problems too. The first few were fine, but at <strong>Exercise 2.2.3</strong> I ran into a few problems:</p>
+<blockquote class="blockquote">
+<p><strong>Exercise 2.2.3.</strong> Prove Proposition 2.2.12.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Proposition 2.2.12 (Basic properties of order for natural numbers).</strong> Let <img src="https://latex.codecogs.com/png.latex?a,%20b,%20c"> be natural numbers. Then: (e) <img src="https://latex.codecogs.com/png.latex?a%20%3C%20b"> if and only if <img src="https://latex.codecogs.com/png.latex?a++%20%5Cleq%20b">.</p>
+</blockquote>
+<p>At first, I didn’t realize that this exercise required <strong>Lemma 2.2.10</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>Lemma 2.2.10.</strong> Let a be a positive number. Then there exists exactly one natural number <img src="https://latex.codecogs.com/png.latex?b"> such that <img src="https://latex.codecogs.com/png.latex?b++=a"></p>
+</blockquote>
+<p>This made me go back and sort out the logical flow of the whole of <strong>Section 2.2</strong>. Tao’s strong emphasis on rigor made me reluctant to use certain things that were probably fine — I just couldn’t clearly tell what was strictly rigorous and what might lead to circular reasoning.</p>
+<p>Moreover, this also made me lean toward things I was already familiar with and could be certain were rigorous. For example, my original proof went like this:</p>
+<blockquote class="blockquote">
+<p><img src="https://latex.codecogs.com/png.latex?a%20%3C%20b">, by definition we get <img src="https://latex.codecogs.com/png.latex?b%20%E2%89%A5%20a"> and <img src="https://latex.codecogs.com/png.latex?b%20%E2%89%A0%20a">, <img src="https://latex.codecogs.com/png.latex?b=a+x"> which <img src="https://latex.codecogs.com/png.latex?x"> is a natural number. By <strong>Lemma 2.2.10</strong> we obtain there exists exactly one natural number <img src="https://latex.codecogs.com/png.latex?y"> such that <img src="https://latex.codecogs.com/png.latex?y++=x">. Then <img src="https://latex.codecogs.com/png.latex?b=a+(y++)">, by <strong>Lemma 2.2.3</strong> we obtain <img src="https://latex.codecogs.com/png.latex?b=(a+y)++"> ; using <em>commutativity</em> we get <img src="https://latex.codecogs.com/png.latex?b=(y+a)++"> ; then applying <strong>Lemma 2.2.3</strong> in reverse yields <img src="https://latex.codecogs.com/png.latex?b=y+(a++)"> ; and finally, by <em>commutativity</em> we obtain <img src="https://latex.codecogs.com/png.latex?b=(a++)+y"> . This is precisely the definition of <img src="https://latex.codecogs.com/png.latex?b%E2%89%A5a++">.</p>
+</blockquote>
+<p>Actually, if I’d just used the <em>definition of addition</em>, I wouldn’t have needed <em>commutativity</em> at all… but I’m still more at ease using things I already know well.</p>
+<p>As for <strong>Exercise 2.2.5</strong>, maybe it was down to my English ability — halfway through the proof, I realized I hadn’t even fully clarified what the problem was asking. That cost me some time. But with a similar kind of problem in <strong>Exercise 2.2.6</strong>, I first wrote out the logical structure of the statement. A bit clumsy, maybe, but it really helped me see the whole problem more clearly.</p>
+</section>
+<section id="section-2.3-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="section-2.3-multiplication">Section 2.3 Multiplication</h2>
+<p>With the foundation laid in <strong>Section 2.2</strong>, <strong>Section 2.3</strong> was very straightforward — including all of the <strong>Exercises 2.3.x</strong> … I’m not sure if this was intentional on Tao’s part, but either way, this part went very smoothly.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Real Analysis</category>
+  <category>Mathematics</category>
+  <category>Reading Notes</category>
+  <guid>https://blog.yijialog.org/posts/3/</guid>
+  <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Building process of this blog</title>
   <dc:creator>Yijia Zhao</dc:creator>
@@ -544,6 +624,7 @@ font-style: inherit;">document</span>}</span></code></pre></div></div>
 
  ]]></description>
   <category>Classic Mechanics</category>
+  <category>Physics</category>
   <guid>https://blog.yijialog.org/posts/1/</guid>
   <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
 </item>

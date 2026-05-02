@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Yijia Zhao">
+<meta name="dcterms.date" content="2026-05-02">
 
-<title>Posts – Yijia Zhao</title>
+<title>Tao’s Analysis I, Chapter 2: Natural Numbers – Yijia Zhao</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,30 +28,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-1c5d05e776d8cc6ed79b334dc06cf84a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-1c5d05e776d8cc6ed79b334dc06cf84a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -76,35 +76,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
@@ -151,8 +122,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Yijia Zhao" href="posts.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -332,7 +303,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Yijia Zhao</span>
     </a>
   </div>
@@ -343,17 +314,17 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> <i class="bi bi-file-post" role="img">
+    <a class="nav-link" href="../../posts.html"> <i class="bi bi-file-post" role="img">
 </i> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./downloads.html"> <i class="bi bi-download" role="img">
+    <a class="nav-link" href="../../downloads.html"> <i class="bi bi-download" role="img">
 </i> 
 <span class="menu-text">Downloads</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> <i class="bi bi-file-person" role="img">
+    <a class="nav-link" href="../../about.html"> <i class="bi bi-file-person" role="img">
 </i> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -368,334 +339,122 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Posts</h1>
-            <p class="subtitle lead"><i class="bi bi-rss-fill" style="color: #ee802f;"></i> <a href="posts.xml">RSS</a></p>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Tao’s Analysis I, Chapter 2: Natural Numbers</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Real Analysis</div>
+                <div class="quarto-category">Mathematics</div>
+                <div class="quarto-category">Reading Notes</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Yijia Zhao </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 2, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q2FzdWFs">Casual <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2xhc3NpYyUyME1lY2hhbmljcw==">Classic Mechanics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWF0aGVtYXRpY3M=">Mathematics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGh5c2ljcw==">Physics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVhZGluZyUyME5vdGVz">Reading Notes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVhbCUyMEFuYWx5c2lz">Real Analysis <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section-2.1-the-peano-axioms" id="toc-section-2.1-the-peano-axioms" class="nav-link active" data-scroll-target="#section-2.1-the-peano-axioms">Section 2.1 The Peano Axioms</a></li>
+  <li><a href="#section-2.2-addition" id="toc-section-2.2-addition" class="nav-link" data-scroll-target="#section-2.2-addition">Section 2.2 Addition</a></li>
+  <li><a href="#section-2.3-multiplication" id="toc-section-2.3-multiplication" class="nav-link" data-scroll-target="#section-2.3-multiplication">Section 2.3 Multiplication</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
 
-<style>
-/* Common card styles (unified)*/
-.quarto-post .card,
-.quarto-listing-cols-3 .card,
-.quarto-grid-item,
-.quarto-listing-container-default .quarto-post,
-#quarto-margin-sidebar .quarto-listing-category {
-  background: var(--background-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 16px var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
-}
-
-/* Hover effect for cards */
-.quarto-post .card:hover,
-.quarto-listing-cols-3 .card:hover,
-.quarto-grid-item:hover,
-.quarto-listing-container-default .quarto-post:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(90, 103, 216, 0.13);
-}
-
-/* Typography & layout for listing container */
-.quarto-listing .quarto-post {
-  margin-bottom: 1em;
-  padding-top: 0;
-}
-
-.quarto-grid-item .card-title,
-.listing-title {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400;
-  color: var(--ink);
-}
-
-.listing-date,
-.listing-author,
-.card-text.listing-description {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-.quarto-listing-container-default .metadata {
-  width: 80px;
-  flex-basis: 80px;
-}
-
-.quarto-listing-container-default .listing-author,
-.quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-/* Categories styling */
-.listing-categories .listing-category {
-  background: var(--accent-light);
-  color: var(--accent);
-  border: none;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  padding: 0.15em 0.6em;
-}
-
-/* Horizontal listing cards (default style)*/
-.quarto-listing-container-default .quarto-post {
-  padding: 1.1rem 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.quarto-listing-container-default .quarto-post:hover {
-  transform: translateY(-2px);
-}
-
-/* Remove default dividers */
-.quarto-listing-container-default .quarto-post + .quarto-post {
-  border-top: none;
-}
-.quarto-listing-container-default .list .quarto-post {
-  border-bottom: none;
-  padding-top: 1.1rem;
-  padding-bottom: 1.1rem;
-}
-
-/* Thumbnail images */
-.quarto-listing-container-default .thumbnail img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  width: 100%;
-  border-radius: 6px;
-}
-
-/* Listing title */
-.quarto-listing-container-default .listing-title a {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400;
-  font-size: 1.05rem;
-  color: var(--ink, #2d2d3a);
-  text-decoration: none;
-}
-.quarto-listing-container-default .listing-title a:hover {
-  color: var(--accent, #5a67d8);
-}
-
-/* Listing description */
-.quarto-listing-container-default .listing-description {
-  font-size: 0.85rem;
-  color: var(--muted, #888);
-  line-height: 1.65;
-  margin-top: 0.3rem;
-}
-
-/* Author & date — reduced selector nesting, avoid !important */
-.quarto-listing-container-default .listing-author,
-.quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
-  font-family: sans-serif;
-}
-
-/* Metadata column width */
-.quarto-listing-container-default .metadata {
-  width: 90px;
-  flex-basis: 90px;
-}
-
-/* Inline categories inside listing */
-.quarto-listing-container-default .listing-categories {
-  margin-top: 0.6rem;
-}
-
-.quarto-listing-container-default .quarto-post .listing-categories .listing-category {
-  background: var(--accent-light, #ebedfa);
-  color: var(--accent, #5a67d8);
-  border: none;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  padding: 0.15em 0.6em;
-}
-
-/* Categories sidebar box */
-#quarto-margin-sidebar {
-  padding-top: 0;
-}
-
-#quarto-margin-sidebar .quarto-listing-category-title {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent, #5a67d8);
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border, #e0e0ec);
-}
-
-#quarto-margin-sidebar .quarto-listing-category {
-  padding: 1rem 1.1rem;
-}
-
-#quarto-margin-sidebar .quarto-category {
-  border-radius: 4px;
-  font-size: 0.78rem;
-  margin-bottom: 0.15rem;
-}
-#quarto-margin-sidebar .quarto-category.active {
-  background-color: var(--accent, #5a67d8);
-  border-color: var(--accent, #5a67d8);
-  color: #fff;
-}
-
-/* Dark mode adjustments (both selectors) */
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .quarto-post,
-body.quarto-dark .quarto-listing-container-default .quarto-post,
-[data-quarto-color-scheme="dark"] #quarto-margin-sidebar .quarto-listing-category,
-body.quarto-dark #quarto-margin-sidebar .quarto-listing-category {
-  background: var(--background-secondary, #161820);
-}
-
-/* Ensure dark mode does not alter these rules unless necessary */
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-author,
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-date,
-body.quarto-dark .quarto-listing-container-default .listing-author,
-body.quarto-dark .quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
-  font-family: sans-serif;
-}
-
-</style>
+<p>I began with the Chinese version (my native language), but I wasted time because of a translation error in Chapter 2. I was afraid there would be more mistakes in the other chapters, so I switched to the original.</p>
+<p>I haven’t written a reading note for Chapter 1, not only because I read the Chinese translation, but also because it didn’t contain anything worth writing down. It reminded me of <em>Counterexamples in Real Analysis</em> — inspiring, but not really suited for taking notes.</p>
+<p>To begin with Section 2.1, I’d first like to state my basics. I only knew a little about the <strong>Peano axioms</strong> from some blogs and videos popularizing math. I had studied <em>Mathematical Analysis</em> in Chinese several years ago, but it began with <strong>decimals</strong> or <strong>functions</strong> instead.</p>
+<p>Also, I’ve seen in some articles that Tao’s notation, especially for the <strong>increment operation</strong>, differs from the mainstream notation. But since this is my first encounter with this material, I’m just using Tao’s notation directly.</p>
+<section id="section-2.1-the-peano-axioms" class="level2">
+<h2 class="anchored" data-anchor-id="section-2.1-the-peano-axioms">Section 2.1 The Peano Axioms</h2>
+<p>While Axioms 2.1–2.4 struck me as quite natural, my real confusion started with Axiom 2.5.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 2.5 (Principle of mathematical induction).</strong> Let <span class="math inline">P(n)</span> be any property pertaining to a natural number <span class="math inline">n</span>. Suppose that <span class="math inline">P(0)</span> is true, and suppose that whenever <span class="math inline">P(n)</span> is true, <span class="math inline">P(n++)</span> is also true. Then <span class="math inline">P(n)</span> is true for every natural number <span class="math inline">n</span>.</p>
+</blockquote>
+<p>Here were my questions:</p>
+<ol type="1">
+<li>Why <em>Mathematical induction</em> ?</li>
+<li>How to define <span class="math inline">P(n)</span> ?</li>
+<li>As it is an <em>axiom schema</em>, how many axioms do we need in total to determine <span class="math inline">\mathbb{N}</span> in total ?</li>
+<li>Does it really determine <span class="math inline">\mathbb{N}</span> ?</li>
+</ol>
+<p>As for the first question, I had never thought of <em>mathematical induction</em> as “obviously true,” and I couldn’t accept it as an axiom or a basic rule. In other words: How was <em>mathematical induction</em> founded in <strong>history</strong>? Why did Peano choose it as an axiom? May I replace it with another axiom?</p>
+<p>What surprised and puzzled me is that, historically, the principle of mathematical induction seems to never have been “derived” from anything more fundamental. Peano probably just took this thing that everyone already accepted and made it an axiom. Also, while I did find some propositions that are equivalent to mathematical induction, they didn’t quite reach the point of “deriving” mathematical induction in the way I had hoped. But some arguments about this issue (the <em>reality</em> of mathematical induction) did manage to convince me. That’s too philosophical, so I won’t expand on it in this post.</p>
+<p>As for the second question, the first thing that puzzled me was how to actually express such a <span class="math inline">P(n)</span>. For instance, take the half-integer example Tao gives in the book, like <span class="math inline">{0.5, 1.5,...}</span>. Am I supposed to write something like “<span class="math inline">P(n)</span> means <span class="math inline">n</span> is not a half-integer”? That hardly feels like mathematical language. Later I realized that this is actually because <span class="math inline">0.5</span> hasn’t even been defined yet — so maybe I was overthinking it? Numbers like <span class="math inline">\sqrt{2}</span> or <span class="math inline">1+2i</span> would be ruled out in a similar way.</p>
+<p>But then I thought twice: if I define <span class="math inline">b=a ++ , c= b++</span>, how can I be sure that these things are not in <span class="math inline">\mathbb{N}</span>? Should I write “<span class="math inline">P(n)</span> means <span class="math inline">n</span> is not a letter of the alphabet”? Ugh, that seems unsatisfactory. At the moment, I’m not sure if this approach is correct. Maybe it’s because what I defined wasn’t really “mathematical” in the first place — hence the unsatisfying result.</p>
+<p>Given my thoughts on the second question, I intuitively felt that the answer to the third question would be “infinitely many,” though I can’t prove it. The same goes for the fourth question. My intuition tells me that if I could list infinitely many such “mathematical induction axioms,” I would thereby be able to determine <span class="math inline">\mathbb{N}</span> — but again, I can’t prove it. Anyway, these reflections have strayed too far from <em>analysis</em> itself, so I’ve decided to set them aside for now.</p>
+</section>
+<section id="section-2.2-addition" class="level2">
+<h2 class="anchored" data-anchor-id="section-2.2-addition">Section 2.2 Addition</h2>
+<p>By the way, I really like this style — “(why?)”, for example:</p>
+<blockquote class="blockquote">
+<p>As a particular corollary of Lemma 2.2.2 and Lemma 2.2.3 we see that n++ = n + 1 (why?).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Lemma 2.2.2.</strong> For any natural number <span class="math inline">n</span>, <span class="math inline">n+0=n</span>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Lemma 2.2.3.</strong> For any natural numbers <span class="math inline">n</span> and <span class="math inline">m</span>, <span class="math inline">n+(m++)=(n+m)++</span></p>
+</blockquote>
+<p>It’s really not that hard — you just need to apply <strong>Lemma 2.2.2</strong> in reverse to get <span class="math inline">n++=(n+0)++</span>, and then use <strong>Lemma 2.2.3</strong> to prove <span class="math inline">(n+0)++=n+(0++)=n+1</span> But this serves as a great reminder: when a step is skipped, I should actually stop and think it through, or even work out the derivation myself — not just accept the word “obviously” like in some physics books that use it to gloss over things that are anything but obvious.</p>
+<p>When doing the exercises, I noticed some problems too. The first few were fine, but at <strong>Exercise 2.2.3</strong> I ran into a few problems:</p>
+<blockquote class="blockquote">
+<p><strong>Exercise 2.2.3.</strong> Prove Proposition 2.2.12.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Proposition 2.2.12 (Basic properties of order for natural numbers).</strong> Let <span class="math inline">a, b, c</span> be natural numbers. Then: (e) <span class="math inline">a &lt; b</span> if and only if <span class="math inline">a++ \leq b</span>.</p>
+</blockquote>
+<p>At first, I didn’t realize that this exercise required <strong>Lemma 2.2.10</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>Lemma 2.2.10.</strong> Let a be a positive number. Then there exists exactly one natural number <span class="math inline">b</span> such that <span class="math inline">b++=a</span></p>
+</blockquote>
+<p>This made me go back and sort out the logical flow of the whole of <strong>Section 2.2</strong>. Tao’s strong emphasis on rigor made me reluctant to use certain things that were probably fine — I just couldn’t clearly tell what was strictly rigorous and what might lead to circular reasoning.</p>
+<p>Moreover, this also made me lean toward things I was already familiar with and could be certain were rigorous. For example, my original proof went like this:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">a &lt; b</span>, by definition we get <span class="math inline">b ≥ a</span> and <span class="math inline">b ≠ a</span>, <span class="math inline">b=a+x</span> which <span class="math inline">x</span> is a natural number. By <strong>Lemma 2.2.10</strong> we obtain there exists exactly one natural number <span class="math inline">y</span> such that <span class="math inline">y++=x</span>. Then <span class="math inline">b=a+(y++)</span>, by <strong>Lemma 2.2.3</strong> we obtain <span class="math inline">b=(a+y)++</span> ; using <em>commutativity</em> we get <span class="math inline">b=(y+a)++</span> ; then applying <strong>Lemma 2.2.3</strong> in reverse yields <span class="math inline">b=y+(a++)</span> ; and finally, by <em>commutativity</em> we obtain <span class="math inline">b=(a++)+y</span> . This is precisely the definition of <span class="math inline">b≥a++</span>.</p>
+</blockquote>
+<p>Actually, if I’d just used the <em>definition of addition</em>, I wouldn’t have needed <em>commutativity</em> at all… but I’m still more at ease using things I already know well.</p>
+<p>As for <strong>Exercise 2.2.5</strong>, maybe it was down to my English ability — halfway through the proof, I realized I hadn’t even fully clarified what the problem was asking. That cost me some time. But with a similar kind of problem in <strong>Exercise 2.2.6</strong>, I first wrote out the logical structure of the statement. A bit clumsy, maybe, but it really helped me see the whole problem more clearly.</p>
+</section>
+<section id="section-2.3-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="section-2.3-multiplication">Section 2.3 Multiplication</h2>
+<p>With the foundation laid in <strong>Section 2.2</strong>, <strong>Section 2.3</strong> was very straightforward — including all of the <strong>Exercises 2.3.x</strong> … I’m not sure if this was intentional on Tao’s part, but either way, this part went very smoothly.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWF0aGVtYXRpY3MlMkNSZWFkaW5nJTIwTm90ZXM=" data-listing-date-sort="1777680000000" data-listing-file-modified-sort="1777704861969" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1134">
-<div class="thumbnail"><a href="./posts/3/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="assets/placeholder.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/3/index.html" class="no-external">Tao’s Analysis I, Chapter 2: Natural Numbers</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhbCUyMEFuYWx5c2lz'); return false;">Real Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWF0aGVtYXRpY3M='); return false;">Mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhZGluZyUyME5vdGVz'); return false;">Reading Notes</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/3/index.html" class="no-external">
-I began with the Chinese version (my native language), but I wasted time because of a translation error in Chapter 2. I was afraid there would be more mistakes in the other…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/3/index.html" class="no-external">
-<div class="listing-date">
-May 2, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Q2FzdWFs" data-listing-date-sort="1771200000000" data-listing-file-modified-sort="1777704861968" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
-<div class="thumbnail"><a href="./posts/2/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/2/Cos_and_Cosh_light.svg" alt="Cos and Cosh functions in complex plane"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2/index.html" class="no-external">Building process of this blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2FzdWFs'); return false;">Casual</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2/index.html" class="no-external">
-This blog is built by Quarto, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode).
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2/index.html" class="no-external">
-<div class="listing-date">
-Feb 16, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Q2xhc3NpYyUyME1lY2hhbmljcyUyQ1BoeXNpY3M=" data-listing-date-sort="1770422400000" data-listing-file-modified-sort="1777704861965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
-<div class="thumbnail"><a href="./posts/1/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/1/simple_pendulum.svg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/1/index.html" class="no-external">Test post: Euler-Lagrange’s equation in simple pendulum</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhc3NpYyUyME1lY2hhbmljcw=='); return false;">Classic Mechanics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGh5c2ljcw=='); return false;">Physics</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/1/index.html" class="no-external">
-Here is the <strong>Euler-Lagrange’s equation</strong>:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/1/index.html" class="no-external">
-<div class="listing-date">
-Feb 7, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -1198,7 +957,7 @@ document.addEventListener("DOMContentLoaded", function () {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><a href="./credits.html">Copyright</a> © 2026 Yijia Zhao | Built with <a href="https://quarto.org/">Quarto</a></p>
+<p><a href="../../credits.html">Copyright</a> © 2026 Yijia Zhao | Built with <a href="https://quarto.org/">Quarto</a></p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
