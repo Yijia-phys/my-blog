@@ -10,7 +10,262 @@
 <atom:link href="https://blog.yijialog.org/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Sat, 02 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 09 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Tao’s Analysis I, Chapter 3: Set Theory</title>
+  <dc:creator>Yijia Zhao</dc:creator>
+  <link>https://blog.yijialog.org/posts/4/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>Just like with the previous chapter, I came into this with almost zero background in set theory. I spent 1,100 minutes over four days getting through this chapter and made a pass at most of the exercises. But unlike Chapter 2, where I solved the majority of them on my own, this time there were quite a few where I threw in the towel without really wrestling with them and just looked up the answers. To be honest, I can’t really claim to have fully grasped this chapter, and I definitely felt a pretty strong sense of overload — there’s a lot I’m just not fluent with and don’t really know how to use. So for this post, I’ll go into a bit more detail on the parts where I personally struggled the most.</p>
+<p>But I’m not planning to spend much more time on this chapter either. Partly because, as someone headed toward mathematical physics, I’m unlikely to use rigorous set theory much in practice. And partly because, if I ever really need it later, I’d rather just pick up a dedicated <em>ZFC set theory</em> book.</p>
+<p>Also, I’ve got two updated takes on Chapter 2 that I want to mention:</p>
+<p>One, the notation — I can’t stand it anymore. The <em>cardinality</em> notation in particular: <img src="https://latex.codecogs.com/png.latex?%5C#(A)">. But I’ll just stick with the original notation in this post to avoid confusion.</p>
+<p>Two, the “(why?)” style. To be honest, I’ve come to find a lot of these annotations kind of strange. Plenty of things are genuinely obvious, and every time I see “(why?)” I end up questioning myself: “Is it really that simple?” It’s kind of a waste of time, honestly. Or at least, I don’t think the spots they’re placed in really warrant the attention.</p>
+<section id="section-3.1-fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.1-fundamentals">Section 3.1 Fundamentals</h2>
+<p><strong>Section 3.1</strong> was pretty basic — basic enough, in fact, to give me the false impression at the start that “set theory is actually easy.” But for the sake of keeping this post’s style consistent, and since a few of the axioms are genuinely important, I’ll still walk through them in order.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.1 (Sets are objects).</strong> If <img src="https://latex.codecogs.com/png.latex?A"> is a set, then <img src="https://latex.codecogs.com/png.latex?A"> is also an object. In particular, given two sets <img src="https://latex.codecogs.com/png.latex?A"> and <img src="https://latex.codecogs.com/png.latex?B">, it is meaningful to ask whether <img src="https://latex.codecogs.com/png.latex?A"> is also an element of <img src="https://latex.codecogs.com/png.latex?B">.</p>
+</blockquote>
+<p>To be honest, I think it gets a bit heavy on the philosophy here — at least, some of these moves didn’t really make sense to me as a beginner. Things like <em>“sets are objects,”</em> <em>“natural numbers are not sets,”</em> or <em>“pure set theory.”</em> I had to look each of these up separately just to figure out why they’re being emphasized so much.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.2 (Empty set).</strong> There exists a set <img src="https://latex.codecogs.com/png.latex?%5Cemptyset">, known as the empty set, which contains no elements, i.e., for every object x we have <img src="https://latex.codecogs.com/png.latex?x%20%5Cnotin%20%5Cemptyset">.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.3 (Singleton sets and pair sets).</strong> If <img src="https://latex.codecogs.com/png.latex?a"> is an object, then there exists a set <img src="https://latex.codecogs.com/png.latex?%5C%7Ba%5C%7D"> whose only element is a, i.e., for every object y, we have <img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20%5C%7Ba%5C%7D">$ if and only if <img src="https://latex.codecogs.com/png.latex?y%20=%20a">; we refer to <img src="https://latex.codecogs.com/png.latex?%5C%7Ba%5C%7D"> as the singleton set whose element is <img src="https://latex.codecogs.com/png.latex?a">. Furthermore, if <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b"> are objects, then there exists a set <img src="https://latex.codecogs.com/png.latex?%5C%7Ba,%20b%5C%7D"> whose only elements are <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b">; i.e., for every object y, we have <img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20%5C%7Ba,%20b%5C%7D"> if and only if <img src="https://latex.codecogs.com/png.latex?y%20=%20a"> or <img src="https://latex.codecogs.com/png.latex?y%20=%20b">; we refer to this set as the pair set formed by <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b">.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.4 (Pairwise union).</strong> Given any two sets <img src="https://latex.codecogs.com/png.latex?A">, <img src="https://latex.codecogs.com/png.latex?B">, there exists a set <img src="https://latex.codecogs.com/png.latex?A%20%5Ccup%20B">, called the union <img src="https://latex.codecogs.com/png.latex?A%20%5Ccup%20B"> of <img src="https://latex.codecogs.com/png.latex?A"> and <img src="https://latex.codecogs.com/png.latex?B">, whose elements consists of all the elements which belong to <img src="https://latex.codecogs.com/png.latex?A"> or <img src="https://latex.codecogs.com/png.latex?B"> or both. In other words, for any object <img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?%0Ax%20%5Cin%20A%20%5Ccup%20B%20%5Ciff%20x%20%5Cin%20A%20%5Clor%20x%20%5Cin%20B%0A"></p>
+</blockquote>
+<p>Some of the remarks feel kind of jarring. Throughout the appendix and Chapter 1, I get the sense that Tao assumes I have at least some calculus background — but then every so often he’ll emphasize something that I don’t think really needs emphasizing at this level, like <strong>Remark 3.1.12</strong> making a point of the difference between addition and union.</p>
+<p>And I noticed that a lot of the proofs in this chapter can be cranked out pretty easily using logical notation — <strong>Lemma 3.1.13</strong>, for example. The proof in the book feels a bit overdone to me, and in some of the exercises I just went ahead and did it that way myself.</p>
+<p>Also, the choice of axiom system here honestly goes a bit beyond what I thought axioms were supposed to be. At least, I used to think axioms could have equivalent formulations but couldn’t actually be derived from anything. But I guess as long as it can well-define sets, whatever.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.5 (Axiom of specification).</strong> Let <img src="https://latex.codecogs.com/png.latex?A"> be a set, and for each <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20A">, let <img src="https://latex.codecogs.com/png.latex?P(x)"> be a property pertaining to x (i.e., <img src="https://latex.codecogs.com/png.latex?P(x)"> is either a true statement or a false statement). Then there exists a set, called <img src="https://latex.codecogs.com/png.latex?%5C%7Bx%20%5Cin%20A%20:%20P(x)%20is%20true%5C%7D"> (or simply <img src="https://latex.codecogs.com/png.latex?%5C%7Bx%20%5Cin%20A%20:%20P(x)%5C%7D"> for short), whose elements are precisely the elements <img src="https://latex.codecogs.com/png.latex?x"> in <img src="https://latex.codecogs.com/png.latex?A"> for which <img src="https://latex.codecogs.com/png.latex?P(x)"> is true. In other words, for any object <img src="https://latex.codecogs.com/png.latex?y">,<br>
+<img src="https://latex.codecogs.com/png.latex?%0Ay%20%5Cin%20%5C%7Bx%20%5Cin%20A%20:%20P(x)%20%5Ctext%7B%20is%20true%20%7D%5C%7D%20%5Ciff%20y%20%5Cin%20A%20%5Cland%20P(y)%20%5Ctext%7B%20is%20true%20%7D%0A"></p>
+</blockquote>
+<p>In other words, <strong>Axiom 3.5</strong> lets us “filter out” the elements of a set A that satisfy some property — which means we need a set A to already exist in the first place. This also avoids the kind of trouble that <strong>Axiom 3.8</strong> gets into.</p>
+<p>And here you can really see how the basic set-theoretic notation ties into logical notation — <strong>Proposition 3.1.28</strong> even comes right out and says “Sets form a <em>boolean algebra</em>.” Basically, once you take the rules for logical symbols as given, you can prove all of these pretty smoothly just using the definitions of the set-theoretic symbols.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.6 (Replacement).</strong> Let <img src="https://latex.codecogs.com/png.latex?A"> be a set. For any object <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20A">, and any object <img src="https://latex.codecogs.com/png.latex?y">, suppose we have a statement <img src="https://latex.codecogs.com/png.latex?P(x,%20y)"> pertaining to <img src="https://latex.codecogs.com/png.latex?x"> and <img src="https://latex.codecogs.com/png.latex?y">, such that for each <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20A"> there is at most one <img src="https://latex.codecogs.com/png.latex?y"> for which <img src="https://latex.codecogs.com/png.latex?P(x,%20y)"> is true. Then there exists a set <img src="https://latex.codecogs.com/png.latex?%5C%7By%20:%20P(x,%20y)%20%5Ctext%7B%20is%20true%20for%20some%20%7D%20x%20%5Cin%20A%5C%7D">, such that for any object <img src="https://latex.codecogs.com/png.latex?z">, <img src="https://latex.codecogs.com/png.latex?%0Az%20%5Cin%20%5C%7By%20:%20P(x,%20y)%20%5Ctext%7B%20is%20true%20for%20some%20%7D%20x%20%5Cin%20A%5C%7D%20%5Ciff%20P(x,%20z)%20%5Ctext%7B%20is%20true%20for%20some%20%7D%20x%20%5Cin%20A.%0A"></p>
+</blockquote>
+<p>Although <strong>Axiom 3.6</strong> lets us “construct” a new set, the “size” (cardinality) of this set is still ≤ that of the original.</p>
+<p>Of course, this is a classic case of “axiom redundancy” — <strong>Axiom 3.6</strong> can actually derive <strong>Axiom 3.5</strong>, and <strong>Axiom 3.6</strong> is clearly the stronger statement. The proof is easy enough too; it’s exactly what <strong>Exercise 3.1.11</strong> asks you to do — you just need to pick a suitable <img src="https://latex.codecogs.com/png.latex?P(x,y)">. That said, defining <strong>Axiom 3.5</strong> first does make the logical flow feel more coherent and gradual.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.7 (Infinity).</strong> There exists a set <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, whose elements are called <em>natural numbers</em>, as well as an object <img src="https://latex.codecogs.com/png.latex?0"> in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D">, and an object <img src="https://latex.codecogs.com/png.latex?n++"> assigned to every <em>natural number</em> <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, such that the <em>Peano axioms</em> (Axioms 2.1 - 2.5) hold.</p>
+</blockquote>
+</section>
+<section id="section-3.2-russells-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.2-russells-paradox">Section 3.2 Russell’s paradox</h2>
+<p>Actually, I only realized after finishing <strong>Section 3.2</strong> that this section was optional reading. But whatever — it’s not a long section anyway. Since <strong>Axiom 3.8</strong> is informal by nature, I won’t bother writing it out here.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.9 (Regularity).</strong> If <img src="https://latex.codecogs.com/png.latex?A"> is a non-empty set, then there is at least one element <img src="https://latex.codecogs.com/png.latex?x"> of <img src="https://latex.codecogs.com/png.latex?A"> which is either not a set, or is <em>disjoint</em> from <img src="https://latex.codecogs.com/png.latex?A">.</p>
+</blockquote>
+<p>This axiom is actually pretty interesting. My first reaction was worrying whether it would kill off some sets we actually want — but later I realized only sets like <img src="https://latex.codecogs.com/png.latex?A%20%5Cin%20A"> would get ruled out by this one. The exercises for this section were pretty easy too.</p>
+</section>
+<section id="section-3.3-functions" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.3-functions">Section 3.3 Functions</h2>
+<p>To sum things up, I’ll first lay out the definitions for <em>functions</em>, <em>injective</em> , <em>surjective</em> and <em>bijective</em>, along with equivalent formulations and proof techniques.</p>
+<ol type="1">
+<li><em>Injective</em>
+<ul>
+<li>Definition: <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20f(x')%20%5Cimplies%20x%20=%20x'"></li>
+<li>Equivalent: <img src="https://latex.codecogs.com/png.latex?x%20%5Cneq%20x'%20%5Cimplies%20f(x)%20%5Cneq%20f(x')"></li>
+<li>Proof techniques:
+<ul>
+<li>Direct: assume <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20f(x')">, derive <img src="https://latex.codecogs.com/png.latex?x%20=%20x'"></li>
+<li>Contrapositive: assume <img src="https://latex.codecogs.com/png.latex?x%20%5Cneq%20x'">, derive <img src="https://latex.codecogs.com/png.latex?f(x)%20%5Cneq%20f(x')"></li>
+</ul></li>
+<li>Equivalent statements:
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D(f(S))%20=%20S"> for all <img src="https://latex.codecogs.com/png.latex?S%20%5Csubseteq%20X"></li>
+<li><img src="https://latex.codecogs.com/png.latex?f(A%20%5Ccap%20B)%20=%20f(A)%20%5Ccap%20f(B)"> for all <img src="https://latex.codecogs.com/png.latex?A,%20B%20%5Csubseteq%20X"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5C#(f(X))%20=%20%5C#(X)"> (finite sets)</li>
+</ul></li>
+</ul></li>
+<li><em>Surjective</em>
+<ul>
+<li>Definition: <img src="https://latex.codecogs.com/png.latex?%5Cforall%20y%20%5Cin%20Y,%20%5Cexists%20x%20%5Cin%20X,%20f(x)%20=%20y"></li>
+<li>Equivalent: <img src="https://latex.codecogs.com/png.latex?f(X)%20=%20Y"></li>
+<li>Proof techniques:
+<ul>
+<li>Direct: take any <img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20Y">, construct <img src="https://latex.codecogs.com/png.latex?x"> such that <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20y"></li>
+<li>Proof by contradiction: assume <img src="https://latex.codecogs.com/png.latex?%5Cexists%20y%20%5Cin%20Y"> not in the image, derive a contradiction</li>
+</ul></li>
+<li>Equivalent statements:
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?f(f%5E%7B-1%7D(S))%20=%20S"> for all <img src="https://latex.codecogs.com/png.latex?S%20%5Csubseteq%20Y"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cforall%20y%20%5Cin%20Y,%20f%5E%7B-1%7D(%5C%7By%5C%7D)%20%5Cneq%20%5Cvarnothing"></li>
+</ul></li>
+</ul></li>
+<li><em>Bijective</em>
+<ul>
+<li>Definition: injective and surjective</li>
+<li>Proof techniques:
+<ul>
+<li>Verify injective + surjective</li>
+<li>Construct an inverse map <img src="https://latex.codecogs.com/png.latex?g:%20Y%20%5Cto%20X">, verify <img src="https://latex.codecogs.com/png.latex?f%20%5Ccirc%20g%20=%20%5Ctext%7Bid%7D"> and <img src="https://latex.codecogs.com/png.latex?g%20%5Ccirc%20f%20=%20%5Ctext%7Bid%7D"></li>
+</ul></li>
+<li>Equivalent statements:
+<ul>
+<li>There exists an inverse function <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D:%20Y%20%5Cto%20X"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5C#(X)%20=%20%5C#(Y)"> (finite sets)</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>Another thing worth keeping an eye on is the <em>empty function</em>. By definition, if the codomain is non-empty, the empty function is <em>injective</em> but not <em>surjective</em>; if the codomain is empty, it’s <em>bijective</em>. This can easily trip you up later when bijections come up all the time in the cardinality section.</p>
+<p>As far as the exercises in this chapter go, they were fine. I’m also reasonably comfortable with the concept of <em>functions</em> by now. But I’d never studied <em>set theory</em> before, and I’d basically never drawn a distinction between <em>codomain</em> and <em>range</em>. In fact, if I remember right, the definitions I learned earlier even treated <em>functions</em> as naturally <em>surjective</em>.</p>
+</section>
+<section id="section3.4-images-and-inverse-images" class="level2">
+<h2 class="anchored" data-anchor-id="section3.4-images-and-inverse-images">Section3.4 Images and inverse images</h2>
+<ol type="1">
+<li><em>Forward Image</em>
+<ul>
+<li>Definition: <img src="https://latex.codecogs.com/png.latex?f(A)%20=%20%5C%7Bf(x)%20:%20x%20%5Cin%20A%5C%7D"></li>
+<li>Equivalent: <img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20f(A)%20%5Ciff%20%5Cexists%20x%20%5Cin%20A,%20f(x)%20=%20y"></li>
+<li>Properties:
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?f(A%20%5Ccup%20B)%20=%20f(A)%20%5Ccup%20f(B)"></li>
+<li><img src="https://latex.codecogs.com/png.latex?f(A%20%5Ccap%20B)%20%5Csubseteq%20f(A)%20%5Ccap%20f(B)">, equality holds <img src="https://latex.codecogs.com/png.latex?%5Ciff"> <img src="https://latex.codecogs.com/png.latex?f"> is <em>injective</em></li>
+<li><img src="https://latex.codecogs.com/png.latex?f(A%20%5Csetminus%20B)%20%5Csupseteq%20f(A)%20%5Csetminus%20f(B)">, equality holds <img src="https://latex.codecogs.com/png.latex?%5Ciff"> <img src="https://latex.codecogs.com/png.latex?f"> is <em>injective</em></li>
+<li><img src="https://latex.codecogs.com/png.latex?S%20%5Csubseteq%20f%5E%7B-1%7D(f(S))">, equality holds <img src="https://latex.codecogs.com/png.latex?%5Ciff"> <img src="https://latex.codecogs.com/png.latex?f"> is <em>injective</em></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5C#(f(X))%20%5Cleq%20%5C#(X)">, equality holds <img src="https://latex.codecogs.com/png.latex?%5Ciff"> <img src="https://latex.codecogs.com/png.latex?f"> is <em>injective</em></li>
+</ul></li>
+</ul></li>
+<li><em>Inverse Image</em>
+<ul>
+<li>Definition: <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D(B)%20=%20%5C%7Bx%20%5Cin%20X%20:%20f(x)%20%5Cin%20B%5C%7D"></li>
+<li>Equivalent: <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20f%5E%7B-1%7D(B)%20%5Ciff%20f(x)%20%5Cin%20B"></li>
+<li>Properties:
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D(U%20%5Ccup%20V)%20=%20f%5E%7B-1%7D(U)%20%5Ccup%20f%5E%7B-1%7D(V)"></li>
+<li><img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D(U%20%5Ccap%20V)%20=%20f%5E%7B-1%7D(U)%20%5Ccap%20f%5E%7B-1%7D(V)"></li>
+<li><img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D(U%20%5Csetminus%20V)%20=%20f%5E%7B-1%7D(U)%20%5Csetminus%20f%5E%7B-1%7D(V)"></li>
+<li><img src="https://latex.codecogs.com/png.latex?f(f%5E%7B-1%7D(S))%20%5Csubseteq%20S">, equality holds <img src="https://latex.codecogs.com/png.latex?%5Ciff"> <img src="https://latex.codecogs.com/png.latex?f"> is <em>surjective</em></li>
+</ul></li>
+</ul></li>
+</ol>
+<ul>
+<li>A key structural difference: the forward image involves <img src="https://latex.codecogs.com/png.latex?%5Cexists">, the inverse image doesn’t:
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20f(A)%20%5Ciff%20%7B%5Cexists%7Dx%20%5Cin%20A,%20f(x)%20=%20y"></li>
+<li><img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20f%5E%7B-1%7D(B)%20%5Ciff%20f(x)%20%5Cin%20B"></li>
+</ul></li>
+<li>As a result, the inverse image preserves <img src="https://latex.codecogs.com/png.latex?%5Ccup">, <img src="https://latex.codecogs.com/png.latex?%5Ccap">, and <img src="https://latex.codecogs.com/png.latex?%5Csetminus"> perfectly (all <img src="https://latex.codecogs.com/png.latex?%5Ciff">), while the forward image only gets equality for <img src="https://latex.codecogs.com/png.latex?%5Ccup"> — for <img src="https://latex.codecogs.com/png.latex?%5Ccap"> and <img src="https://latex.codecogs.com/png.latex?%5Csetminus">, only one-direction inclusion holds in general.</li>
+</ul>
+<p>I don’t really like the inverse image notation. Every time I write <img src="https://latex.codecogs.com/png.latex?f%5E%7B-1%7D">, it feels like I’m implicitly assuming <img src="https://latex.codecogs.com/png.latex?f"> is <em>invertible</em> (<em>bijective</em>) — but the definition of the <em>inverse image</em> doesn’t require that at all.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.10 (Power set axiom).</strong> Let <img src="https://latex.codecogs.com/png.latex?X"> and <img src="https://latex.codecogs.com/png.latex?Y"> be sets. Then there exists a set, denoted <img src="https://latex.codecogs.com/png.latex?Y%5EX">, which consists of all the functions from <img src="https://latex.codecogs.com/png.latex?X"> to <img src="https://latex.codecogs.com/png.latex?Y">, thus <img src="https://latex.codecogs.com/png.latex?%0Af%20%5Cin%20Y%5EX%20%5Ciff%20(f%20%5Ctext%7B%20is%20a%20function%20with%20domain%20%7D%20X%20%5Ctext%7B%20and%20range%20%7D%20Y).%0A"></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.11 (Union).</strong> Let <img src="https://latex.codecogs.com/png.latex?A"> be a set, all of whose elements are themselves sets. Then there exists a set <img src="https://latex.codecogs.com/png.latex?%5Cbigcup%20A"> whose elements are precisely those objects which are elements of the elements of <img src="https://latex.codecogs.com/png.latex?A">, thus for all objects <img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?%0Ax%20%5Cin%20%5Cbigcup%20A%20%5Ciff%20(x%20%5Cin%20S%20%5Ctext%7B%20for%20some%20%7D%20S%20%5Cin%20A).%0A"></p>
+</blockquote>
+<p>What’s exciting is that these axioms give us a great way to construct a bigger set — and then we can filter out some of its elements via <strong>Axiom 3.5</strong> or <strong>Axiom 3.6</strong> to form a new set, which is exactly how you define a lot of specific sets. A ton of the later exercises follow this exact playbook.</p>
+<ol type="1">
+<li><em>Grand Union</em>
+<ul>
+<li><strong>Axiom 3.11</strong>: Let <img src="https://latex.codecogs.com/png.latex?A"> be a set whose elements are all sets; then <img src="https://latex.codecogs.com/png.latex?%5Cbigcup%20A"> exists.</li>
+<li>Definition: <img src="https://latex.codecogs.com/png.latex?%5Cbigcup_%7B%5Calpha%20%5Cin%20I%7D%20A_%5Calpha%20=%20%5Cbigcup%20%5C%7BA_%5Calpha%20:%20%5Calpha%20%5Cin%20I%5C%7D"></li>
+<li>Equivalent: <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5Cbigcup_%7B%5Calpha%20%5Cin%20I%7D%20A_%5Calpha%20%5Ciff%20%5Cexists%20%5Calpha%20%5Cin%20I,%20x%20%5Cin%20A_%5Calpha"></li>
+<li>Construction:
+<ol type="1">
+<li><strong>Axiom 3.6</strong>: Replace each <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Cin%20I"> with <img src="https://latex.codecogs.com/png.latex?A_%5Calpha">, obtaining <img src="https://latex.codecogs.com/png.latex?%5C%7BA_%5Calpha%20:%20%5Calpha%20%5Cin%20I%5C%7D"></li>
+<li><strong>Axiom 3.11</strong>: Take the union</li>
+</ol></li>
+<li>Edge case: When <img src="https://latex.codecogs.com/png.latex?I%20=%20%5Cvarnothing">, <img src="https://latex.codecogs.com/png.latex?%5Cbigcup_%7B%5Calpha%20%5Cin%20%5Cvarnothing%7D%20A_%5Calpha%20=%20%5Cvarnothing"> (vacuously true — no <img src="https://latex.codecogs.com/png.latex?%5Calpha">, so no elements)</li>
+</ul></li>
+<li><em>Grand Intersection</em>
+<ul>
+<li>Definition (requires <img src="https://latex.codecogs.com/png.latex?I%20%5Cneq%20%5Cvarnothing">): <img src="https://latex.codecogs.com/png.latex?%5Cbigcap_%7B%5Calpha%20%5Cin%20I%7D%20A_%5Calpha%20=%20%5C%7Bx%20%5Cin%20A_%5Cbeta%20:%20x%20%5Cin%20A_%5Calpha%20%5Ctext%7B%20for%20all%20%7D%20%5Calpha%20%5Cin%20I%5C%7D">, where <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> is any element of <img src="https://latex.codecogs.com/png.latex?I"></li>
+<li>Equivalent: <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5Cbigcap_%7B%5Calpha%20%5Cin%20I%7D%20A_%5Calpha%20%5Ciff%20%5Cforall%20%5Calpha%20%5Cin%20I,%20x%20%5Cin%20A_%5Calpha"></li>
+<li>Why no new axiom is needed: <img src="https://latex.codecogs.com/png.latex?%5Cbigcap_%7B%5Calpha%20%5Cin%20I%7D%20A_%5Calpha%20=%20%5C%7Bx%20%5Cin%20A_%5Cbeta%20:%20x%20%5Cin%20A_%5Calpha%20%5Ctext%7B%20for%20all%20%7D%20%5Calpha%20%5Cin%20I%5C%7D"> This filters elements from an existing set <img src="https://latex.codecogs.com/png.latex?A_%5Cbeta"> via <strong>Axiom 3.5</strong> — no new axiom required.</li>
+<li>Why <img src="https://latex.codecogs.com/png.latex?I"> must be non-empty: When <img src="https://latex.codecogs.com/png.latex?I%20=%20%5Cvarnothing">, <img src="https://latex.codecogs.com/png.latex?%5Cforall%20%5Calpha%20%5Cin%20%5Cvarnothing"> is vacuously true, so <img src="https://latex.codecogs.com/png.latex?%5Cbigcap_%7B%5Calpha%20%5Cin%20%5Cvarnothing%7D%20A_%5Calpha"> would contain <em>all</em> objects — i.e., the universal set <img src="https://latex.codecogs.com/png.latex?%5COmega">, which doesn’t exist!</li>
+<li>Independence of <img src="https://latex.codecogs.com/png.latex?%5Cbeta">: Since “<img src="https://latex.codecogs.com/png.latex?%5Cforall%20%5Calpha%20%5Cin%20I">” already includes <img src="https://latex.codecogs.com/png.latex?%5Cbeta">, the filtered result is the same regardless of which <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> you pick.</li>
+</ul></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th><em>Grand Union</em></th>
+<th><em>Grand Intersection</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quantifier</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Cexists"></td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Cforall"></td>
+</tr>
+<tr class="even">
+<td><img src="https://latex.codecogs.com/png.latex?I%20=%20%5Cvarnothing"></td>
+<td>Result is <img src="https://latex.codecogs.com/png.latex?%5Cvarnothing"></td>
+<td>Not allowed!</td>
+</tr>
+<tr class="odd">
+<td>Requires an axiom</td>
+<td>Yes (<strong>Axiom 3.11</strong>)</td>
+<td>No (uses <strong>Axiom 3.5</strong>)</td>
+</tr>
+<tr class="even">
+<td>Intuition</td>
+<td>“is in at least one”</td>
+<td>“is in all of them”</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="section-3.5-cartesian-products" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.5-cartesian-products">Section 3.5 Cartesian products</h2>
+<ol type="1">
+<li><em>Ordered Pair</em>
+<ul>
+<li>Definition: <img src="https://latex.codecogs.com/png.latex?(x,%20y)%20:=%20%5C%7B%5C%7Bx%5C%7D,%20%5C%7Bx,%20y%5C%7D%5C%7D"></li>
+<li>Core property: <img src="https://latex.codecogs.com/png.latex?(x,%20y)%20=%20(x',%20y')%20%5Ciff%20x%20=%20x'%20%5Cland%20y%20=%20y'"></li>
+</ul></li>
+<li><em>Ordered n-tuple</em>
+<ul>
+<li>Definition: a <em>surjective</em> function <img src="https://latex.codecogs.com/png.latex?x:%20%5C%7Bi%20%5Cin%20%5Cmathbb%7BN%7D%20:%201%20%5Cleq%20i%20%5Cleq%20n%5C%7D%20%5Cto%20X">, denoted <img src="https://latex.codecogs.com/png.latex?(x_i)_%7B1%20%5Cleq%20i%20%5Cleq%20n%7D"></li>
+<li>Equality: <img src="https://latex.codecogs.com/png.latex?(x_i)%20=%20(y_i)%20%5Ciff%20x_i%20=%20y_i"> for all <img src="https://latex.codecogs.com/png.latex?1%20%5Cleq%20i%20%5Cleq%20n"></li>
+</ul></li>
+<li><em>Cartesian Product</em>
+<ul>
+<li>Binary: <img src="https://latex.codecogs.com/png.latex?X%20%5Ctimes%20Y%20=%20%5C%7B(x,%20y)%20:%20x%20%5Cin%20X,%20y%20%5Cin%20Y%5C%7D"></li>
+<li><img src="https://latex.codecogs.com/png.latex?n">-ary: <img src="https://latex.codecogs.com/png.latex?%5Cprod_%7B1%20%5Cleq%20i%20%5Cleq%20n%7D%20X_i%20=%20%5C%7B(x_i)_%7B1%20%5Cleq%20i%20%5Cleq%20n%7D%20:%20x_i%20%5Cin%20X_i%20%5Ctext%7B%20for%20all%20%7D%201%20%5Cleq%20i%20%5Cleq%20n%5C%7D"></li>
+<li>Function set: <img src="https://latex.codecogs.com/png.latex?Y%5EX%20=%20%5C%7Bf%20:%20f%20%5Ctext%7B%20is%20a%20function%20from%20%7D%20X%20%5Ctext%7B%20to%20%7D%20Y%5C%7D"></li>
+<li>Relationships:
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?X%5En%20=%20%5Cprod_%7B1%20%5Cleq%20i%20%5Cleq%20n%7D%20X"> (all components from the same set)</li>
+<li><img src="https://latex.codecogs.com/png.latex?X%5E0%20=%20%5C%7B()%5C%7D"> (exactly one element)</li>
+<li><img src="https://latex.codecogs.com/png.latex?2%5EX%20%5Cleftrightarrow%20%5C%7BY%20:%20Y%20%5Csubseteq%20X%5C%7D"> (bijection via characteristic functions)</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>Especially the last three exercises in this section — I was basically getting stuck at every single step. But when I actually looked at the solutions, it turned out they weren’t even that hard. It’s just that there’s too much stuff stacked together and I’m not fluent enough with any of it yet.</p>
+</section>
+<section id="section-3.6-cardinality-of-sets" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.6-cardinality-of-sets">Section 3.6 Cardinality of sets</h2>
+<p><em>Cardinality</em> - <img src="https://latex.codecogs.com/png.latex?X"> has cardinality <img src="https://latex.codecogs.com/png.latex?n"> <img src="https://latex.codecogs.com/png.latex?%5Ciff"> <img src="https://latex.codecogs.com/png.latex?X"> is <em>equinumerous</em> with <img src="https://latex.codecogs.com/png.latex?%5C%7Bi%20%5Cin%20%5Cmathbb%7BN%7D%20:%201%20%5Cleq%20i%20%5Cleq%20n%5C%7D"> - Special cases: - <img src="https://latex.codecogs.com/png.latex?%5C#(%5Cvarnothing)%20=%200"> (the empty function is a bijection) - If <img src="https://latex.codecogs.com/png.latex?X"> has cardinality <img src="https://latex.codecogs.com/png.latex?n"> and <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20X">, then <img src="https://latex.codecogs.com/png.latex?%5C#(X%20%5Csetminus%20%5C%7Bx%5C%7D)%20=%20n-1"></p>
+<p>For the remaining sections, I didn’t stick to the same writing style as before. I took a look back at my notes, and while I had just as many thoughts as usual, a lot of them weren’t particularly meaningful — so I won’t go into too much detail here.</p>
+<p>Also, a quick rant about some of the exercises — like <strong>Exercise 3.6.4</strong> (f). I’m genuinely curious: can a beginner actually construct a function like that? Or is there a better way to prove it? Or am I just that bad at this?</p>
+<p>And I personally think <strong>Exercise 3.6.8</strong> needs the extra condition that <img src="https://latex.codecogs.com/png.latex?A"> is non-empty — otherwise the whole empty function issue I mentioned earlier rears its head again.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Real Analysis</category>
+  <category>Mathematics</category>
+  <category>Reading Notes</category>
+  <guid>https://blog.yijialog.org/posts/4/</guid>
+  <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Tao’s Analysis I, Chapter 2: Natural Numbers</title>
   <dc:creator>Yijia Zhao</dc:creator>
@@ -24,8 +279,8 @@
 
 <p>I began with the Chinese version (my native language), but I wasted time because of a translation error in Chapter 2. I was afraid there would be more mistakes in the other chapters, so I switched to the original.</p>
 <p>I haven’t written a reading note for Chapter 1, not only because I read the Chinese translation, but also because it didn’t contain anything worth writing down. It reminded me of <em>Counterexamples in Real Analysis</em> — inspiring, but not really suited for taking notes.</p>
-<p>To begin with Section 2.1, I’d first like to state my basics. I only knew a little about the <strong>Peano axioms</strong> from some blogs and videos popularizing math. I had studied <em>Mathematical Analysis</em> in Chinese several years ago, but it began with <strong>decimals</strong> or <strong>functions</strong> instead.</p>
-<p>Also, I’ve seen in some articles that Tao’s notation, especially for the <strong>increment operation</strong>, differs from the mainstream notation. But since this is my first encounter with this material, I’m just using Tao’s notation directly.</p>
+<p>To begin with Section 2.1, I’d first like to state my basics. I only knew a little about the <em>Peano axioms</em> from some blogs and videos popularizing math. I had studied <em>Mathematical Analysis</em> in Chinese several years ago, but it began with <em>decimals</em> or <em>functions</em> instead.</p>
+<p>Also, I’ve seen in some articles that Tao’s notation, especially for the <em>increment operation</em>, differs from the mainstream notation. But since this is my first encounter with this material, I’m just using Tao’s notation directly.</p>
 <section id="section-2.1-the-peano-axioms" class="level2">
 <h2 class="anchored" data-anchor-id="section-2.1-the-peano-axioms">Section 2.1 The Peano Axioms</h2>
 <p>While Axioms 2.1–2.4 struck me as quite natural, my real confusion started with Axiom 2.5.</p>

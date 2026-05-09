@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Yijia Zhao">
+<meta name="dcterms.date" content="2026-05-09">
 
-<title>Posts – Yijia Zhao</title>
+<title>Tao’s Analysis I, Chapter 3: Set Theory – Yijia Zhao</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,30 +28,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-1c5d05e776d8cc6ed79b334dc06cf84a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-1c5d05e776d8cc6ed79b334dc06cf84a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -76,35 +76,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
@@ -151,8 +122,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Yijia Zhao" href="posts.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -332,7 +303,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Yijia Zhao</span>
     </a>
   </div>
@@ -343,17 +314,17 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> <i class="bi bi-file-post" role="img">
+    <a class="nav-link" href="../../posts.html"> <i class="bi bi-file-post" role="img">
 </i> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./downloads.html"> <i class="bi bi-download" role="img">
+    <a class="nav-link" href="../../downloads.html"> <i class="bi bi-download" role="img">
 </i> 
 <span class="menu-text">Downloads</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> <i class="bi bi-file-person" role="img">
+    <a class="nav-link" href="../../about.html"> <i class="bi bi-file-person" role="img">
 </i> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -368,368 +339,310 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Posts</h1>
-            <p class="subtitle lead"><i class="bi bi-rss-fill" style="color: #ee802f;"></i> <a href="posts.xml">RSS</a></p>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Tao’s Analysis I, Chapter 3: Set Theory</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Real Analysis</div>
+                <div class="quarto-category">Mathematics</div>
+                <div class="quarto-category">Reading Notes</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Yijia Zhao </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 9, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q2FzdWFs">Casual <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2xhc3NpYyUyME1lY2hhbmljcw==">Classic Mechanics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWF0aGVtYXRpY3M=">Mathematics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UGh5c2ljcw==">Physics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVhZGluZyUyME5vdGVz">Reading Notes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVhbCUyMEFuYWx5c2lz">Real Analysis <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section-3.1-fundamentals" id="toc-section-3.1-fundamentals" class="nav-link active" data-scroll-target="#section-3.1-fundamentals">Section 3.1 Fundamentals</a></li>
+  <li><a href="#section-3.2-russells-paradox" id="toc-section-3.2-russells-paradox" class="nav-link" data-scroll-target="#section-3.2-russells-paradox">Section 3.2 Russell’s paradox</a></li>
+  <li><a href="#section-3.3-functions" id="toc-section-3.3-functions" class="nav-link" data-scroll-target="#section-3.3-functions">Section 3.3 Functions</a></li>
+  <li><a href="#section3.4-images-and-inverse-images" id="toc-section3.4-images-and-inverse-images" class="nav-link" data-scroll-target="#section3.4-images-and-inverse-images">Section3.4 Images and inverse images</a></li>
+  <li><a href="#section-3.5-cartesian-products" id="toc-section-3.5-cartesian-products" class="nav-link" data-scroll-target="#section-3.5-cartesian-products">Section 3.5 Cartesian products</a></li>
+  <li><a href="#section-3.6-cardinality-of-sets" id="toc-section-3.6-cardinality-of-sets" class="nav-link" data-scroll-target="#section-3.6-cardinality-of-sets">Section 3.6 Cardinality of sets</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
 
-<style>
-/* Common card styles (unified)*/
-.quarto-post .card,
-.quarto-listing-cols-3 .card,
-.quarto-grid-item,
-.quarto-listing-container-default .quarto-post,
-#quarto-margin-sidebar .quarto-listing-category {
-  background: var(--background-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 16px var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
-}
+<p>Just like with the previous chapter, I came into this with almost zero background in set theory. I spent 1,100 minutes over four days getting through this chapter and made a pass at most of the exercises. But unlike Chapter 2, where I solved the majority of them on my own, this time there were quite a few where I threw in the towel without really wrestling with them and just looked up the answers. To be honest, I can’t really claim to have fully grasped this chapter, and I definitely felt a pretty strong sense of overload — there’s a lot I’m just not fluent with and don’t really know how to use. So for this post, I’ll go into a bit more detail on the parts where I personally struggled the most.</p>
+<p>But I’m not planning to spend much more time on this chapter either. Partly because, as someone headed toward mathematical physics, I’m unlikely to use rigorous set theory much in practice. And partly because, if I ever really need it later, I’d rather just pick up a dedicated <em>ZFC set theory</em> book.</p>
+<p>Also, I’ve got two updated takes on Chapter 2 that I want to mention:</p>
+<p>One, the notation — I can’t stand it anymore. The <em>cardinality</em> notation in particular: <span class="math inline">\#(A)</span>. But I’ll just stick with the original notation in this post to avoid confusion.</p>
+<p>Two, the “(why?)” style. To be honest, I’ve come to find a lot of these annotations kind of strange. Plenty of things are genuinely obvious, and every time I see “(why?)” I end up questioning myself: “Is it really that simple?” It’s kind of a waste of time, honestly. Or at least, I don’t think the spots they’re placed in really warrant the attention.</p>
+<section id="section-3.1-fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.1-fundamentals">Section 3.1 Fundamentals</h2>
+<p><strong>Section 3.1</strong> was pretty basic — basic enough, in fact, to give me the false impression at the start that “set theory is actually easy.” But for the sake of keeping this post’s style consistent, and since a few of the axioms are genuinely important, I’ll still walk through them in order.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.1 (Sets are objects).</strong> If <span class="math inline">A</span> is a set, then <span class="math inline">A</span> is also an object. In particular, given two sets <span class="math inline">A</span> and <span class="math inline">B</span>, it is meaningful to ask whether <span class="math inline">A</span> is also an element of <span class="math inline">B</span>.</p>
+</blockquote>
+<p>To be honest, I think it gets a bit heavy on the philosophy here — at least, some of these moves didn’t really make sense to me as a beginner. Things like <em>“sets are objects,”</em> <em>“natural numbers are not sets,”</em> or <em>“pure set theory.”</em> I had to look each of these up separately just to figure out why they’re being emphasized so much.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.2 (Empty set).</strong> There exists a set <span class="math inline">\emptyset</span>, known as the empty set, which contains no elements, i.e., for every object x we have <span class="math inline">x \notin \emptyset</span>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.3 (Singleton sets and pair sets).</strong> If <span class="math inline">a</span> is an object, then there exists a set <span class="math inline">\{a\}</span> whose only element is a, i.e., for every object y, we have <span class="math inline">y \in \{a\}</span>$ if and only if <span class="math inline">y = a</span>; we refer to <span class="math inline">\{a\}</span> as the singleton set whose element is <span class="math inline">a</span>. Furthermore, if <span class="math inline">a</span> and <span class="math inline">b</span> are objects, then there exists a set <span class="math inline">\{a, b\}</span> whose only elements are <span class="math inline">a</span> and <span class="math inline">b</span>; i.e., for every object y, we have <span class="math inline">y \in \{a, b\}</span> if and only if <span class="math inline">y = a</span> or <span class="math inline">y = b</span>; we refer to this set as the pair set formed by <span class="math inline">a</span> and <span class="math inline">b</span>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.4 (Pairwise union).</strong> Given any two sets <span class="math inline">A</span>, <span class="math inline">B</span>, there exists a set <span class="math inline">A \cup B</span>, called the union <span class="math inline">A \cup B</span> of <span class="math inline">A</span> and <span class="math inline">B</span>, whose elements consists of all the elements which belong to <span class="math inline">A</span> or <span class="math inline">B</span> or both. In other words, for any object <span class="math inline">x</span>, <span class="math display">
+x \in A \cup B \iff x \in A \lor x \in B
+</span></p>
+</blockquote>
+<p>Some of the remarks feel kind of jarring. Throughout the appendix and Chapter 1, I get the sense that Tao assumes I have at least some calculus background — but then every so often he’ll emphasize something that I don’t think really needs emphasizing at this level, like <strong>Remark 3.1.12</strong> making a point of the difference between addition and union.</p>
+<p>And I noticed that a lot of the proofs in this chapter can be cranked out pretty easily using logical notation — <strong>Lemma 3.1.13</strong>, for example. The proof in the book feels a bit overdone to me, and in some of the exercises I just went ahead and did it that way myself.</p>
+<p>Also, the choice of axiom system here honestly goes a bit beyond what I thought axioms were supposed to be. At least, I used to think axioms could have equivalent formulations but couldn’t actually be derived from anything. But I guess as long as it can well-define sets, whatever.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.5 (Axiom of specification).</strong> Let <span class="math inline">A</span> be a set, and for each <span class="math inline">x \in A</span>, let <span class="math inline">P(x)</span> be a property pertaining to x (i.e., <span class="math inline">P(x)</span> is either a true statement or a false statement). Then there exists a set, called <span class="math inline">\{x \in A : P(x) is true\}</span> (or simply <span class="math inline">\{x \in A : P(x)\}</span> for short), whose elements are precisely the elements <span class="math inline">x</span> in <span class="math inline">A</span> for which <span class="math inline">P(x)</span> is true. In other words, for any object <span class="math inline">y</span>,<br>
+<span class="math display">
+y \in \{x \in A : P(x) \text{ is true }\} \iff y \in A \land P(y) \text{ is true }
+</span></p>
+</blockquote>
+<p>In other words, <strong>Axiom 3.5</strong> lets us “filter out” the elements of a set A that satisfy some property — which means we need a set A to already exist in the first place. This also avoids the kind of trouble that <strong>Axiom 3.8</strong> gets into.</p>
+<p>And here you can really see how the basic set-theoretic notation ties into logical notation — <strong>Proposition 3.1.28</strong> even comes right out and says “Sets form a <em>boolean algebra</em>.” Basically, once you take the rules for logical symbols as given, you can prove all of these pretty smoothly just using the definitions of the set-theoretic symbols.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.6 (Replacement).</strong> Let <span class="math inline">A</span> be a set. For any object <span class="math inline">x \in A</span>, and any object <span class="math inline">y</span>, suppose we have a statement <span class="math inline">P(x, y)</span> pertaining to <span class="math inline">x</span> and <span class="math inline">y</span>, such that for each <span class="math inline">x \in A</span> there is at most one <span class="math inline">y</span> for which <span class="math inline">P(x, y)</span> is true. Then there exists a set <span class="math inline">\{y : P(x, y) \text{ is true for some } x \in A\}</span>, such that for any object <span class="math inline">z</span>, <span class="math display">
+z \in \{y : P(x, y) \text{ is true for some } x \in A\} \iff P(x, z) \text{ is true for some } x \in A.
+</span></p>
+</blockquote>
+<p>Although <strong>Axiom 3.6</strong> lets us “construct” a new set, the “size” (cardinality) of this set is still ≤ that of the original.</p>
+<p>Of course, this is a classic case of “axiom redundancy” — <strong>Axiom 3.6</strong> can actually derive <strong>Axiom 3.5</strong>, and <strong>Axiom 3.6</strong> is clearly the stronger statement. The proof is easy enough too; it’s exactly what <strong>Exercise 3.1.11</strong> asks you to do — you just need to pick a suitable <span class="math inline">P(x,y)</span>. That said, defining <strong>Axiom 3.5</strong> first does make the logical flow feel more coherent and gradual.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.7 (Infinity).</strong> There exists a set <span class="math inline">\mathbb{N}</span>, whose elements are called <em>natural numbers</em>, as well as an object <span class="math inline">0</span> in <span class="math inline">\mathbb{N}</span>, and an object <span class="math inline">n++</span> assigned to every <em>natural number</em> <span class="math inline">n \in \mathbb{N}</span>, such that the <em>Peano axioms</em> (Axioms 2.1 - 2.5) hold.</p>
+</blockquote>
+</section>
+<section id="section-3.2-russells-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.2-russells-paradox">Section 3.2 Russell’s paradox</h2>
+<p>Actually, I only realized after finishing <strong>Section 3.2</strong> that this section was optional reading. But whatever — it’s not a long section anyway. Since <strong>Axiom 3.8</strong> is informal by nature, I won’t bother writing it out here.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.9 (Regularity).</strong> If <span class="math inline">A</span> is a non-empty set, then there is at least one element <span class="math inline">x</span> of <span class="math inline">A</span> which is either not a set, or is <em>disjoint</em> from <span class="math inline">A</span>.</p>
+</blockquote>
+<p>This axiom is actually pretty interesting. My first reaction was worrying whether it would kill off some sets we actually want — but later I realized only sets like <span class="math inline">A \in A</span> would get ruled out by this one. The exercises for this section were pretty easy too.</p>
+</section>
+<section id="section-3.3-functions" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.3-functions">Section 3.3 Functions</h2>
+<p>To sum things up, I’ll first lay out the definitions for <em>functions</em>, <em>injective</em> , <em>surjective</em> and <em>bijective</em>, along with equivalent formulations and proof techniques.</p>
+<ol type="1">
+<li><em>Injective</em>
+<ul>
+<li>Definition: <span class="math inline">f(x) = f(x') \implies x = x'</span></li>
+<li>Equivalent: <span class="math inline">x \neq x' \implies f(x) \neq f(x')</span></li>
+<li>Proof techniques:
+<ul>
+<li>Direct: assume <span class="math inline">f(x) = f(x')</span>, derive <span class="math inline">x = x'</span></li>
+<li>Contrapositive: assume <span class="math inline">x \neq x'</span>, derive <span class="math inline">f(x) \neq f(x')</span></li>
+</ul></li>
+<li>Equivalent statements:
+<ul>
+<li><span class="math inline">f^{-1}(f(S)) = S</span> for all <span class="math inline">S \subseteq X</span></li>
+<li><span class="math inline">f(A \cap B) = f(A) \cap f(B)</span> for all <span class="math inline">A, B \subseteq X</span></li>
+<li><span class="math inline">\#(f(X)) = \#(X)</span> (finite sets)</li>
+</ul></li>
+</ul></li>
+<li><em>Surjective</em>
+<ul>
+<li>Definition: <span class="math inline">\forall y \in Y, \exists x \in X, f(x) = y</span></li>
+<li>Equivalent: <span class="math inline">f(X) = Y</span></li>
+<li>Proof techniques:
+<ul>
+<li>Direct: take any <span class="math inline">y \in Y</span>, construct <span class="math inline">x</span> such that <span class="math inline">f(x) = y</span></li>
+<li>Proof by contradiction: assume <span class="math inline">\exists y \in Y</span> not in the image, derive a contradiction</li>
+</ul></li>
+<li>Equivalent statements:
+<ul>
+<li><span class="math inline">f(f^{-1}(S)) = S</span> for all <span class="math inline">S \subseteq Y</span></li>
+<li><span class="math inline">\forall y \in Y, f^{-1}(\{y\}) \neq \varnothing</span></li>
+</ul></li>
+</ul></li>
+<li><em>Bijective</em>
+<ul>
+<li>Definition: injective and surjective</li>
+<li>Proof techniques:
+<ul>
+<li>Verify injective + surjective</li>
+<li>Construct an inverse map <span class="math inline">g: Y \to X</span>, verify <span class="math inline">f \circ g = \text{id}</span> and <span class="math inline">g \circ f = \text{id}</span></li>
+</ul></li>
+<li>Equivalent statements:
+<ul>
+<li>There exists an inverse function <span class="math inline">f^{-1}: Y \to X</span></li>
+<li><span class="math inline">\#(X) = \#(Y)</span> (finite sets)</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>Another thing worth keeping an eye on is the <em>empty function</em>. By definition, if the codomain is non-empty, the empty function is <em>injective</em> but not <em>surjective</em>; if the codomain is empty, it’s <em>bijective</em>. This can easily trip you up later when bijections come up all the time in the cardinality section.</p>
+<p>As far as the exercises in this chapter go, they were fine. I’m also reasonably comfortable with the concept of <em>functions</em> by now. But I’d never studied <em>set theory</em> before, and I’d basically never drawn a distinction between <em>codomain</em> and <em>range</em>. In fact, if I remember right, the definitions I learned earlier even treated <em>functions</em> as naturally <em>surjective</em>.</p>
+</section>
+<section id="section3.4-images-and-inverse-images" class="level2">
+<h2 class="anchored" data-anchor-id="section3.4-images-and-inverse-images">Section3.4 Images and inverse images</h2>
+<ol type="1">
+<li><em>Forward Image</em>
+<ul>
+<li>Definition: <span class="math inline">f(A) = \{f(x) : x \in A\}</span></li>
+<li>Equivalent: <span class="math inline">y \in f(A) \iff \exists x \in A, f(x) = y</span></li>
+<li>Properties:
+<ul>
+<li><span class="math inline">f(A \cup B) = f(A) \cup f(B)</span></li>
+<li><span class="math inline">f(A \cap B) \subseteq f(A) \cap f(B)</span>, equality holds <span class="math inline">\iff</span> <span class="math inline">f</span> is <em>injective</em></li>
+<li><span class="math inline">f(A \setminus B) \supseteq f(A) \setminus f(B)</span>, equality holds <span class="math inline">\iff</span> <span class="math inline">f</span> is <em>injective</em></li>
+<li><span class="math inline">S \subseteq f^{-1}(f(S))</span>, equality holds <span class="math inline">\iff</span> <span class="math inline">f</span> is <em>injective</em></li>
+<li><span class="math inline">\#(f(X)) \leq \#(X)</span>, equality holds <span class="math inline">\iff</span> <span class="math inline">f</span> is <em>injective</em></li>
+</ul></li>
+</ul></li>
+<li><em>Inverse Image</em>
+<ul>
+<li>Definition: <span class="math inline">f^{-1}(B) = \{x \in X : f(x) \in B\}</span></li>
+<li>Equivalent: <span class="math inline">x \in f^{-1}(B) \iff f(x) \in B</span></li>
+<li>Properties:
+<ul>
+<li><span class="math inline">f^{-1}(U \cup V) = f^{-1}(U) \cup f^{-1}(V)</span></li>
+<li><span class="math inline">f^{-1}(U \cap V) = f^{-1}(U) \cap f^{-1}(V)</span></li>
+<li><span class="math inline">f^{-1}(U \setminus V) = f^{-1}(U) \setminus f^{-1}(V)</span></li>
+<li><span class="math inline">f(f^{-1}(S)) \subseteq S</span>, equality holds <span class="math inline">\iff</span> <span class="math inline">f</span> is <em>surjective</em></li>
+</ul></li>
+</ul></li>
+</ol>
+<ul>
+<li>A key structural difference: the forward image involves <span class="math inline">\exists</span>, the inverse image doesn’t:
+<ul>
+<li><span class="math inline">y \in f(A) \iff {\exists}x \in A, f(x) = y</span></li>
+<li><span class="math inline">x \in f^{-1}(B) \iff f(x) \in B</span></li>
+</ul></li>
+<li>As a result, the inverse image preserves <span class="math inline">\cup</span>, <span class="math inline">\cap</span>, and <span class="math inline">\setminus</span> perfectly (all <span class="math inline">\iff</span>), while the forward image only gets equality for <span class="math inline">\cup</span> — for <span class="math inline">\cap</span> and <span class="math inline">\setminus</span>, only one-direction inclusion holds in general.</li>
+</ul>
+<p>I don’t really like the inverse image notation. Every time I write <span class="math inline">f^{-1}</span>, it feels like I’m implicitly assuming <span class="math inline">f</span> is <em>invertible</em> (<em>bijective</em>) — but the definition of the <em>inverse image</em> doesn’t require that at all.</p>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.10 (Power set axiom).</strong> Let <span class="math inline">X</span> and <span class="math inline">Y</span> be sets. Then there exists a set, denoted <span class="math inline">Y^X</span>, which consists of all the functions from <span class="math inline">X</span> to <span class="math inline">Y</span>, thus <span class="math display">
+f \in Y^X \iff (f \text{ is a function with domain } X \text{ and range } Y).
+</span></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Axiom 3.11 (Union).</strong> Let <span class="math inline">A</span> be a set, all of whose elements are themselves sets. Then there exists a set <span class="math inline">\bigcup A</span> whose elements are precisely those objects which are elements of the elements of <span class="math inline">A</span>, thus for all objects <span class="math inline">x</span>, <span class="math display">
+x \in \bigcup A \iff (x \in S \text{ for some } S \in A).
+</span></p>
+</blockquote>
+<p>What’s exciting is that these axioms give us a great way to construct a bigger set — and then we can filter out some of its elements via <strong>Axiom 3.5</strong> or <strong>Axiom 3.6</strong> to form a new set, which is exactly how you define a lot of specific sets. A ton of the later exercises follow this exact playbook.</p>
+<ol type="1">
+<li><em>Grand Union</em>
+<ul>
+<li><strong>Axiom 3.11</strong>: Let <span class="math inline">A</span> be a set whose elements are all sets; then <span class="math inline">\bigcup A</span> exists.</li>
+<li>Definition: <span class="math inline">\bigcup_{\alpha \in I} A_\alpha = \bigcup \{A_\alpha : \alpha \in I\}</span></li>
+<li>Equivalent: <span class="math inline">x \in \bigcup_{\alpha \in I} A_\alpha \iff \exists \alpha \in I, x \in A_\alpha</span></li>
+<li>Construction:
+<ol type="1">
+<li><strong>Axiom 3.6</strong>: Replace each <span class="math inline">\alpha \in I</span> with <span class="math inline">A_\alpha</span>, obtaining <span class="math inline">\{A_\alpha : \alpha \in I\}</span></li>
+<li><strong>Axiom 3.11</strong>: Take the union</li>
+</ol></li>
+<li>Edge case: When <span class="math inline">I = \varnothing</span>, <span class="math inline">\bigcup_{\alpha \in \varnothing} A_\alpha = \varnothing</span> (vacuously true — no <span class="math inline">\alpha</span>, so no elements)</li>
+</ul></li>
+<li><em>Grand Intersection</em>
+<ul>
+<li>Definition (requires <span class="math inline">I \neq \varnothing</span>): <span class="math inline">\bigcap_{\alpha \in I} A_\alpha = \{x \in A_\beta : x \in A_\alpha \text{ for all } \alpha \in I\}</span>, where <span class="math inline">\beta</span> is any element of <span class="math inline">I</span></li>
+<li>Equivalent: <span class="math inline">x \in \bigcap_{\alpha \in I} A_\alpha \iff \forall \alpha \in I, x \in A_\alpha</span></li>
+<li>Why no new axiom is needed: <span class="math inline">\bigcap_{\alpha \in I} A_\alpha = \{x \in A_\beta : x \in A_\alpha \text{ for all } \alpha \in I\}</span> This filters elements from an existing set <span class="math inline">A_\beta</span> via <strong>Axiom 3.5</strong> — no new axiom required.</li>
+<li>Why <span class="math inline">I</span> must be non-empty: When <span class="math inline">I = \varnothing</span>, <span class="math inline">\forall \alpha \in \varnothing</span> is vacuously true, so <span class="math inline">\bigcap_{\alpha \in \varnothing} A_\alpha</span> would contain <em>all</em> objects — i.e., the universal set <span class="math inline">\Omega</span>, which doesn’t exist!</li>
+<li>Independence of <span class="math inline">\beta</span>: Since “<span class="math inline">\forall \alpha \in I</span>” already includes <span class="math inline">\beta</span>, the filtered result is the same regardless of which <span class="math inline">\beta</span> you pick.</li>
+</ul></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th><em>Grand Union</em></th>
+<th><em>Grand Intersection</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quantifier</td>
+<td><span class="math inline">\exists</span></td>
+<td><span class="math inline">\forall</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">I = \varnothing</span></td>
+<td>Result is <span class="math inline">\varnothing</span></td>
+<td>Not allowed!</td>
+</tr>
+<tr class="odd">
+<td>Requires an axiom</td>
+<td>Yes (<strong>Axiom 3.11</strong>)</td>
+<td>No (uses <strong>Axiom 3.5</strong>)</td>
+</tr>
+<tr class="even">
+<td>Intuition</td>
+<td>“is in at least one”</td>
+<td>“is in all of them”</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="section-3.5-cartesian-products" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.5-cartesian-products">Section 3.5 Cartesian products</h2>
+<ol type="1">
+<li><em>Ordered Pair</em>
+<ul>
+<li>Definition: <span class="math inline">(x, y) := \{\{x\}, \{x, y\}\}</span></li>
+<li>Core property: <span class="math inline">(x, y) = (x', y') \iff x = x' \land y = y'</span></li>
+</ul></li>
+<li><em>Ordered n-tuple</em>
+<ul>
+<li>Definition: a <em>surjective</em> function <span class="math inline">x: \{i \in \mathbb{N} : 1 \leq i \leq n\} \to X</span>, denoted <span class="math inline">(x_i)_{1 \leq i \leq n}</span></li>
+<li>Equality: <span class="math inline">(x_i) = (y_i) \iff x_i = y_i</span> for all <span class="math inline">1 \leq i \leq n</span></li>
+</ul></li>
+<li><em>Cartesian Product</em>
+<ul>
+<li>Binary: <span class="math inline">X \times Y = \{(x, y) : x \in X, y \in Y\}</span></li>
+<li><span class="math inline">n</span>-ary: <span class="math inline">\prod_{1 \leq i \leq n} X_i = \{(x_i)_{1 \leq i \leq n} : x_i \in X_i \text{ for all } 1 \leq i \leq n\}</span></li>
+<li>Function set: <span class="math inline">Y^X = \{f : f \text{ is a function from } X \text{ to } Y\}</span></li>
+<li>Relationships:
+<ul>
+<li><span class="math inline">X^n = \prod_{1 \leq i \leq n} X</span> (all components from the same set)</li>
+<li><span class="math inline">X^0 = \{()\}</span> (exactly one element)</li>
+<li><span class="math inline">2^X \leftrightarrow \{Y : Y \subseteq X\}</span> (bijection via characteristic functions)</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>Especially the last three exercises in this section — I was basically getting stuck at every single step. But when I actually looked at the solutions, it turned out they weren’t even that hard. It’s just that there’s too much stuff stacked together and I’m not fluent enough with any of it yet.</p>
+</section>
+<section id="section-3.6-cardinality-of-sets" class="level2">
+<h2 class="anchored" data-anchor-id="section-3.6-cardinality-of-sets">Section 3.6 Cardinality of sets</h2>
+<p><em>Cardinality</em> - <span class="math inline">X</span> has cardinality <span class="math inline">n</span> <span class="math inline">\iff</span> <span class="math inline">X</span> is <em>equinumerous</em> with <span class="math inline">\{i \in \mathbb{N} : 1 \leq i \leq n\}</span> - Special cases: - <span class="math inline">\#(\varnothing) = 0</span> (the empty function is a bijection) - If <span class="math inline">X</span> has cardinality <span class="math inline">n</span> and <span class="math inline">x \in X</span>, then <span class="math inline">\#(X \setminus \{x\}) = n-1</span></p>
+<p>For the remaining sections, I didn’t stick to the same writing style as before. I took a look back at my notes, and while I had just as many thoughts as usual, a lot of them weren’t particularly meaningful — so I won’t go into too much detail here.</p>
+<p>Also, a quick rant about some of the exercises — like <strong>Exercise 3.6.4</strong> (f). I’m genuinely curious: can a beginner actually construct a function like that? Or is there a better way to prove it? Or am I just that bad at this?</p>
+<p>And I personally think <strong>Exercise 3.6.8</strong> needs the extra condition that <span class="math inline">A</span> is non-empty — otherwise the whole empty function issue I mentioned earlier rears its head again.</p>
 
-/* Hover effect for cards */
-.quarto-post .card:hover,
-.quarto-listing-cols-3 .card:hover,
-.quarto-grid-item:hover,
-.quarto-listing-container-default .quarto-post:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(90, 103, 216, 0.13);
-}
 
-/* Typography & layout for listing container */
-.quarto-listing .quarto-post {
-  margin-bottom: 1em;
-  padding-top: 0;
-}
+</section>
 
-.quarto-grid-item .card-title,
-.listing-title {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400;
-  color: var(--ink);
-}
-
-.listing-date,
-.listing-author,
-.card-text.listing-description {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-.quarto-listing-container-default .metadata {
-  width: 80px;
-  flex-basis: 80px;
-}
-
-.quarto-listing-container-default .listing-author,
-.quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-/* Categories styling */
-.listing-categories .listing-category {
-  background: var(--accent-light);
-  color: var(--accent);
-  border: none;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  padding: 0.15em 0.6em;
-}
-
-/* Horizontal listing cards (default style)*/
-.quarto-listing-container-default .quarto-post {
-  padding: 1.1rem 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.quarto-listing-container-default .quarto-post:hover {
-  transform: translateY(-2px);
-}
-
-/* Remove default dividers */
-.quarto-listing-container-default .quarto-post + .quarto-post {
-  border-top: none;
-}
-.quarto-listing-container-default .list .quarto-post {
-  border-bottom: none;
-  padding-top: 1.1rem;
-  padding-bottom: 1.1rem;
-}
-
-/* Thumbnail images */
-.quarto-listing-container-default .thumbnail img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  width: 100%;
-  border-radius: 6px;
-}
-
-/* Listing title */
-.quarto-listing-container-default .listing-title a {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400;
-  font-size: 1.05rem;
-  color: var(--ink, #2d2d3a);
-  text-decoration: none;
-}
-.quarto-listing-container-default .listing-title a:hover {
-  color: var(--accent, #5a67d8);
-}
-
-/* Listing description */
-.quarto-listing-container-default .listing-description {
-  font-size: 0.85rem;
-  color: var(--muted, #888);
-  line-height: 1.65;
-  margin-top: 0.3rem;
-}
-
-/* Author & date — reduced selector nesting, avoid !important */
-.quarto-listing-container-default .listing-author,
-.quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
-  font-family: sans-serif;
-}
-
-/* Metadata column width */
-.quarto-listing-container-default .metadata {
-  width: 90px;
-  flex-basis: 90px;
-}
-
-/* Inline categories inside listing */
-.quarto-listing-container-default .listing-categories {
-  margin-top: 0.6rem;
-}
-
-.quarto-listing-container-default .quarto-post .listing-categories .listing-category {
-  background: var(--accent-light, #ebedfa);
-  color: var(--accent, #5a67d8);
-  border: none;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  padding: 0.15em 0.6em;
-}
-
-/* Categories sidebar box */
-#quarto-margin-sidebar {
-  padding-top: 0;
-}
-
-#quarto-margin-sidebar .quarto-listing-category-title {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent, #5a67d8);
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border, #e0e0ec);
-}
-
-#quarto-margin-sidebar .quarto-listing-category {
-  padding: 1rem 1.1rem;
-}
-
-#quarto-margin-sidebar .quarto-category {
-  border-radius: 4px;
-  font-size: 0.78rem;
-  margin-bottom: 0.15rem;
-}
-#quarto-margin-sidebar .quarto-category.active {
-  background-color: var(--accent, #5a67d8);
-  border-color: var(--accent, #5a67d8);
-  color: #fff;
-}
-
-/* Dark mode adjustments (both selectors) */
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .quarto-post,
-body.quarto-dark .quarto-listing-container-default .quarto-post,
-[data-quarto-color-scheme="dark"] #quarto-margin-sidebar .quarto-listing-category,
-body.quarto-dark #quarto-margin-sidebar .quarto-listing-category {
-  background: var(--background-secondary, #161820);
-}
-
-/* Ensure dark mode does not alter these rules unless necessary */
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-author,
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-date,
-body.quarto-dark .quarto-listing-container-default .listing-author,
-body.quarto-dark .quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
-  font-family: sans-serif;
-}
-
-</style>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWF0aGVtYXRpY3MlMkNSZWFkaW5nJTIwTm90ZXM=" data-listing-date-sort="1778284800000" data-listing-file-modified-sort="1778321384075" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2982">
-<div class="thumbnail"><a href="./posts/4/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="assets/placeholder.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/4/index.html" class="no-external">Tao’s Analysis I, Chapter 3: Set Theory</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhbCUyMEFuYWx5c2lz'); return false;">Real Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWF0aGVtYXRpY3M='); return false;">Mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhZGluZyUyME5vdGVz'); return false;">Reading Notes</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/4/index.html" class="no-external">
-Just like with the previous chapter, I came into this with almost zero background in set theory. I spent 1,100 minutes over four days getting through this chapter and made a…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/4/index.html" class="no-external">
-<div class="listing-date">
-May 9, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWF0aGVtYXRpY3MlMkNSZWFkaW5nJTIwTm90ZXM=" data-listing-date-sort="1777680000000" data-listing-file-modified-sort="1778321384075" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1134">
-<div class="thumbnail"><a href="./posts/3/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="assets/placeholder.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/3/index.html" class="no-external">Tao’s Analysis I, Chapter 2: Natural Numbers</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhbCUyMEFuYWx5c2lz'); return false;">Real Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWF0aGVtYXRpY3M='); return false;">Mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhZGluZyUyME5vdGVz'); return false;">Reading Notes</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/3/index.html" class="no-external">
-I began with the Chinese version (my native language), but I wasted time because of a translation error in Chapter 2. I was afraid there would be more mistakes in the other…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/3/index.html" class="no-external">
-<div class="listing-date">
-May 2, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Q2FzdWFs" data-listing-date-sort="1771200000000" data-listing-file-modified-sort="1778321384075" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
-<div class="thumbnail"><a href="./posts/2/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/2/Cos_and_Cosh_light.svg" alt="Cos and Cosh functions in complex plane"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2/index.html" class="no-external">Building process of this blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2FzdWFs'); return false;">Casual</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2/index.html" class="no-external">
-This blog is built by Quarto, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode).
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2/index.html" class="no-external">
-<div class="listing-date">
-Feb 16, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Q2xhc3NpYyUyME1lY2hhbmljcyUyQ1BoeXNpY3M=" data-listing-date-sort="1770422400000" data-listing-file-modified-sort="1778321384072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
-<div class="thumbnail"><a href="./posts/1/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/1/simple_pendulum.svg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/1/index.html" class="no-external">Test post: Euler-Lagrange’s equation in simple pendulum</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhc3NpYyUyME1lY2hhbmljcw=='); return false;">Classic Mechanics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGh5c2ljcw=='); return false;">Physics</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/1/index.html" class="no-external">
-Here is the <strong>Euler-Lagrange’s equation</strong>:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/1/index.html" class="no-external">
-<div class="listing-date">
-Feb 7, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -1232,7 +1145,7 @@ document.addEventListener("DOMContentLoaded", function () {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><a href="./credits.html">Copyright</a> © 2026 Yijia Zhao | Built with <a href="https://quarto.org/">Quarto</a></p>
+<p><a href="../../credits.html">Copyright</a> © 2026 Yijia Zhao | Built with <a href="https://quarto.org/">Quarto</a></p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
