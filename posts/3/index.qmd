@@ -10,9 +10,9 @@ I began with the Chinese version (my native language), but I wasted time because
 
 I haven't written a reading note for Chapter 1, not only because I read the Chinese translation, but also because it didn't contain anything worth writing down. It reminded me of *Counterexamples in Real Analysis* — inspiring, but not really suited for taking notes.
 
-To begin with Section 2.1, I'd first like to state my basics. I only knew a little about the **Peano axioms** from some blogs and videos popularizing math. I had studied *Mathematical Analysis* in Chinese several years ago, but it began with **decimals** or **functions** instead.
+To begin with Section 2.1, I'd first like to state my basics. I only knew a little about the *Peano axioms* from some blogs and videos popularizing math. I had studied *Mathematical Analysis* in Chinese several years ago, but it began with *decimals* or *functions* instead.
 
-Also, I’ve seen in some articles that Tao’s notation, especially for the **increment operation**, differs from the mainstream notation. But since this is my first encounter with this material, I’m just using Tao’s notation directly.
+Also, I’ve seen in some articles that Tao’s notation, especially for the *increment operation*, differs from the mainstream notation. But since this is my first encounter with this material, I’m just using Tao’s notation directly.
 
 ## Section 2.1 The Peano Axioms
 

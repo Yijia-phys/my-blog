@@ -1,0 +1,210 @@
+---
+title: "Tao's Analysis I, Chapter 3: Set Theory"
+author: "Yijia Zhao"
+date: "2026-05-09"
+categories: [Real Analysis, Mathematics, Reading Notes]
+format: html
+---
+
+Just like with the previous chapter, I came into this with almost zero background in set theory. I spent 1,100 minutes over four days getting through this chapter and made a pass at most of the exercises. But unlike Chapter 2, where I solved the majority of them on my own, this time there were quite a few where I threw in the towel without really wrestling with them and just looked up the answers. To be honest, I can’t really claim to have fully grasped this chapter, and I definitely felt a pretty strong sense of overload — there’s a lot I’m just not fluent with and don’t really know how to use. So for this post, I’ll go into a bit more detail on the parts where I personally struggled the most.
+
+But I’m not planning to spend much more time on this chapter either. Partly because, as someone headed toward mathematical physics, I’m unlikely to use rigorous set theory much in practice. And partly because, if I ever really need it later, I’d rather just pick up a dedicated *ZFC set theory* book.
+
+Also, I’ve got two updated takes on Chapter 2 that I want to mention:
+
+One, the notation — I can’t stand it anymore. The *cardinality* notation in particular: $\#(A)$. But I’ll just stick with the original notation in this post to avoid confusion.
+
+Two, the “(why?)” style. To be honest, I’ve come to find a lot of these annotations kind of strange. Plenty of things are genuinely obvious, and every time I see “(why?)” I end up questioning myself: “Is it really that simple?” It’s kind of a waste of time, honestly. Or at least, I don’t think the spots they’re placed in really warrant the attention.
+
+## Section 3.1 Fundamentals
+
+**Section 3.1** was pretty basic — basic enough, in fact, to give me the false impression at the start that “set theory is actually easy.” But for the sake of keeping this post’s style consistent, and since a few of the axioms are genuinely important, I’ll still walk through them in order.
+
+> **Axiom 3.1 (Sets are objects).** If $A$ is a set, then $A$ is also an object. In particular, given two sets $A$ and $B$, it is meaningful to ask whether $A$ is also an element of $B$.
+
+To be honest, I think it gets a bit heavy on the philosophy here — at least, some of these moves didn’t really make sense to me as a beginner. Things like *“sets are objects,”* *“natural numbers are not sets,”* or *“pure set theory.”* I had to look each of these up separately just to figure out why they’re being emphasized so much.
+
+> **Axiom 3.2 (Empty set).** There exists a set $\emptyset$, known as the empty set, which contains no elements, i.e., for every object x we have $x \notin \emptyset$.
+
+> **Axiom 3.3 (Singleton sets and pair sets).** If $a$ is an object, then there exists a set $\{a\}$ whose only element is a, i.e., for every object y, we have $y \in \{a\}$$ if and only if $y = a$; we refer to $\{a\}$ as the singleton set whose element is $a$. Furthermore, if $a$ and $b$ are objects, then there exists a set $\{a, b\}$ whose only elements are $a$ and $b$; i.e., for every object y, we have $y \in \{a, b\}$ if and only if $y = a$ or $y = b$; we refer to this set as the pair set formed by $a$ and $b$.
+
+> **Axiom 3.4 (Pairwise union).** Given any two sets $A$, $B$, there exists a set $A \cup B$, called the union $A \cup B$ of $A$ and $B$, whose elements consists of all the elements which belong to $A$ or $B$ or both. In other words, for any object $x$,
+$$
+x \in A \cup B \iff x \in A \lor x \in B
+$$
+
+Some of the remarks feel kind of jarring. Throughout the appendix and Chapter 1, I get the sense that Tao assumes I have at least some calculus background — but then every so often he’ll emphasize something that I don’t think really needs emphasizing at this level, like **Remark 3.1.12** making a point of the difference between addition and union.
+
+And I noticed that a lot of the proofs in this chapter can be cranked out pretty easily using logical notation — **Lemma 3.1.13**, for example. The proof in the book feels a bit overdone to me, and in some of the exercises I just went ahead and did it that way myself.
+
+Also, the choice of axiom system here honestly goes a bit beyond what I thought axioms were supposed to be. At least, I used to think axioms could have equivalent formulations but couldn’t actually be derived from anything. But I guess as long as it can well-define sets, whatever.
+
+> **Axiom 3.5 (Axiom of specification).** Let $A$ be a set, and for each $x \in A$, let $P(x)$ be a property pertaining to x (i.e., $P(x)$ is either a true statement or a false statement). Then there exists a set, called $\{x \in A : P(x) is true\}$ (or simply $\{x \in A : P(x)\}$ for short), whose elements are precisely the elements $x$ in $A$ for which $P(x)$ is true. In other words, for any object $y$,  
+$$
+y \in \{x \in A : P(x) \text{ is true }\} \iff y \in A \land P(y) \text{ is true }
+$$
+
+In other words, **Axiom 3.5** lets us “filter out” the elements of a set A that satisfy some property — which means we need a set A to already exist in the first place. This also avoids the kind of trouble that **Axiom 3.8** gets into.
+
+And here you can really see how the basic set-theoretic notation ties into logical notation — **Proposition 3.1.28** even comes right out and says “Sets form a *boolean algebra*.” Basically, once you take the rules for logical symbols as given, you can prove all of these pretty smoothly just using the definitions of the set-theoretic symbols.
+
+> **Axiom 3.6 (Replacement).** Let $A$ be a set. For any object $x \in A$, and any object $y$, suppose we have a statement $P(x, y)$ pertaining to $x$ and $y$, such that for each $x \in A$ there is at most one $y$ for which $P(x, y)$ is true. Then there exists a set $\{y : P(x, y) \text{ is true for some } x \in A\}$, such that for any object $z$,
+$$ 
+z \in \{y : P(x, y) \text{ is true for some } x \in A\} \iff P(x, z) \text{ is true for some } x \in A.
+$$
+
+Although **Axiom 3.6** lets us “construct” a new set, the “size” (cardinality) of this set is still ≤ that of the original.
+
+Of course, this is a classic case of “axiom redundancy” — **Axiom 3.6** can actually derive **Axiom 3.5**, and **Axiom 3.6** is clearly the stronger statement. The proof is easy enough too; it’s exactly what **Exercise 3.1.11** asks you to do — you just need to pick a suitable $P(x,y)$. That said, defining **Axiom 3.5** first does make the logical flow feel more coherent and gradual.
+
+> **Axiom 3.7 (Infinity).** There exists a set $\mathbb{N}$, whose elements are called *natural numbers*, as well as an object $0$ in $\mathbb{N}$, and an object $n++$ assigned to every *natural number* $n \in \mathbb{N}$, such that the *Peano axioms* (Axioms 2.1 - 2.5) hold.
+
+
+## Section 3.2 Russell’s paradox
+
+Actually, I only realized after finishing **Section 3.2** that this section was optional reading. But whatever — it's not a long section anyway. Since **Axiom 3.8** is informal by nature, I won't bother writing it out here.
+
+> **Axiom 3.9 (Regularity).** If $A$ is a non-empty set, then there is at least one element $x$ of $A$ which is either not a set, or is *disjoint* from $A$.
+
+This axiom is actually pretty interesting. My first reaction was worrying whether it would kill off some sets we actually want — but later I realized only sets like $A \in A$ would get ruled out by this one. The exercises for this section were pretty easy too.
+
+## Section 3.3 Functions
+
+To sum things up, I'll first lay out the definitions for *functions*, *injective* , *surjective* and *bijective*, along with equivalent formulations and proof techniques.
+
+1. *Injective*
+   - Definition: $f(x) = f(x') \implies x = x'$
+   - Equivalent: $x \neq x' \implies f(x) \neq f(x')$
+   - Proof techniques:
+     - Direct: assume $f(x) = f(x')$, derive $x = x'$
+     - Contrapositive: assume $x \neq x'$, derive $f(x) \neq f(x')$
+   - Equivalent statements:
+     - $f^{-1}(f(S)) = S$ for all $S \subseteq X$
+     - $f(A \cap B) = f(A) \cap f(B)$ for all $A, B \subseteq X$
+     - $\#(f(X)) = \#(X)$ (finite sets)
+
+2. *Surjective*
+   - Definition: $\forall y \in Y, \exists x \in X, f(x) = y$
+   - Equivalent: $f(X) = Y$
+   - Proof techniques:
+     - Direct: take any $y \in Y$, construct $x$ such that $f(x) = y$
+     - Proof by contradiction: assume $\exists y \in Y$ not in the image, derive a contradiction
+   - Equivalent statements:
+     - $f(f^{-1}(S)) = S$ for all $S \subseteq Y$
+     - $\forall y \in Y, f^{-1}(\{y\}) \neq \varnothing$
+
+3. *Bijective*
+   - Definition: injective and surjective
+   - Proof techniques:
+     - Verify injective + surjective
+     - Construct an inverse map $g: Y \to X$, verify $f \circ g = \text{id}$ and $g \circ f = \text{id}$
+   - Equivalent statements:
+     - There exists an inverse function $f^{-1}: Y \to X$
+     - $\#(X) = \#(Y)$ (finite sets)
+
+Another thing worth keeping an eye on is the *empty function*. By definition, if the codomain is non-empty, the empty function is *injective* but not *surjective*; if the codomain is empty, it's *bijective*. This can easily trip you up later when bijections come up all the time in the cardinality section.
+
+As far as the exercises in this chapter go, they were fine. I'm also reasonably comfortable with the concept of *functions* by now. But I'd never studied *set theory* before, and I'd basically never drawn a distinction between *codomain* and *range*. In fact, if I remember right, the definitions I learned earlier even treated *functions* as naturally *surjective*.
+
+## Section3.4 Images and inverse images
+
+1. *Forward Image*
+   - Definition: $f(A) = \{f(x) : x \in A\}$
+   - Equivalent: $y \in f(A) \iff \exists x \in A, f(x) = y$
+   - Properties:
+     - $f(A \cup B) = f(A) \cup f(B)$
+     - $f(A \cap B) \subseteq f(A) \cap f(B)$, equality holds $\iff$ $f$ is *injective*
+     - $f(A \setminus B) \supseteq f(A) \setminus f(B)$, equality holds $\iff$ $f$ is *injective*
+     - $S \subseteq f^{-1}(f(S))$, equality holds $\iff$ $f$ is *injective*
+     - $\#(f(X)) \leq \#(X)$, equality holds $\iff$ $f$ is *injective*
+
+2. *Inverse Image*
+   - Definition: $f^{-1}(B) = \{x \in X : f(x) \in B\}$
+   - Equivalent: $x \in f^{-1}(B) \iff f(x) \in B$
+   - Properties:
+     - $f^{-1}(U \cup V) = f^{-1}(U) \cup f^{-1}(V)$
+     - $f^{-1}(U \cap V) = f^{-1}(U) \cap f^{-1}(V)$
+     - $f^{-1}(U \setminus V) = f^{-1}(U) \setminus f^{-1}(V)$
+     - $f(f^{-1}(S)) \subseteq S$, equality holds $\iff$ $f$ is *surjective*
+
+- A key structural difference: the forward image involves $\exists$, the inverse image doesn't:
+  - $y \in f(A) \iff {\exists}x \in A, f(x) = y$
+  - $x \in f^{-1}(B) \iff f(x) \in B$
+- As a result, the inverse image preserves $\cup$, $\cap$, and $\setminus$ perfectly (all $\iff$), while the forward image only gets equality for $\cup$ — for $\cap$ and $\setminus$, only one-direction inclusion holds in general.
+
+I don't really like the inverse image notation. Every time I write $f^{-1}$, it feels like I'm implicitly assuming $f$ is *invertible* (*bijective*) — but the definition of the *inverse image* doesn't require that at all.
+
+> **Axiom 3.10 (Power set axiom).** Let $X$ and $Y$ be sets. Then there exists a set, denoted $Y^X$, which consists of all the functions from $X$ to $Y$, thus
+$$
+f \in Y^X \iff (f \text{ is a function with domain } X \text{ and range } Y).
+$$
+
+> **Axiom 3.11 (Union).** Let $A$ be a set, all of whose elements are themselves sets. Then there exists a set $\bigcup A$ whose elements are precisely those objects which are elements of the elements of $A$, thus for all objects $x$,
+$$
+x \in \bigcup A \iff (x \in S \text{ for some } S \in A).
+$$
+
+What's exciting is that these axioms give us a great way to construct a bigger set — and then we can filter out some of its elements via **Axiom 3.5** or **Axiom 3.6** to form a new set, which is exactly how you define a lot of specific sets. A ton of the later exercises follow this exact playbook.
+
+1. *Grand Union*
+   - **Axiom 3.11**: Let $A$ be a set whose elements are all sets; then $\bigcup A$ exists.
+   - Definition: $\bigcup_{\alpha \in I} A_\alpha = \bigcup \{A_\alpha : \alpha \in I\}$
+   - Equivalent: $x \in \bigcup_{\alpha \in I} A_\alpha \iff \exists \alpha \in I, x \in A_\alpha$
+   - Construction:
+     1. **Axiom 3.6**: Replace each $\alpha \in I$ with $A_\alpha$, obtaining $\{A_\alpha : \alpha \in I\}$
+     2. **Axiom 3.11**: Take the union
+   - Edge case: When $I = \varnothing$, $\bigcup_{\alpha \in \varnothing} A_\alpha = \varnothing$ (vacuously true — no $\alpha$, so no elements)
+
+2. *Grand Intersection*
+   - Definition (requires $I \neq \varnothing$):
+     $\bigcap_{\alpha \in I} A_\alpha = \{x \in A_\beta : x \in A_\alpha \text{ for all } \alpha \in I\}$, where $\beta$ is any element of $I$
+   - Equivalent: $x \in \bigcap_{\alpha \in I} A_\alpha \iff \forall \alpha \in I, x \in A_\alpha$
+   - Why no new axiom is needed:
+     $\bigcap_{\alpha \in I} A_\alpha = \{x \in A_\beta : x \in A_\alpha \text{ for all } \alpha \in I\}$
+     This filters elements from an existing set $A_\beta$ via **Axiom 3.5** — no new axiom required.
+   - Why $I$ must be non-empty:
+     When $I = \varnothing$, $\forall \alpha \in \varnothing$ is vacuously true, so $\bigcap_{\alpha \in \varnothing} A_\alpha$ would contain *all* objects — i.e., the universal set $\Omega$, which doesn't exist!
+   - Independence of $\beta$:
+     Since "$\forall \alpha \in I$" already includes $\beta$, the filtered result is the same regardless of which $\beta$ you pick.
+
+|  | *Grand Union* | *Grand Intersection* |
+|---|---|---|
+| Quantifier | $\exists$ | $\forall$ |
+| $I = \varnothing$ | Result is $\varnothing$ | Not allowed! |
+| Requires an axiom | Yes (**Axiom 3.11**) | No (uses **Axiom 3.5**) |
+| Intuition | "is in at least one" | "is in all of them" |
+
+## Section 3.5 Cartesian products
+
+1. *Ordered Pair*
+   - Definition: $(x, y) := \{\{x\}, \{x, y\}\}$
+   - Core property: $(x, y) = (x', y') \iff x = x' \land y = y'$
+
+2. *Ordered n-tuple*
+   - Definition: a *surjective* function $x: \{i \in \mathbb{N} : 1 \leq i \leq n\} \to X$, denoted $(x_i)_{1 \leq i \leq n}$
+   - Equality: $(x_i) = (y_i) \iff x_i = y_i$ for all $1 \leq i \leq n$
+
+3. *Cartesian Product*
+   - Binary: $X \times Y = \{(x, y) : x \in X, y \in Y\}$
+   - $n$-ary: $\prod_{1 \leq i \leq n} X_i = \{(x_i)_{1 \leq i \leq n} : x_i \in X_i \text{ for all } 1 \leq i \leq n\}$
+   - Function set: $Y^X = \{f : f \text{ is a function from } X \text{ to } Y\}$
+   - Relationships:
+     - $X^n = \prod_{1 \leq i \leq n} X$ (all components from the same set)
+     - $X^0 = \{()\}$ (exactly one element)
+     - $2^X \leftrightarrow \{Y : Y \subseteq X\}$ (bijection via characteristic functions)
+
+Especially the last three exercises in this section — I was basically getting stuck at every single step. But when I actually looked at the solutions, it turned out they weren't even that hard. It's just that there's too much stuff stacked together and I'm not fluent enough with any of it yet.
+
+## Section 3.6 Cardinality of sets
+
+ *Cardinality*
+   - $X$ has cardinality $n$ $\iff$ $X$ is *equinumerous* with $\{i \in \mathbb{N} : 1 \leq i \leq n\}$
+   - Special cases:
+     - $\#(\varnothing) = 0$ (the empty function is a bijection)
+     - If $X$ has cardinality $n$ and $x \in X$, then $\#(X \setminus \{x\}) = n-1$
+
+For the remaining sections, I didn't stick to the same writing style as before. I took a look back at my notes, and while I had just as many thoughts as usual, a lot of them weren't particularly meaningful — so I won't go into too much detail here.
+
+Also, a quick rant about some of the exercises — like **Exercise 3.6.4** (f). I'm genuinely curious: can a beginner actually construct a function like that? Or is there a better way to prove it? Or am I just that bad at this?
+
+And I personally think **Exercise 3.6.8** needs the extra condition that $A$ is non-empty — otherwise the whole empty function issue I mentioned earlier rears its head again.
