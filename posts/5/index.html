@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Yijia Zhao">
+<meta name="dcterms.date" content="2026-05-14">
 
-<title>Posts – Yijia Zhao</title>
+<title>Tao’s Analysis I, Chapter 4: Integers and rationals – Yijia Zhao</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,30 +28,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-1c5d05e776d8cc6ed79b334dc06cf84a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-1c5d05e776d8cc6ed79b334dc06cf84a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3ab3c25880d787e734ee9f73ca06a7d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -76,35 +76,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
@@ -151,8 +122,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Yijia Zhao" href="posts.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -332,7 +303,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Yijia Zhao</span>
     </a>
   </div>
@@ -343,17 +314,17 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> <i class="bi bi-file-post" role="img">
+    <a class="nav-link" href="../../posts.html"> <i class="bi bi-file-post" role="img">
 </i> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./downloads.html"> <i class="bi bi-download" role="img">
+    <a class="nav-link" href="../../downloads.html"> <i class="bi bi-download" role="img">
 </i> 
 <span class="menu-text">Downloads</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> <i class="bi bi-file-person" role="img">
+    <a class="nav-link" href="../../about.html"> <i class="bi bi-file-person" role="img">
 </i> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -368,402 +339,103 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Posts</h1>
-            <p class="subtitle lead"><i class="bi bi-rss-fill" style="color: #ee802f;"></i> <a href="posts.xml">RSS</a></p>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Tao’s Analysis I, Chapter 4: Integers and rationals</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Real Analysis</div>
+                <div class="quarto-category">Mathematics</div>
+                <div class="quarto-category">Reading Notes</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Yijia Zhao </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 14, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Q2FzdWFs">Casual <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2xhc3NpYyUyME1lY2hhbmljcw==">Classic Mechanics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWF0aGVtYXRpY3M=">Mathematics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UGh5c2ljcw==">Physics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVhZGluZyUyME5vdGVz">Reading Notes <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UmVhbCUyMEFuYWx5c2lz">Real Analysis <span class="quarto-category-count">(3)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section-4.1-the-integers" id="toc-section-4.1-the-integers" class="nav-link active" data-scroll-target="#section-4.1-the-integers">Section 4.1 The integers</a></li>
+  <li><a href="#section-4.2-the-rationals" id="toc-section-4.2-the-rationals" class="nav-link" data-scroll-target="#section-4.2-the-rationals">Section 4.2 The rationals</a></li>
+  <li><a href="#section-4.3-absolute-value-and-exponentiation" id="toc-section-4.3-absolute-value-and-exponentiation" class="nav-link" data-scroll-target="#section-4.3-absolute-value-and-exponentiation">Section 4.3 Absolute value and exponentiation</a></li>
+  <li><a href="#section-4.4-gaps-in-the-rational-numbers" id="toc-section-4.4-gaps-in-the-rational-numbers" class="nav-link" data-scroll-target="#section-4.4-gaps-in-the-rational-numbers">Section 4.4 Gaps in the rational numbers</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
 
-<style>
-/* Common card styles (unified)*/
-.quarto-post .card,
-.quarto-listing-cols-3 .card,
-.quarto-grid-item,
-.quarto-listing-container-default .quarto-post,
-#quarto-margin-sidebar .quarto-listing-category {
-  background: var(--background-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 16px var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
-}
-
-/* Hover effect for cards */
-.quarto-post .card:hover,
-.quarto-listing-cols-3 .card:hover,
-.quarto-grid-item:hover,
-.quarto-listing-container-default .quarto-post:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(90, 103, 216, 0.13);
-}
-
-/* Typography & layout for listing container */
-.quarto-listing .quarto-post {
-  margin-bottom: 1em;
-  padding-top: 0;
-}
-
-.quarto-grid-item .card-title,
-.listing-title {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400;
-  color: var(--ink);
-}
-
-.listing-date,
-.listing-author,
-.card-text.listing-description {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-.quarto-listing-container-default .metadata {
-  width: 80px;
-  flex-basis: 80px;
-}
-
-.quarto-listing-container-default .listing-author,
-.quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-/* Categories styling */
-.listing-categories .listing-category {
-  background: var(--accent-light);
-  color: var(--accent);
-  border: none;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  padding: 0.15em 0.6em;
-}
-
-/* Horizontal listing cards (default style)*/
-.quarto-listing-container-default .quarto-post {
-  padding: 1.1rem 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.quarto-listing-container-default .quarto-post:hover {
-  transform: translateY(-2px);
-}
-
-/* Remove default dividers */
-.quarto-listing-container-default .quarto-post + .quarto-post {
-  border-top: none;
-}
-.quarto-listing-container-default .list .quarto-post {
-  border-bottom: none;
-  padding-top: 1.1rem;
-  padding-bottom: 1.1rem;
-}
-
-/* Thumbnail images */
-.quarto-listing-container-default .thumbnail img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  width: 100%;
-  border-radius: 6px;
-}
-
-/* Listing title */
-.quarto-listing-container-default .listing-title a {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400;
-  font-size: 1.05rem;
-  color: var(--ink, #2d2d3a);
-  text-decoration: none;
-}
-.quarto-listing-container-default .listing-title a:hover {
-  color: var(--accent, #5a67d8);
-}
-
-/* Listing description */
-.quarto-listing-container-default .listing-description {
-  font-size: 0.85rem;
-  color: var(--muted, #888);
-  line-height: 1.65;
-  margin-top: 0.3rem;
-}
-
-/* Author & date — reduced selector nesting, avoid !important */
-.quarto-listing-container-default .listing-author,
-.quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
-  font-family: sans-serif;
-}
-
-/* Metadata column width */
-.quarto-listing-container-default .metadata {
-  width: 90px;
-  flex-basis: 90px;
-}
-
-/* Inline categories inside listing */
-.quarto-listing-container-default .listing-categories {
-  margin-top: 0.6rem;
-}
-
-.quarto-listing-container-default .quarto-post .listing-categories .listing-category {
-  background: var(--accent-light, #ebedfa);
-  color: var(--accent, #5a67d8);
-  border: none;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  padding: 0.15em 0.6em;
-}
-
-/* Categories sidebar box */
-#quarto-margin-sidebar {
-  padding-top: 0;
-}
-
-#quarto-margin-sidebar .quarto-listing-category-title {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent, #5a67d8);
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border, #e0e0ec);
-}
-
-#quarto-margin-sidebar .quarto-listing-category {
-  padding: 1rem 1.1rem;
-}
-
-#quarto-margin-sidebar .quarto-category {
-  border-radius: 4px;
-  font-size: 0.78rem;
-  margin-bottom: 0.15rem;
-}
-#quarto-margin-sidebar .quarto-category.active {
-  background-color: var(--accent, #5a67d8);
-  border-color: var(--accent, #5a67d8);
-  color: #fff;
-}
-
-/* Dark mode adjustments (both selectors) */
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .quarto-post,
-body.quarto-dark .quarto-listing-container-default .quarto-post,
-[data-quarto-color-scheme="dark"] #quarto-margin-sidebar .quarto-listing-category,
-body.quarto-dark #quarto-margin-sidebar .quarto-listing-category {
-  background: var(--background-secondary, #161820);
-}
-
-/* Ensure dark mode does not alter these rules unless necessary */
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-author,
-[data-quarto-color-scheme="dark"] .quarto-listing-container-default .listing-date,
-body.quarto-dark .quarto-listing-container-default .listing-author,
-body.quarto-dark .quarto-listing-container-default .listing-date {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
-  font-family: sans-serif;
-}
-
-</style>
+<p>I want to strike a better balance with this blog going forward — not just a raw log of my own reading reflections, but also weaving in summary overviews or proofs that I find particularly elegant.</p>
+<p>To be honest, I originally had no intention of giving Chapter 4 its own post. I figured I’d either fold it into Chapter 5 or just skip it entirely — much like I did with Chapter 1. The content in this chapter really isn’t much; it only took me about 300 minutes to get through. That said, there are a few genuinely interesting bits worth writing about. And, to be honest, I’d also like to keep the site looking tidy — so I figured I might as well write something for every chapter.</p>
+<section id="section-4.1-the-integers" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.1-the-integers">Section 4.1 The integers</h2>
+<blockquote class="blockquote">
+<p><strong>Definition 4.1.1 (Integers).</strong> An integer is an expression of the form <span class="math inline">a--b</span>, where <span class="math inline">a</span> and <span class="math inline">b</span> are natural numbers. Two integers are considered to be equal, <span class="math inline">a--b = c--d</span>, if and only if <span class="math inline">a + d = c + b</span>. We let <span class="math inline">\mathbb{Z}</span> denote the set of all integers.</p>
+</blockquote>
+<p>This definition alone honestly threw me a bit. For example, I’d always thought of a non-zero natural number as just being a positive integer — but it turns out that’s a later definition. <span class="math inline">\mathbb{Z}</span> should be something more like the set of expressions <span class="math inline">a--b</span>, or strictly speaking, it should be written as:</p>
+<p><span class="math display">
+\mathbb{Z} = (\mathbb{N} \times \mathbb{N}) / \sim = \{[(a,b)] \mid a,b \in \mathbb{N}\}, \quad (a,b) \sim (c,d) \iff a + d = b + c
+</span></p>
+<p>I briefly looked up the definitions of equivalence relations and equivalence classes, but honestly — I don’t think bringing them in here is really necessary. The more intuitive notation the book uses is just easier to follow.</p>
+<p>Also, starting from this chapter, I really began to feel the significance of verifying that every newly defined operation is <em>well-defined</em>. Sure, most of the time you can just push the definition back onto some previously proven well-defined operation and lean on the properties of equality. But if I ever tried to define an operation from scratch myself — satisfying well-definedness could actually be pretty hard, and “it absolutely has to be verified”.</p>
+<p>Going back to embedding <span class="math inline">\mathbb{N}</span> into <span class="math inline">\mathbb{Z}</span> — I originally thought it would work just like the previous chapter: as long as there exists a <em>bijection</em> <span class="math inline">f: \mathbb{N} \to \mathbb{Z}</span> that sends each <span class="math inline">n \in \mathbb{N}</span> to something like <span class="math inline">f(n) = n--0</span>, that would be enough. But actually, it also requires an <em>algebraic isomorphism</em>. That is, <span class="math inline">f(n + m) = f(n) + f(m)</span> and <span class="math inline">f(n \times m) = f(n) \times f(m)</span> must hold as well.</p>
+<p>Another thing that surprised me a bit: the reason the book doesn’t just define <span class="math inline">\mathbb{Z}</span> as <span class="math inline">\mathbb{N} \cup (-\mathbb{N})</span> is really just a matter of workload — that definition is honestly a lot more intuitive. I think what’s more important, though, is that the definition used in the book generalizes nicely to <span class="math inline">\mathbb{Q}</span> and <span class="math inline">\mathbb{R}</span> in a similar way.</p>
+<p>The exercises in Chapter 4 as a whole are pretty straightforward — apart from the last few problems, there’s really not much worth mentioning.</p>
+</section>
+<section id="section-4.2-the-rationals" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.2-the-rationals">Section 4.2 The rationals</h2>
+<p>The definition of <span class="math inline">\mathbb{Q}</span> is actually pretty similar to <span class="math inline">\mathbb{Z}</span> — the only thing worth keeping an eye on is that age-old rule: “0 cannot be a divisor.” Also, you really have to watch out for <span class="math inline">0</span>. For example, in <strong>Exercise 4.2.1</strong>, when proving transitivity, I completely forgot about the conditions required for the cancellation law.</p>
+<p>This chapter briefly touches on the concepts of <em>rings</em> and <em>fields</em> — for instance, <span class="math inline">\mathbb{Z}</span> is a <em>commutative ring</em>, while <span class="math inline">\mathbb{Q}</span> is a <em>field</em> (since every non-zero element has a <em>multiplicative inverse</em>). And <span class="math inline">\mathbb{Q}</span> as a field is also <em>ordered</em> — I’d actually heard that one before. <span class="math inline">\mathbb{C}</span>, on the other hand, is not. My algebra background is pretty weak — I only really knew a bit about <em>groups</em> before. I don’t think I’ll go out of my way to fill in these gaps either; if I really need it later, I’ll deal with it then.</p>
+</section>
+<section id="section-4.3-absolute-value-and-exponentiation" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.3-absolute-value-and-exponentiation">Section 4.3 Absolute value and exponentiation</h2>
+<p>Just seeing the section title already raised a question for me — why are these two things defined on <span class="math inline">\mathbb{Q}</span> instead of <span class="math inline">\mathbb{Z}</span> ? I figure exponentiation probably has a good reason, but for absolute value, it’s most likely just to save a bit of space.</p>
+<p>Also — is the definition of <span class="math inline">\varepsilon</span>-close really broken down that finely? I’m not sure how other textbooks handle this, but it definitely gives off that feeling.</p>
+</section>
+<section id="section-4.4-gaps-in-the-rational-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.4-gaps-in-the-rational-numbers">Section 4.4 Gaps in the rational numbers</h2>
+<blockquote class="blockquote">
+<p>Every natural number is either even or odd, but not both (why?). If <span class="math inline">p</span> is odd, then <span class="math inline">p^2</span> is also odd (why?).</p>
+</blockquote>
+<p>This is part of <strong>Exercise 4.4.3</strong>. The latter proof is dead simple — the problem is, I actually spent quite a while thinking about the former, gave it a try, and still couldn’t solve it. But if you’re allowed to just use the division algorithm directly, it’s actually pretty easy to get.</p>
+<p>As for the proof that <span class="math inline">\sqrt{2}</span> is irrational — I learned that one back in high school. In fact, the proof given here isn’t really all that different. But this <em>infinite descent</em> method is genuinely quite interesting.</p>
+<p>Then, I briefly looked into Dedekind cuts — for example, the definition of <span class="math inline">\sqrt{2}</span>: <span class="math display">
+L = \{q \in \mathbb{Q} \mid q^2 &lt; 2\}, \quad R = \{q \in \mathbb{Q} \mid q^2 \geq 2\}
+</span></p>
+<p>Of course, <span class="math inline">L</span> also needs to satisfy some additional properties. Uh, honestly — I don’t really see the advantage of this definition.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWF0aGVtYXRpY3MlMkNSZWFkaW5nJTIwTm90ZXM=" data-listing-date-sort="1778716800000" data-listing-file-modified-sort="1778760264562" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="914">
-<div class="thumbnail"><a href="./posts/5/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="assets/placeholder.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/5/index.html" class="no-external">Tao’s Analysis I, Chapter 4: Integers and rationals</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhbCUyMEFuYWx5c2lz'); return false;">Real Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWF0aGVtYXRpY3M='); return false;">Mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhZGluZyUyME5vdGVz'); return false;">Reading Notes</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/5/index.html" class="no-external">
-I want to strike a better balance with this blog going forward — not just a raw log of my own reading reflections, but also weaving in summary overviews or proofs that I…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/5/index.html" class="no-external">
-<div class="listing-date">
-May 14, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWF0aGVtYXRpY3MlMkNSZWFkaW5nJTIwTm90ZXM=" data-listing-date-sort="1778284800000" data-listing-file-modified-sort="1778760264562" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2982">
-<div class="thumbnail"><a href="./posts/4/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="assets/placeholder.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/4/index.html" class="no-external">Tao’s Analysis I, Chapter 3: Set Theory</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhbCUyMEFuYWx5c2lz'); return false;">Real Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWF0aGVtYXRpY3M='); return false;">Mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhZGluZyUyME5vdGVz'); return false;">Reading Notes</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/4/index.html" class="no-external">
-Just like with the previous chapter, I came into this with almost zero background in set theory. I spent 1,100 minutes over four days getting through this chapter and made a…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/4/index.html" class="no-external">
-<div class="listing-date">
-May 9, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UmVhbCUyMEFuYWx5c2lzJTJDTWF0aGVtYXRpY3MlMkNSZWFkaW5nJTIwTm90ZXM=" data-listing-date-sort="1777680000000" data-listing-file-modified-sort="1778760264562" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1134">
-<div class="thumbnail"><a href="./posts/3/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="assets/placeholder.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/3/index.html" class="no-external">Tao’s Analysis I, Chapter 2: Natural Numbers</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhbCUyMEFuYWx5c2lz'); return false;">Real Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWF0aGVtYXRpY3M='); return false;">Mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhZGluZyUyME5vdGVz'); return false;">Reading Notes</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/3/index.html" class="no-external">
-I began with the Chinese version (my native language), but I wasted time because of a translation error in Chapter 2. I was afraid there would be more mistakes in the other…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/3/index.html" class="no-external">
-<div class="listing-date">
-May 2, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Q2FzdWFs" data-listing-date-sort="1771200000000" data-listing-file-modified-sort="1778760264561" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
-<div class="thumbnail"><a href="./posts/2/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/2/Cos_and_Cosh_light.svg" alt="Cos and Cosh functions in complex plane"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2/index.html" class="no-external">Building process of this blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2FzdWFs'); return false;">Casual</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2/index.html" class="no-external">
-This blog is built by Quarto, which is a powerful open-source scientific and technical publishing system built on Pandoc (written by AI in vscode).
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2/index.html" class="no-external">
-<div class="listing-date">
-Feb 16, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Q2xhc3NpYyUyME1lY2hhbmljcyUyQ1BoeXNpY3M=" data-listing-date-sort="1770422400000" data-listing-file-modified-sort="1778760264558" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262">
-<div class="thumbnail"><a href="./posts/1/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/1/simple_pendulum.svg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/1/index.html" class="no-external">Test post: Euler-Lagrange’s equation in simple pendulum</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhc3NpYyUyME1lY2hhbmljcw=='); return false;">Classic Mechanics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGh5c2ljcw=='); return false;">Physics</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/1/index.html" class="no-external">
-Here is the <strong>Euler-Lagrange’s equation</strong>:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/1/index.html" class="no-external">
-<div class="listing-date">
-Feb 7, 2026
-</div>
-<div class="listing-author">
-Yijia Zhao
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -1266,7 +938,7 @@ document.addEventListener("DOMContentLoaded", function () {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><a href="./credits.html">Copyright</a> © 2026 Yijia Zhao | Built with <a href="https://quarto.org/">Quarto</a></p>
+<p><a href="../../credits.html">Copyright</a> © 2026 Yijia Zhao | Built with <a href="https://quarto.org/">Quarto</a></p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
