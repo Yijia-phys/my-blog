@@ -1,0 +1,58 @@
+---
+title: "Tao's Analysis I, Chapter 4: Integers and rationals"
+author: "Yijia Zhao"
+date: "2026-05-14"
+categories: [Real Analysis, Mathematics, Reading Notes]
+format: html
+---
+
+I want to strike a better balance with this blog going forward — not just a raw log of my own reading reflections, but also weaving in summary overviews or proofs that I find particularly elegant.
+
+To be honest, I originally had no intention of giving Chapter 4 its own post. I figured I'd either fold it into Chapter 5 or just skip it entirely — much like I did with Chapter 1. The content in this chapter really isn't much; it only took me about 300 minutes to get through. That said, there are a few genuinely interesting bits worth writing about. And, to be honest, I'd also like to keep the site looking tidy — so I figured I might as well write something for every chapter.
+
+## Section 4.1 The integers
+
+> **Definition 4.1.1 (Integers).** An integer is an expression of the form $a--b$, where $a$ and $b$ are natural numbers. Two integers are considered to be equal, $a--b = c--d$, if and only if $a + d = c + b$. We let $\mathbb{Z}$ denote the set of all integers.
+
+This definition alone honestly threw me a bit. For example, I'd always thought of a non-zero natural number as just being a positive integer — but it turns out that's a later definition. $\mathbb{Z}$ should be something more like the set of expressions $a--b$, or strictly speaking, it should be written as:
+
+$$
+\mathbb{Z} = (\mathbb{N} \times \mathbb{N}) / \sim = \{[(a,b)] \mid a,b \in \mathbb{N}\}, \quad (a,b) \sim (c,d) \iff a + d = b + c
+$$
+
+I briefly looked up the definitions of equivalence relations and equivalence classes, but honestly — I don't think bringing them in here is really necessary. The more intuitive notation the book uses is just easier to follow.
+
+Also, starting from this chapter, I really began to feel the significance of verifying that every newly defined operation is *well-defined*. Sure, most of the time you can just push the definition back onto some previously proven well-defined operation and lean on the properties of equality. But if I ever tried to define an operation from scratch myself — satisfying well-definedness could actually be pretty hard, and "it absolutely has to be verified".
+
+Going back to embedding $\mathbb{N}$ into $\mathbb{Z}$ — I originally thought it would work just like the previous chapter: as long as there exists a *bijection* $f: \mathbb{N} \to \mathbb{Z}$ that sends each $n \in \mathbb{N}$ to something like $f(n) = n--0$, that would be enough. But actually, it also requires an *algebraic isomorphism*. That is, $f(n + m) = f(n) + f(m)$ and $f(n \times m) = f(n) \times f(m)$ must hold as well.
+
+Another thing that surprised me a bit: the reason the book doesn't just define $\mathbb{Z}$ as $\mathbb{N} \cup (-\mathbb{N})$ is really just a matter of workload — that definition is honestly a lot more intuitive. I think what's more important, though, is that the definition used in the book generalizes nicely to $\mathbb{Q}$ and $\mathbb{R}$ in a similar way.
+
+The exercises in Chapter 4 as a whole are pretty straightforward — apart from the last few problems, there's really not much worth mentioning.
+
+## Section 4.2 The rationals
+
+The definition of $\mathbb{Q}$ is actually pretty similar to $\mathbb{Z}$ — the only thing worth keeping an eye on is that age-old rule: "0 cannot be a divisor." Also, you really have to watch out for $0$. For example, in **Exercise 4.2.1**, when proving transitivity, I completely forgot about the conditions required for the cancellation law.
+
+This chapter briefly touches on the concepts of *rings* and *fields* — for instance, $\mathbb{Z}$ is a *commutative ring*, while $\mathbb{Q}$ is a *field* (since every non-zero element has a *multiplicative inverse*). And $\mathbb{Q}$ as a field is also *ordered* — I'd actually heard that one before. $\mathbb{C}$, on the other hand, is not. My algebra background is pretty weak — I only really knew a bit about *groups* before. I don't think I'll go out of my way to fill in these gaps either; if I really need it later, I'll deal with it then.
+
+## Section 4.3 Absolute value and exponentiation
+
+Just seeing the section title already raised a question for me — why are these two things defined on $\mathbb{Q}$ instead of $\mathbb{Z}$ ? I figure exponentiation probably has a good reason, but for absolute value, it's most likely just to save a bit of space.
+
+Also — is the definition of $\varepsilon$-close really broken down that finely? I'm not sure how other textbooks handle this, but it definitely gives off that feeling.
+
+## Section 4.4 Gaps in the rational numbers
+
+> Every natural number is either even or odd, but not both (why?). If $p$ is odd, then $p^2$ is also odd (why?).
+
+This is part of **Exercise 4.4.3**. The latter proof is dead simple — the problem is, I actually spent quite a while thinking about the former, gave it a try, and still couldn't solve it. But if you're allowed to just use the division algorithm directly, it's actually pretty easy to get.
+
+As for the proof that $\sqrt{2}$ is irrational — I learned that one back in high school. In fact, the proof given here isn't really all that different. But this *infinite descent* method is genuinely quite interesting.
+
+Then, I briefly looked into Dedekind cuts — for example, the definition of $\sqrt{2}$:
+$$
+L = \{q \in \mathbb{Q} \mid q^2 < 2\}, \quad R = \{q \in \mathbb{Q} \mid q^2 \geq 2\}
+$$
+
+Of course, $L$ also needs to satisfy some additional properties. Uh, honestly — I don't really see the advantage of this definition.
