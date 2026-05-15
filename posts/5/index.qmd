@@ -12,7 +12,7 @@ To be honest, I originally had no intention of giving Chapter 4 its own post. I 
 
 ## Section 4.1 The integers
 
-> **Definition 4.1.1 (Integers).** An integer is an expression of the form $a--b$, where $a$ and $b$ are natural numbers. Two integers are considered to be equal, $a--b = c--d$, if and only if $a + d = c + b$. We let $\mathbb{Z}$ denote the set of all integers.
+> **Definition 4.1.1 (Integers).** An integer is an expression of the form $a--b$, where $a$ and $b$ are natural numbers. Two integers are considered to be equal, $a-b = c-d$, if and only if $a + d = c + b$. We let $\mathbb{Z}$ denote the set of all integers.
 
 This definition alone honestly threw me a bit. For example, I'd always thought of a non-zero natural number as just being a positive integer — but it turns out that's a later definition. $\mathbb{Z}$ should be something more like the set of expressions $a--b$, or strictly speaking, it should be written as:
 
