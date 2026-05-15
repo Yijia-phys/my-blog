@@ -10,7 +10,63 @@
 <atom:link href="https://blog.yijialog.org/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Sat, 09 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 14 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Tao’s Analysis I, Chapter 4: Integers and rationals</title>
+  <dc:creator>Yijia Zhao</dc:creator>
+  <link>https://blog.yijialog.org/posts/5/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>I want to strike a better balance with this blog going forward — not just a raw log of my own reading reflections, but also weaving in summary overviews or proofs that I find particularly elegant.</p>
+<p>To be honest, I originally had no intention of giving Chapter 4 its own post. I figured I’d either fold it into Chapter 5 or just skip it entirely — much like I did with Chapter 1. The content in this chapter really isn’t much; it only took me about 300 minutes to get through. That said, there are a few genuinely interesting bits worth writing about. And, to be honest, I’d also like to keep the site looking tidy — so I figured I might as well write something for every chapter.</p>
+<section id="section-4.1-the-integers" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.1-the-integers">Section 4.1 The integers</h2>
+<blockquote class="blockquote">
+<p><strong>Definition 4.1.1 (Integers).</strong> An integer is an expression of the form <img src="https://latex.codecogs.com/png.latex?a--b">, where <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b"> are natural numbers. Two integers are considered to be equal, <img src="https://latex.codecogs.com/png.latex?a--b%20=%20c--d">, if and only if <img src="https://latex.codecogs.com/png.latex?a%20+%20d%20=%20c%20+%20b">. We let <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D"> denote the set of all integers.</p>
+</blockquote>
+<p>This definition alone honestly threw me a bit. For example, I’d always thought of a non-zero natural number as just being a positive integer — but it turns out that’s a later definition. <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D"> should be something more like the set of expressions <img src="https://latex.codecogs.com/png.latex?a--b">, or strictly speaking, it should be written as:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BZ%7D%20=%20(%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D)%20/%20%5Csim%20=%20%5C%7B%5B(a,b)%5D%20%5Cmid%20a,b%20%5Cin%20%5Cmathbb%7BN%7D%5C%7D,%20%5Cquad%20(a,b)%20%5Csim%20(c,d)%20%5Ciff%20a%20+%20d%20=%20b%20+%20c%0A"></p>
+<p>I briefly looked up the definitions of equivalence relations and equivalence classes, but honestly — I don’t think bringing them in here is really necessary. The more intuitive notation the book uses is just easier to follow.</p>
+<p>Also, starting from this chapter, I really began to feel the significance of verifying that every newly defined operation is <em>well-defined</em>. Sure, most of the time you can just push the definition back onto some previously proven well-defined operation and lean on the properties of equality. But if I ever tried to define an operation from scratch myself — satisfying well-definedness could actually be pretty hard, and “it absolutely has to be verified”.</p>
+<p>Going back to embedding <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D"> into <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D"> — I originally thought it would work just like the previous chapter: as long as there exists a <em>bijection</em> <img src="https://latex.codecogs.com/png.latex?f:%20%5Cmathbb%7BN%7D%20%5Cto%20%5Cmathbb%7BZ%7D"> that sends each <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D"> to something like <img src="https://latex.codecogs.com/png.latex?f(n)%20=%20n--0">, that would be enough. But actually, it also requires an <em>algebraic isomorphism</em>. That is, <img src="https://latex.codecogs.com/png.latex?f(n%20+%20m)%20=%20f(n)%20+%20f(m)"> and <img src="https://latex.codecogs.com/png.latex?f(n%20%5Ctimes%20m)%20=%20f(n)%20%5Ctimes%20f(m)"> must hold as well.</p>
+<p>Another thing that surprised me a bit: the reason the book doesn’t just define <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D"> as <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BN%7D%20%5Ccup%20(-%5Cmathbb%7BN%7D)"> is really just a matter of workload — that definition is honestly a lot more intuitive. I think what’s more important, though, is that the definition used in the book generalizes nicely to <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BQ%7D"> and <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D"> in a similar way.</p>
+<p>The exercises in Chapter 4 as a whole are pretty straightforward — apart from the last few problems, there’s really not much worth mentioning.</p>
+</section>
+<section id="section-4.2-the-rationals" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.2-the-rationals">Section 4.2 The rationals</h2>
+<p>The definition of <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BQ%7D"> is actually pretty similar to <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D"> — the only thing worth keeping an eye on is that age-old rule: “0 cannot be a divisor.” Also, you really have to watch out for <img src="https://latex.codecogs.com/png.latex?0">. For example, in <strong>Exercise 4.2.1</strong>, when proving transitivity, I completely forgot about the conditions required for the cancellation law.</p>
+<p>This chapter briefly touches on the concepts of <em>rings</em> and <em>fields</em> — for instance, <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D"> is a <em>commutative ring</em>, while <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BQ%7D"> is a <em>field</em> (since every non-zero element has a <em>multiplicative inverse</em>). And <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BQ%7D"> as a field is also <em>ordered</em> — I’d actually heard that one before. <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BC%7D">, on the other hand, is not. My algebra background is pretty weak — I only really knew a bit about <em>groups</em> before. I don’t think I’ll go out of my way to fill in these gaps either; if I really need it later, I’ll deal with it then.</p>
+</section>
+<section id="section-4.3-absolute-value-and-exponentiation" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.3-absolute-value-and-exponentiation">Section 4.3 Absolute value and exponentiation</h2>
+<p>Just seeing the section title already raised a question for me — why are these two things defined on <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BQ%7D"> instead of <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D"> ? I figure exponentiation probably has a good reason, but for absolute value, it’s most likely just to save a bit of space.</p>
+<p>Also — is the definition of <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon">-close really broken down that finely? I’m not sure how other textbooks handle this, but it definitely gives off that feeling.</p>
+</section>
+<section id="section-4.4-gaps-in-the-rational-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="section-4.4-gaps-in-the-rational-numbers">Section 4.4 Gaps in the rational numbers</h2>
+<blockquote class="blockquote">
+<p>Every natural number is either even or odd, but not both (why?). If <img src="https://latex.codecogs.com/png.latex?p"> is odd, then <img src="https://latex.codecogs.com/png.latex?p%5E2"> is also odd (why?).</p>
+</blockquote>
+<p>This is part of <strong>Exercise 4.4.3</strong>. The latter proof is dead simple — the problem is, I actually spent quite a while thinking about the former, gave it a try, and still couldn’t solve it. But if you’re allowed to just use the division algorithm directly, it’s actually pretty easy to get.</p>
+<p>As for the proof that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> is irrational — I learned that one back in high school. In fact, the proof given here isn’t really all that different. But this <em>infinite descent</em> method is genuinely quite interesting.</p>
+<p>Then, I briefly looked into Dedekind cuts — for example, the definition of <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D">: <img src="https://latex.codecogs.com/png.latex?%0AL%20=%20%5C%7Bq%20%5Cin%20%5Cmathbb%7BQ%7D%20%5Cmid%20q%5E2%20%3C%202%5C%7D,%20%5Cquad%20R%20=%20%5C%7Bq%20%5Cin%20%5Cmathbb%7BQ%7D%20%5Cmid%20q%5E2%20%5Cgeq%202%5C%7D%0A"></p>
+<p>Of course, <img src="https://latex.codecogs.com/png.latex?L"> also needs to satisfy some additional properties. Uh, honestly — I don’t really see the advantage of this definition.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Real Analysis</category>
+  <category>Mathematics</category>
+  <category>Reading Notes</category>
+  <guid>https://blog.yijialog.org/posts/5/</guid>
+  <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Tao’s Analysis I, Chapter 3: Set Theory</title>
   <dc:creator>Yijia Zhao</dc:creator>
